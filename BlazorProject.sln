@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29319.158
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{401346D9-84D1-454F-8666-34C6735927D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3F9367AA-E6D1-4EF8-8BA3-583ED9A9A904}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - UI", "1 - UI", "{FCEFDF52-0012-4334-B638-0561546B3425}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Services", "{7FE9FB42-56FE-46D4-A32A-C6A585609D5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Application", "3 - Application", "{A2741585-9F7C-4828-B90A-011157B5F8DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{289F39AA-F5A4-4EBB-B0AB-0F34E1D4A409}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{A4EF087C-F110-4D1F-A2E4-41AD9FA32743}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Data", "5.1 - Data", "{5904009E-9948-4F69-A273-90D868EAF11B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - CrossCutting", "5.2 - CrossCutting", "{05FE3A81-620B-4107-8AA6-7BBF6CAD6407}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.UI.Client", "Blazor.UI\Blazor.UI.Client.csproj", "{16892FB8-85F8-4EEB-90DB-0DF4B737D245}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.Services.API", "Blazor.Services.API\Blazor.Services.API.csproj", "{95FC47FF-B1F4-4C21-B569-DCF49DC04230}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.Infra.CrossCutting.SharedUI", "Blazor.Infra.CrossCutting.SharedUI\Blazor.Infra.CrossCutting.SharedUI.csproj", "{5A855219-3C8A-454A-9FAE-6DBC8EB33C0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16892FB8-85F8-4EEB-90DB-0DF4B737D245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16892FB8-85F8-4EEB-90DB-0DF4B737D245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16892FB8-85F8-4EEB-90DB-0DF4B737D245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16892FB8-85F8-4EEB-90DB-0DF4B737D245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95FC47FF-B1F4-4C21-B569-DCF49DC04230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95FC47FF-B1F4-4C21-B569-DCF49DC04230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95FC47FF-B1F4-4C21-B569-DCF49DC04230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95FC47FF-B1F4-4C21-B569-DCF49DC04230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A855219-3C8A-454A-9FAE-6DBC8EB33C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A855219-3C8A-454A-9FAE-6DBC8EB33C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A855219-3C8A-454A-9FAE-6DBC8EB33C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A855219-3C8A-454A-9FAE-6DBC8EB33C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FCEFDF52-0012-4334-B638-0561546B3425} = {3F9367AA-E6D1-4EF8-8BA3-583ED9A9A904}
+		{7FE9FB42-56FE-46D4-A32A-C6A585609D5A} = {3F9367AA-E6D1-4EF8-8BA3-583ED9A9A904}
+		{A2741585-9F7C-4828-B90A-011157B5F8DE} = {3F9367AA-E6D1-4EF8-8BA3-583ED9A9A904}
+		{289F39AA-F5A4-4EBB-B0AB-0F34E1D4A409} = {3F9367AA-E6D1-4EF8-8BA3-583ED9A9A904}
+		{A4EF087C-F110-4D1F-A2E4-41AD9FA32743} = {3F9367AA-E6D1-4EF8-8BA3-583ED9A9A904}
+		{5904009E-9948-4F69-A273-90D868EAF11B} = {A4EF087C-F110-4D1F-A2E4-41AD9FA32743}
+		{05FE3A81-620B-4107-8AA6-7BBF6CAD6407} = {A4EF087C-F110-4D1F-A2E4-41AD9FA32743}
+		{16892FB8-85F8-4EEB-90DB-0DF4B737D245} = {FCEFDF52-0012-4334-B638-0561546B3425}
+		{95FC47FF-B1F4-4C21-B569-DCF49DC04230} = {7FE9FB42-56FE-46D4-A32A-C6A585609D5A}
+		{5A855219-3C8A-454A-9FAE-6DBC8EB33C0E} = {05FE3A81-620B-4107-8AA6-7BBF6CAD6407}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {593F827C-E0FC-425D-95C0-1059EE1F9FD2}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/carlos-santana
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Blazor.Infra.CrossCutting.SharedUI\\Blazor.Infra.CrossCutting.SharedUI.csproj
+		SccProjectTopLevelParentUniqueName1 = BlazorProject.sln
+		SccProjectName1 = Blazor.Infra.CrossCutting.SharedUI
+		SccLocalPath1 = Blazor.Infra.CrossCutting.SharedUI
+		SccProjectUniqueName2 = Blazor.Services.API\\Blazor.Services.API.csproj
+		SccProjectTopLevelParentUniqueName2 = BlazorProject.sln
+		SccProjectName2 = Blazor.Services.API
+		SccLocalPath2 = Blazor.Services.API
+		SccProjectUniqueName3 = Blazor.UI\\Blazor.UI.Client.csproj
+		SccProjectTopLevelParentUniqueName3 = BlazorProject.sln
+		SccProjectName3 = Blazor.UI
+		SccLocalPath3 = Blazor.UI
+	EndGlobalSection
+EndGlobal
