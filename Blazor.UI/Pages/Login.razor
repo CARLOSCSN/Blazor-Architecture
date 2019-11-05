@@ -5,11 +5,11 @@
 @inject NavigationManager navigationManager
 @inject IdentityAuthenticationStateProvider authStateProvider
 
-<h1 class="h2 font-weight-normal login-title">
-    Blazor with Identity Sample
-</h1>
+@*<h1 class="h2 font-weight-normal login-title">
+    Paralelas
+</h1>*@
 
-<EditForm class="form-signin" OnValidSubmit="OnSubmit" Model="loginParameters">
+@*<EditForm class="form-signin" OnValidSubmit="OnSubmit" Model="loginParameters">
     <DataAnnotationsValidator />
     <h4 class="font-weight-normal text-center">Login</h4>
 
@@ -33,7 +33,65 @@
     <NavLink href="register">
         <h6 class="font-weight-normal text-center">Create account</h6>
     </NavLink>
+</EditForm>*@
+
+
+<EditForm class="form-signin" OnValidSubmit="OnSubmit" Model="loginParameters">
+    <DataAnnotationsValidator />
+
+    <!-- Wrapper-->
+    <div class="wrapper">
+
+        <!-- Main content-->
+        <section class="content">
+
+            <div class="container-center animated slideInDown">
+
+
+                <div class="view-header">
+                    <div class="header-icon">
+                        <i class="pe page-header-icon pe-7s-unlock"></i>
+                    </div>
+                    <div class="header-title">
+                        <h3>Login</h3>
+                        <small>
+                            Please enter your credentials to login.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="inputUsername" class="sr-only">User Name</label>
+                            <InputText id="inputUsername" class="form-control" @bind-Value="loginParameters.UserName" autofocus placeholder="Username" />
+                            <ValidationMessage For="@(() => loginParameters.UserName)" />
+                            <span class="help-block small">Your unique username to app</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputPassword" class="sr-only">Password</label>
+                            <InputText type="password" id="inputPassword" class="form-control" placeholder="Password" @bind-Value="loginParameters.Password" />
+                            <ValidationMessage For="@(() => loginParameters.Password)" />
+                            <span class="help-block small">Your strong password</span>
+                        </div>
+
+                        <div>
+                            <button class="btn btn-accent" type="submit">Entrar</button>
+                            <a class="btn btn-default" href="register">Registrar</a>
+                            <label class="text-danger">@error</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End main content-->
+
+    </div>
+    <!-- End wrapper-->
 </EditForm>
+
 
 @code{
     LoginParametersViewModel loginParameters { get; set; } = new LoginParametersViewModel();

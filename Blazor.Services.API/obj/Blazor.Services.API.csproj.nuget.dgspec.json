@@ -10,7 +10,7 @@
         "projectUniqueName": "C:\\Temp\\Blazor-Architecture\\Blazor.Infra.CrossCutting.SharedUI\\Blazor.Infra.CrossCutting.SharedUI.csproj",
         "projectName": "Blazor.Infra.CrossCutting.SharedUI",
         "projectPath": "C:\\Temp\\Blazor-Architecture\\Blazor.Infra.CrossCutting.SharedUI\\Blazor.Infra.CrossCutting.SharedUI.csproj",
-        "packagesPath": "C:\\Users\\Carlos Santana\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
         "outputPath": "C:\\Temp\\Blazor-Architecture\\Blazor.Infra.CrossCutting.SharedUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -18,7 +18,7 @@
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Carlos Santana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -27,6 +27,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Temp\\GitLab\\boletos\\Arquivos\\PackagedHavan": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,7 +65,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100-preview2-014569\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -74,7 +75,7 @@
         "projectUniqueName": "C:\\Temp\\Blazor-Architecture\\Blazor.Services.API\\Blazor.Services.API.csproj",
         "projectName": "Blazor.Services.API",
         "projectPath": "C:\\Temp\\Blazor-Architecture\\Blazor.Services.API\\Blazor.Services.API.csproj",
-        "packagesPath": "C:\\Users\\Carlos Santana\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
         "outputPath": "C:\\Temp\\Blazor-Architecture\\Blazor.Services.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -82,7 +83,7 @@
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Carlos Santana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -91,6 +92,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Temp\\GitLab\\boletos\\Arquivos\\PackagedHavan": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -148,6 +150,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -156,7 +176,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100-preview2-014569\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -166,7 +186,7 @@
         "projectUniqueName": "C:\\Temp\\Blazor-Architecture\\Blazor.UI\\Blazor.UI.Client.csproj",
         "projectName": "Blazor.UI.Client",
         "projectPath": "C:\\Temp\\Blazor-Architecture\\Blazor.UI\\Blazor.UI.Client.csproj",
-        "packagesPath": "C:\\Users\\Carlos Santana\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
         "outputPath": "C:\\Temp\\Blazor-Architecture\\Blazor.UI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -174,7 +194,7 @@
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Carlos Santana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -183,6 +203,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Temp\\GitLab\\boletos\\Arquivos\\PackagedHavan": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -246,7 +267,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100-preview2-014569\\RuntimeIdentifierGraph.json"
         }
       }
     }
