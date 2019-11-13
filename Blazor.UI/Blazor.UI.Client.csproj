@@ -46,7 +46,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\scripts\luna.js" />
     <None Include="wwwroot\styles\pe-icons\Pe-icon-7-stroke.svg" />
     <None Include="wwwroot\styles\stroke-icons\stroke.svg" />
     <None Include="wwwroot\vendor\bootstrap3-typeahead\bootstrap3-typeahead.min.js" />

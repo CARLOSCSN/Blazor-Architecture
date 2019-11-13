@@ -1,3 +1,21 @@
+@import url('../css/open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
 .btn:active,
 .btn.active {
   box-shadow: none;
@@ -480,9 +498,9 @@ fieldset[disabled] .btn-danger.focus {
 .typeahead.dropdown-menu li.active a strong {
   color: #f6a821;
 }
-.content > div {
+/*.content > div {
   opacity: 0;
-}
+}*/
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -1071,7 +1089,7 @@ img.image-xl {
   height: 60px;
   padding: 20px 25px;
   font-weight: 400;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   color: #FFFFFF;
 }
 .navbar-default .navbar-brand {

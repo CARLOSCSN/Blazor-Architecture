@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>Blazor.UI</title>
     <base href="/" />
-    <!--<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />-->
-    <!--<link href="css/site.css" rel="stylesheet" />-->
 
-    <!-- Vendor styles -->
+    <!-- styles -->
     <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
     <link rel="stylesheet" href="vendor/animate.css/animate.css" />
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css" />
@@ -22,20 +20,62 @@
 </head>
 <body>
     <app>Loading...</app>
-
     <script src="_framework/blazor.webassembly.js"></script>
 
-    <!-- Vendor scripts -->
-    <script src="vendor/pacejs/pace.min.js"></script>
+    <!-- scripts -->
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/toastr/toastr.min.js"></script>
+
+    <!--<script src="vendor/toastr/toastr.min.js"></script>
     <script src="vendor/sparkline/index.js"></script>
     <script src="vendor/flot/jquery.flot.min.js"></script>
     <script src="vendor/flot/jquery.flot.resize.min.js"></script>
-    <script src="vendor/flot/jquery.flot.spline.js"></script>
+    <script src="vendor/flot/jquery.flot.spline.js"></script>-->
 
-    <!-- App scripts -->
-    <script src="scripts/luna.js"></script>
+    <script>
+
+        setTimeout(function () {
+
+            // Handle minimalize left menu
+            $('.left-nav-toggle a').on('click', function (event) {
+                event.preventDefault();
+                $("body").toggleClass("nav-toggle");
+            });
+
+            // Hide all open sub nav menu list
+            $('.nav-second').on('show.bs.collapse', function () {
+                $('.nav-second.in').collapse('hide');
+            });
+
+            // Handle panel toggle
+            $('.panel-toggle').on('click', function (event) {
+                event.preventDefault();
+                var hpanel = $(event.target).closest('div.panel');
+                var icon = $(event.target).closest('i');
+                var body = hpanel.find('div.panel-body');
+                var footer = hpanel.find('div.panel-footer');
+                body.slideToggle(300);
+                footer.slideToggle(200);
+
+                // Toggle icon from up to down
+                icon.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
+                hpanel.toggleClass('').toggleClass('panel-collapse');
+                setTimeout(function () {
+                    hpanel.resize();
+                    hpanel.find('[id^=map-]').resize();
+                }, 50);
+            });
+
+            // Handle panel close
+            $('.panel-close').on('click', function (event) {
+                event.preventDefault();
+                var hpanel = $(event.target).closest('div.panel');
+                hpanel.remove();
+            });
+
+        }, 5000);
+
+    </script>
+
 </body>
 </html>
