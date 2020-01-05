@@ -1,12 +1,4 @@
-﻿@*<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">BlazorWithIdentity</a>
-    <button class="navbar-toggler" @onclick="@ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-</div>*@
-
-
-<!-- Navigation-->
+﻿<!-- Navigation-->
 <aside class="navigation">
     <nav>
         <ul class="nav luna-nav">
@@ -31,14 +23,6 @@
 <!-- End navigation-->
 
 
-
 @functions {
-    bool collapseNavMenu = true;
 
-    string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
 }

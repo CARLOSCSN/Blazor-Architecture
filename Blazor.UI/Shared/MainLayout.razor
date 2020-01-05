@@ -2,27 +2,20 @@
 @inject NavigationManager navigationManager
 @inject IdentityAuthenticationStateProvider authStateProvider
 
-    <div class="main">
+<div class="main @NavMenuCssClass">
 
     <!-- Header-->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <div id="mobile-menu">
-                    <div class="left-nav-toggle">
-                        <a href="#">
-                            <i class="stroke-hamburgermenu"></i>
-                        </a>
-                    </div>
-                </div>
                 <a class="navbar-brand" href="index.html">
-                    PARALELAS
-                    <span>licitações</span>
+                    Empresa
+                    <br><span>Atividade</span>
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="left-nav-toggle">
-                    <a href="">
+                    <a href=""  @onclick="@ToggleNavMenu">
                         <i class="stroke-hamburgermenu"></i>
                     </a>
                 </div>
@@ -55,20 +48,21 @@
     </nav>
     <!-- End header-->
 
+    <!-- Nav -->
+    <NavMenu />
 
-        <!-- Nav -->
-        <NavMenu />
-
-        <!-- Body -->
-        <div class="content">
-            @Body
-        </div>
+    <!-- Body -->
+    <div class="content">
+        @Body
     </div>
+</div>
 
 @functions{
 
     [CascadingParameter]
     Task<AuthenticationState> AuthenticationState { get; set; }
+    bool collapseNavMenu = false;
+    string NavMenuCssClass => collapseNavMenu ? "nav-toggle" : null;
 
     protected override async Task OnParametersSetAsync()
     {
@@ -82,5 +76,10 @@
     {
         await authStateProvider.Logout();
         navigationManager.NavigateTo("/login");
+    }
+
+    void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
     }
 }
