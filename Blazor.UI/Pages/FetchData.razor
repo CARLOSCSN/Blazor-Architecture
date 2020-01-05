@@ -42,62 +42,72 @@ else
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-body">
-                <div class="text-left">
+
+            <div class="panel panel-filled">
+                <div class="panel-heading">
+                    <div class="panel-tools">
+                        <a class="panel-close" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    </div>
                     <h4 class="modal-title">Cadastro de Nota Fiscal</h4>
                 </div>
-                <br /><br />
-                <form>
-                    <div class="row">
-                        <div class="form-group">
-                            <div class="col-lg-4">
-                                <label for="NotaFiscal">N.F</label>
-                                <input type="text" class="form-control" id="NotaFiscal" name="NotaFiscal" placeholder="Nota Fiscal">
-                            </div>
-                            <div class="col-lg-4">
-                                <label for="DataEmissao">Data</label>
-                                <input type="text" class="form-control" id="DataEmissao" name="DataEmissao" placeholder="Data Emissão">
-                            </div>
-                            <div class="col-lg-4">
-                                <label for="Cliente">Cliente</label>
-                                <input type="text" class="form-control" id="Cliente" name="Cliente" placeholder="Cliente">
-                            </div>
-                        </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                        <div class="form-group">
-                            <div class="col-lg-4">
-                                <label for="Descricao">Descrição</label>
-                                <input type="text" class="form-control" id="Descricao" name="Descricao" placeholder="Descrição">
-                            </div>
-                            <div class="col-lg-4">
-                                <label for="ValorCompra">Valor de Compra</label>
-                                <input type="text" class="form-control" id="ValorCompra" name="ValorCompra" placeholder="Valor de Compra">
-                            </div>
-                            <div class="col-lg-4">
-                                <label for="Imposto">Imposto</label>
-                                <input type="text" class="form-control" id="Imposto" name="Imposto" placeholder="Imposto">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label> 
-                            <input type="checkbox"> Ativo 
-                        </label>
-                    </div>
+                <div class="panel-body">
 
-                    <div class="pull-right">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-accent">Salvar</button>
-                    </div>
-                    <br />
-                </form>
+                    <form>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-lg-4">
+                                    <label for="NotaFiscal">N.F</label>
+                                    <input type="text" class="form-control" id="NotaFiscal" name="NotaFiscal" placeholder="Nota Fiscal">
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="DataEmissao">Data</label>
+                                    <input type="text" class="form-control" id="DataEmissao" name="DataEmissao" placeholder="Data Emissão">
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="Cliente">Cliente</label>
+                                    <input type="text" class="form-control" id="Cliente" name="Cliente" placeholder="Cliente">
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-lg-4">
+                                    <label for="Descricao">Descrição</label>
+                                    <input type="text" class="form-control" id="Descricao" name="Descricao" placeholder="Descrição">
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="ValorCompra">Valor de Compra</label>
+                                    <input type="text" class="form-control" id="ValorCompra" name="ValorCompra" placeholder="Valor de Compra">
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="Imposto">Imposto</label>
+                                    <input type="text" class="form-control" id="Imposto" name="Imposto" placeholder="Imposto">
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-lg-4">
+                                    <label>
+                                        <input type="checkbox"> Ativo
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-accent">Salvar</button>
+                        </div>
+                        <br />
+                    </form>
+                </div>
             </div>
+
         </div>
     </div>
 </div>
-
 
 @code {
     WeatherForecastViewModel[] forecasts;

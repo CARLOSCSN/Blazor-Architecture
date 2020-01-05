@@ -1244,6 +1244,7 @@ img.image-xl {
   -ms-transform: rotate(90deg);
 }
 .panel {
+  margin-bottom: 0px!important;
   background-color: transparent;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
