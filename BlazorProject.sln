@@ -18,9 +18,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{A4EF087C-F110-4D1F-A2E4-41AD9FA32743}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Data", "5.1 - Data", "{5904009E-9948-4F69-A273-90D868EAF11B}"
-	ProjectSection(SolutionItems) = preProject
-		Blazor.Services.API\Data\ApplicationDbContext.cs = Blazor.Services.API\Data\ApplicationDbContext.cs
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - CrossCutting", "5.2 - CrossCutting", "{05FE3A81-620B-4107-8AA6-7BBF6CAD6407}"
 EndProject
