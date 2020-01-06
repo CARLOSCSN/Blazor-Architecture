@@ -110,19 +110,9 @@ namespace Blazor.Services.API
 
             app.UseClientSideBlazorFiles<UI.Client.Startup>();
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
             app.UseHttpsRedirection();
 
             app.UseCors("CorsPolicy");
-
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllers();
-            //});
 
             app.UseRouting();
             app.UseAuthentication();

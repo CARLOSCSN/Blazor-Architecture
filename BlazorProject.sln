@@ -18,6 +18,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{A4EF087C-F110-4D1F-A2E4-41AD9FA32743}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Data", "5.1 - Data", "{5904009E-9948-4F69-A273-90D868EAF11B}"
+	ProjectSection(SolutionItems) = preProject
+		Blazor.Services.API\Data\ApplicationDbContext.cs = Blazor.Services.API\Data\ApplicationDbContext.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - CrossCutting", "5.2 - CrossCutting", "{05FE3A81-620B-4107-8AA6-7BBF6CAD6407}"
 EndProject
@@ -26,6 +29,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.Services.API", "Blazor.Services.API\Blazor.Services.API.csproj", "{95FC47FF-B1F4-4C21-B569-DCF49DC04230}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.Infra.CrossCutting.SharedUI", "Blazor.Infra.CrossCutting.SharedUI\Blazor.Infra.CrossCutting.SharedUI.csproj", "{5A855219-3C8A-454A-9FAE-6DBC8EB33C0E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.API", "Blazor.API\Blazor.API.csproj", "{716ECB80-CB70-484B-805A-13E693448FDC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.Domain", "Blazor.Domain\Blazor.Domain.csproj", "{59FFD4DC-F22E-4B6D-B861-39C94613B65C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.DataEFCore", "Blazor.DataEFCore\Blazor.DataEFCore.csproj", "{C0BB2A5C-4544-4E2E-B726-5531283628AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +54,18 @@ Global
 		{5A855219-3C8A-454A-9FAE-6DBC8EB33C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A855219-3C8A-454A-9FAE-6DBC8EB33C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A855219-3C8A-454A-9FAE-6DBC8EB33C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{716ECB80-CB70-484B-805A-13E693448FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{716ECB80-CB70-484B-805A-13E693448FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{716ECB80-CB70-484B-805A-13E693448FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{716ECB80-CB70-484B-805A-13E693448FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59FFD4DC-F22E-4B6D-B861-39C94613B65C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59FFD4DC-F22E-4B6D-B861-39C94613B65C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59FFD4DC-F22E-4B6D-B861-39C94613B65C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59FFD4DC-F22E-4B6D-B861-39C94613B65C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0BB2A5C-4544-4E2E-B726-5531283628AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0BB2A5C-4544-4E2E-B726-5531283628AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0BB2A5C-4544-4E2E-B726-5531283628AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0BB2A5C-4544-4E2E-B726-5531283628AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,26 +81,11 @@ Global
 		{16892FB8-85F8-4EEB-90DB-0DF4B737D245} = {FCEFDF52-0012-4334-B638-0561546B3425}
 		{95FC47FF-B1F4-4C21-B569-DCF49DC04230} = {7FE9FB42-56FE-46D4-A32A-C6A585609D5A}
 		{5A855219-3C8A-454A-9FAE-6DBC8EB33C0E} = {05FE3A81-620B-4107-8AA6-7BBF6CAD6407}
+		{716ECB80-CB70-484B-805A-13E693448FDC} = {7FE9FB42-56FE-46D4-A32A-C6A585609D5A}
+		{59FFD4DC-F22E-4B6D-B861-39C94613B65C} = {289F39AA-F5A4-4EBB-B0AB-0F34E1D4A409}
+		{C0BB2A5C-4544-4E2E-B726-5531283628AF} = {5904009E-9948-4F69-A273-90D868EAF11B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {593F827C-E0FC-425D-95C0-1059EE1F9FD2}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://dev.azure.com/carlos-santana
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Blazor.Infra.CrossCutting.SharedUI\\Blazor.Infra.CrossCutting.SharedUI.csproj
-		SccProjectTopLevelParentUniqueName1 = BlazorProject.sln
-		SccProjectName1 = Blazor.Infra.CrossCutting.SharedUI
-		SccLocalPath1 = Blazor.Infra.CrossCutting.SharedUI
-		SccProjectUniqueName2 = Blazor.Services.API\\Blazor.Services.API.csproj
-		SccProjectTopLevelParentUniqueName2 = BlazorProject.sln
-		SccProjectName2 = Blazor.Services.API
-		SccLocalPath2 = Blazor.Services.API
-		SccProjectUniqueName3 = Blazor.UI\\Blazor.UI.Client.csproj
-		SccProjectTopLevelParentUniqueName3 = BlazorProject.sln
-		SccProjectName3 = Blazor.UI
-		SccLocalPath3 = Blazor.UI
 	EndGlobalSection
 EndGlobal

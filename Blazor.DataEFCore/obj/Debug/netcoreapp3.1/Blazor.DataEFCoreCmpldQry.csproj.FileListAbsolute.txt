@@ -1,0 +1,11 @@
+C:\Temp\Blazor-Architecture\Blazor.DataEFCoreCmpldQry\bin\Debug\netcoreapp3.1\Blazor.DataEFCoreCmpldQry.deps.json
+C:\Temp\Blazor-Architecture\Blazor.DataEFCoreCmpldQry\bin\Debug\netcoreapp3.1\Blazor.DataEFCoreCmpldQry.dll
+C:\Temp\Blazor-Architecture\Blazor.DataEFCoreCmpldQry\bin\Debug\netcoreapp3.1\Blazor.DataEFCoreCmpldQry.pdb
+C:\Temp\Blazor-Architecture\Blazor.DataEFCoreCmpldQry\bin\Debug\netcoreapp3.1\Blazor.Domain.dll
+C:\Temp\Blazor-Architecture\Blazor.DataEFCoreCmpldQry\bin\Debug\netcoreapp3.1\Blazor.Domain.pdb
+C:\Temp\Blazor-Architecture\Blazor.DataEFCoreCmpldQry\obj\Debug\netcoreapp3.1\Blazor.DataEFCoreCmpldQry.csprojAssemblyReference.cache
+C:\Temp\Blazor-Architecture\Blazor.DataEFCoreCmpldQry\obj\Debug\netcoreapp3.1\Blazor.DataEFCoreCmpldQry.AssemblyInfoInputs.cache
+C:\Temp\Blazor-Architecture\Blazor.DataEFCoreCmpldQry\obj\Debug\netcoreapp3.1\Blazor.DataEFCoreCmpldQry.AssemblyInfo.cs
+C:\Temp\Blazor-Architecture\Blazor.DataEFCoreCmpldQry\obj\Debug\netcoreapp3.1\Blazor.DataEFCoreCmpldQry.csproj.CopyComplete
+C:\Temp\Blazor-Architecture\Blazor.DataEFCoreCmpldQry\obj\Debug\netcoreapp3.1\Blazor.DataEFCoreCmpldQry.dll
+C:\Temp\Blazor-Architecture\Blazor.DataEFCoreCmpldQry\obj\Debug\netcoreapp3.1\Blazor.DataEFCoreCmpldQry.pdb

@@ -1,0 +1,11 @@
+C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.MockData\bin\Debug\netcoreapp3.1\Chinook.MockData.deps.json
+C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.MockData\bin\Debug\netcoreapp3.1\Chinook.MockData.dll
+C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.MockData\bin\Debug\netcoreapp3.1\Chinook.MockData.pdb
+C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.MockData\bin\Debug\netcoreapp3.1\Chinook.Domain.dll
+C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.MockData\bin\Debug\netcoreapp3.1\Chinook.Domain.pdb
+C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.MockData\obj\Debug\netcoreapp3.1\Chinook.MockData.csprojAssemblyReference.cache
+C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.MockData\obj\Debug\netcoreapp3.1\Chinook.MockData.AssemblyInfoInputs.cache
+C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.MockData\obj\Debug\netcoreapp3.1\Chinook.MockData.AssemblyInfo.cs
+C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.MockData\obj\Debug\netcoreapp3.1\Chinook.MockData.csproj.CopyComplete
+C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.MockData\obj\Debug\netcoreapp3.1\Chinook.MockData.dll
+C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.MockData\obj\Debug\netcoreapp3.1\Chinook.MockData.pdb
