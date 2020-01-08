@@ -20,7 +20,8 @@ namespace Blazor.API.Configurations
                 .AddScoped<IInvoiceLineRepository, InvoiceLineRepository>()
                 .AddScoped<IMediaTypeRepository, MediaTypeRepository>()
                 .AddScoped<IPlaylistRepository, PlaylistRepository>()
-                .AddScoped<ITrackRepository, TrackRepository>();
+                .AddScoped<ITrackRepository, TrackRepository>()
+                .AddScoped<IWeatherForecastRepository, WeatherForecastRepository>();
 
             return services;
         }

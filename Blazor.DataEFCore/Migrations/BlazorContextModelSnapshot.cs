@@ -476,6 +476,100 @@ namespace Blazor.DataEFCore.Migrations
                     b.ToTable("Track");
                 });
 
+            modelBuilder.Entity("Blazor.Domain.Entities.WeatherForecast", b =>
+                {
+                    b.Property<int>("WeatherForecastId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Summary")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TemperatureC")
+                        .HasColumnType("int");
+
+                    b.HasKey("WeatherForecastId");
+
+                    b.ToTable("WeatherForecast");
+
+                    b.HasData(
+                        new
+                        {
+                            WeatherForecastId = 1,
+                            Date = new DateTime(2020, 1, 8, 2, 30, 0, 849, DateTimeKind.Local).AddTicks(5619),
+                            Summary = "Warm",
+                            TemperatureC = -10
+                        },
+                        new
+                        {
+                            WeatherForecastId = 2,
+                            Date = new DateTime(2020, 1, 11, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8541),
+                            Summary = "Very Hot",
+                            TemperatureC = 45
+                        },
+                        new
+                        {
+                            WeatherForecastId = 3,
+                            Date = new DateTime(2020, 1, 14, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8700),
+                            Summary = "Bracing",
+                            TemperatureC = 12
+                        },
+                        new
+                        {
+                            WeatherForecastId = 4,
+                            Date = new DateTime(2020, 1, 8, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8706),
+                            Summary = "Frying",
+                            TemperatureC = 50
+                        },
+                        new
+                        {
+                            WeatherForecastId = 5,
+                            Date = new DateTime(2020, 1, 22, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8708),
+                            Summary = "Cold",
+                            TemperatureC = 2
+                        },
+                        new
+                        {
+                            WeatherForecastId = 6,
+                            Date = new DateTime(2020, 3, 8, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8710),
+                            Summary = "Very Cold",
+                            TemperatureC = -5
+                        },
+                        new
+                        {
+                            WeatherForecastId = 7,
+                            Date = new DateTime(2020, 1, 8, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8712),
+                            Summary = "Hot",
+                            TemperatureC = 40
+                        },
+                        new
+                        {
+                            WeatherForecastId = 8,
+                            Date = new DateTime(2020, 2, 10, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8714),
+                            Summary = "Good",
+                            TemperatureC = 22
+                        },
+                        new
+                        {
+                            WeatherForecastId = 9,
+                            Date = new DateTime(2020, 3, 27, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8716),
+                            Summary = "Summer",
+                            TemperatureC = 35
+                        },
+                        new
+                        {
+                            WeatherForecastId = 10,
+                            Date = new DateTime(2020, 1, 8, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8718),
+                            Summary = "Warm",
+                            TemperatureC = 55
+                        });
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
                 {
                     b.Property<Guid>("Id")

@@ -15,6 +15,10 @@ namespace Blazor.DataEFCore
     {
         public static long InstanceCount;
 
+        /// <summary>
+        /// 01 - CompileQuery
+        /// </summary>
+
         private static readonly Func<BlazorContext, IEnumerable<Album>> _queryGetAllAlbums =
             EF.CompileQuery((BlazorContext db) => db.Album.AsNoTracking());
 
@@ -138,10 +142,21 @@ namespace Blazor.DataEFCore
             EF.CompileQuery((BlazorContext db, int id) =>
                 db.Track.Where(a => a.MediaTypeId == id).AsNoTracking());
 
+        private static readonly Func<BlazorContext, IEnumerable<WeatherForecast>> _queryGetAllWeatherForecast =
+            EF.CompileQuery((BlazorContext db) => db.WeatherForecast.AsNoTracking());
+
+        private static readonly Func<BlazorContext, int, IEnumerable<WeatherForecast>> _queryGetWeatherForecast =
+            EF.CompileQuery((BlazorContext db, int id) =>
+                db.WeatherForecast.Where(a => a.WeatherForecastId == id).AsNoTracking());
+
         public BlazorContext(DbContextOptions options) : base(options)
         {
             //Interlocked.Increment(ref InstanceCount);
         }
+
+        /// <summary>
+        /// 02 - DbSet
+        /// </summary>
 
         public virtual DbSet<Album> Album { get; set; }
         public virtual DbSet<Artist> Artist { get; set; }
@@ -154,6 +169,7 @@ namespace Blazor.DataEFCore
         public virtual DbSet<Playlist> Playlist { get; set; }
         public virtual DbSet<PlaylistTrack> PlaylistTrack { get; set; }
         public virtual DbSet<Track> Track { get; set; }
+        public virtual DbSet<WeatherForecast> WeatherForecast { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -170,7 +186,14 @@ namespace Blazor.DataEFCore
             new PlaylistConfiguration(modelBuilder.Entity<Playlist>());
             new PlaylistTrackConfiguration(modelBuilder.Entity<PlaylistTrack>());
             new TrackConfiguration(modelBuilder.Entity<Track>());
+            new WeatherForecastConfiguration(modelBuilder.Entity<WeatherForecast>());
         }
+
+
+        /// <summary>
+        /// 03 - Methods
+        /// </summary>
+        /// <returns></returns>
 
         public async Task<List<Album>> GetAllAlbumsAsync() => _queryGetAllAlbums(this).ToList();
 
@@ -253,5 +276,11 @@ namespace Blazor.DataEFCore
 
         public async Task<List<Track>> GetTracksByMediaTypeIdAsync(int id) =>
             _queryGetTracksByMediaTypeId(this, id).ToList();
+
+        public async Task<List<WeatherForecast>> GetAllWeatherForecastAsync() => 
+            _queryGetAllWeatherForecast(this).ToList();
+
+        public async Task<List<WeatherForecast>> GetWeatherForecastAsync(int id) => 
+            _queryGetWeatherForecast(this, id).ToList();
     }
 }
