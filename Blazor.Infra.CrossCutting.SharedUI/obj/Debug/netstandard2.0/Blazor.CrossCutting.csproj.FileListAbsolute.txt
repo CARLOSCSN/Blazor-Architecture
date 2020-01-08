@@ -1,0 +1,3 @@
+C:\Temp\Blazor-Architecture\Blazor.Infra.CrossCutting.SharedUI\obj\Debug\netstandard2.0\Blazor.CrossCutting.csprojAssemblyReference.cache
+C:\Temp\Blazor-Architecture\Blazor.Infra.CrossCutting.SharedUI\obj\Debug\netstandard2.0\Blazor.CrossCutting.AssemblyInfoInputs.cache
+C:\Temp\Blazor-Architecture\Blazor.Infra.CrossCutting.SharedUI\obj\Debug\netstandard2.0\Blazor.CrossCutting.AssemblyInfo.cs

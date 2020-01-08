@@ -14,6 +14,7 @@ using Blazor.DataEFCore.IdentityModel;
 using Microsoft.AspNetCore.ResponseCompression;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Hosting;
 
 namespace Blazor.API
 {
@@ -105,7 +106,7 @@ namespace Blazor.API
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostEnvironment env, ILoggerFactory loggerFactory)
         {
             using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
@@ -125,7 +126,7 @@ namespace Blazor.API
                 app.UseHsts();
             }
 
-            app.UseClientSideBlazorFiles<UI.Client.Startup>();
+            //app.UseClientSideBlazorFiles<UI.Client.Startup>();
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseCors("CorsPolicy");
@@ -140,7 +141,7 @@ namespace Blazor.API
 
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
-                endpoints.MapFallbackToClientSideBlazor<UI.Client.Startup>("index.html");
+                //endpoints.MapFallbackToClientSideBlazor<UI.Client.Startup>("index.html");
             });
 
             app.UseSwagger();

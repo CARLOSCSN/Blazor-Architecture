@@ -50,13 +50,6 @@ C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Blazor.DataEFCore
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Blazor.Infra.CrossCutting.SharedUI.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Blazor.Infra.CrossCutting.SharedUI.pdb
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Blazor.UI.Client.blazor.config
-C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Blazored.LocalStorage.dll
-C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Blazor.dll
-C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Blazor.HttpClient.dll
-C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Mono.WebAssembly.Interop.dll
-C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Blazor.UI.Client.dll
-C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Blazor.UI.Client.pdb
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

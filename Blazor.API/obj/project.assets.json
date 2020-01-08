@@ -2,19 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Blazored.LocalStorage/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Components": "3.0.0-rc1.19457.4",
-          "Microsoft.AspNetCore.Components.Web": "3.0.0-rc1.19457.4"
-        },
-        "compile": {
-          "lib/netstandard2.0/Blazored.LocalStorage.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Blazored.LocalStorage.dll": {}
-        }
-      },
       "Castle.Core/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -36,46 +23,6 @@
           "lib/netstandard1.5/Castle.Core.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Authorization/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "3.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "3.0.0",
-          "Microsoft.Extensions.Options": "3.0.0"
-        },
-        "compile": {
-          "lib/netcoreapp3.0/Microsoft.AspNetCore.Authorization.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/Microsoft.AspNetCore.Authorization.dll": {}
-        }
-      },
-      "Microsoft.AspNetCore.Blazor/3.0.0-preview9.19457.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Components.Web": "3.0.0-rc1.19457.4",
-          "Microsoft.Extensions.Options": "3.0.0-rc1.19456.10",
-          "Mono.WebAssembly.Interop": "3.0.0-rc1.19456.10"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Blazor.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Blazor.dll": {}
-        }
-      },
-      "Microsoft.AspNetCore.Blazor.HttpClient/3.0.0-preview9.19457.4": {
-        "type": "package",
-        "dependencies": {
-          "System.Text.Json": "4.6.0-rc1.19456.4"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Blazor.HttpClient.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Blazor.HttpClient.dll": {}
-        }
-      },
       "Microsoft.AspNetCore.Blazor.Server/3.1.0-preview4.19579.2": {
         "type": "package",
         "dependencies": {
@@ -91,66 +38,6 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
-      },
-      "Microsoft.AspNetCore.Components/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "3.0.0",
-          "Microsoft.AspNetCore.Components.Analyzers": "3.0.0",
-          "Microsoft.JSInterop": "3.0.0"
-        },
-        "compile": {
-          "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.dll": {}
-        }
-      },
-      "Microsoft.AspNetCore.Components.Analyzers/3.0.0": {
-        "type": "package",
-        "build": {
-          "build/netstandard2.0/_._": {}
-        }
-      },
-      "Microsoft.AspNetCore.Components.Authorization/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "3.0.0",
-          "Microsoft.AspNetCore.Components": "3.0.0"
-        },
-        "compile": {
-          "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.Authorization.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.Authorization.dll": {}
-        }
-      },
-      "Microsoft.AspNetCore.Components.Forms/3.0.0-rc1.19457.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Components": "3.0.0-rc1.19457.4"
-        },
-        "compile": {
-          "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.Forms.dll": {}
-        }
-      },
-      "Microsoft.AspNetCore.Components.Web/3.0.0-rc1.19457.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Components": "3.0.0-rc1.19457.4",
-          "Microsoft.AspNetCore.Components.Forms": "3.0.0-rc1.19457.4",
-          "Microsoft.Extensions.DependencyInjection": "3.0.0-rc1.19456.10",
-          "Microsoft.JSInterop": "3.0.0-rc1.19456.10"
-        },
-        "compile": {
-          "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.Web.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.Web.dll": {}
-        }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.0": {
         "type": "package",
@@ -197,15 +84,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {}
-        }
-      },
-      "Microsoft.AspNetCore.Metadata/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll": {}
         }
       },
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.1.0": {
@@ -572,15 +450,6 @@
           "lib/netcoreapp2.1/Microsoft.Identity.Client.dll": {}
         }
       },
-      "Microsoft.JSInterop/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.0/Microsoft.JSInterop.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/Microsoft.JSInterop.dll": {}
-        }
-      },
       "Microsoft.NETCore.Platforms/2.0.0": {
         "type": "package",
         "compile": {
@@ -665,18 +534,6 @@
           "lib/netstandard1.3/Mono.Cecil.Pdb.dll": {},
           "lib/netstandard1.3/Mono.Cecil.Rocks.dll": {},
           "lib/netstandard1.3/Mono.Cecil.dll": {}
-        }
-      },
-      "Mono.WebAssembly.Interop/3.0.0-rc1.19456.10": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.JSInterop": "3.0.0-rc1.19456.10"
-        },
-        "compile": {
-          "lib/netstandard2.0/Mono.WebAssembly.Interop.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Mono.WebAssembly.Interop.dll": {}
         }
       },
       "NETStandard.Library/1.6.1": {
@@ -2257,15 +2114,6 @@
           "ref/netstandard1.3/System.Text.Encoding.Extensions.dll": {}
         }
       },
-      "System.Text.Json/4.6.0-rc1.19456.4": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.0/System.Text.Json.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/System.Text.Json.dll": {}
-        }
-      },
       "System.Text.RegularExpressions/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2471,39 +2319,10 @@
         "runtime": {
           "bin/placeholder/Blazor.Infra.CrossCutting.SharedUI.dll": {}
         }
-      },
-      "Blazor.UI.Client/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Blazor.Infra.CrossCutting.SharedUI": "1.0.0",
-          "Blazored.LocalStorage": "2.1.0",
-          "Microsoft.AspNetCore.Blazor": "3.0.0-preview9.19457.4",
-          "Microsoft.AspNetCore.Blazor.HttpClient": "3.0.0-preview9.19457.4",
-          "Microsoft.AspNetCore.Components.Authorization": "3.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Blazor.UI.Client.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Blazor.UI.Client.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "Blazored.LocalStorage/2.1.0": {
-      "sha512": "+V8+n4ky0O6WIUGhU4ugpjZzQHsSQDjbIhwnAO7GtVjW3lliAC7lsWTa2AoITuhJyIuByX1U6WESOQztef1qcw==",
-      "type": "package",
-      "path": "blazored.localstorage/2.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "blazored.localstorage.2.1.0.nupkg.sha512",
-        "blazored.localstorage.nuspec",
-        "lib/netstandard2.0/Blazored.LocalStorage.dll"
-      ]
-    },
     "Castle.Core/4.4.0": {
       "sha512": "b5rRL5zeaau1y/5hIbI+6mGw3cwun16YjkHZnV9RRT5UyUIFsgLmNXJ0YnIN9p8Hw7K7AbG1q1UclQVU3DinAQ==",
       "type": "package",
@@ -2529,47 +2348,6 @@
         "readme.txt"
       ]
     },
-    "Microsoft.AspNetCore.Authorization/3.0.0": {
-      "sha512": "pylAplpaC5r3YIh2OR4RcYCSYoMc/sZwHyGeyT43IbSMN+TqvO05pAybaFcNxPeZ+HxDP2LcRO/R1XHSCB2GKw==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.authorization/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netcoreapp3.0/Microsoft.AspNetCore.Authorization.dll",
-        "lib/netcoreapp3.0/Microsoft.AspNetCore.Authorization.xml",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
-        "microsoft.aspnetcore.authorization.3.0.0.nupkg.sha512",
-        "microsoft.aspnetcore.authorization.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Blazor/3.0.0-preview9.19457.4": {
-      "sha512": "/aTobVM7reQ2El4TYrr9u4827WZurJYjzB52h8uLs4pj6N3593uXBpXx7CxgmdiZGZR65CEWNDKQWkfs0kHEpA==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.blazor/3.0.0-preview9.19457.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "THIRD-PARTY-NOTICES.txt",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Blazor.dll",
-        "microsoft.aspnetcore.blazor.3.0.0-preview9.19457.4.nupkg.sha512",
-        "microsoft.aspnetcore.blazor.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Blazor.HttpClient/3.0.0-preview9.19457.4": {
-      "sha512": "ud4PjvdQLu+/8svadsT2XKy4wCHy79nlGtoSO3ghd/rCMpCjYOwkWbj6uwBsqercYqeLzwRey9gsyTcezK64uA==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.blazor.httpclient/3.0.0-preview9.19457.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "THIRD-PARTY-NOTICES.txt",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Blazor.HttpClient.dll",
-        "microsoft.aspnetcore.blazor.httpclient.3.0.0-preview9.19457.4.nupkg.sha512",
-        "microsoft.aspnetcore.blazor.httpclient.nuspec"
-      ]
-    },
     "Microsoft.AspNetCore.Blazor.Server/3.1.0-preview4.19579.2": {
       "sha512": "UzmGMKCq03/q1S7yRsnVJMVFDQbjPovTmbXruPogriJnMHZXggc/N84aMfse3mjPFGUyTy7jHD56qlNrL2INYg==",
       "type": "package",
@@ -2582,84 +2360,6 @@
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Blazor.Server.dll",
         "microsoft.aspnetcore.blazor.server.3.1.0-preview4.19579.2.nupkg.sha512",
         "microsoft.aspnetcore.blazor.server.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Components/3.0.0": {
-      "sha512": "aH23865LRGx21C36zNY0xcWzYRvQIqXsUzcR/9BIH/UezsNV2eWOKQaCkQItzo2RG2ebRkWk6livhc0VLeEt7Q==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.components/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "THIRD-PARTY-NOTICES.txt",
-        "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.dll",
-        "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.xml",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.xml",
-        "microsoft.aspnetcore.components.3.0.0.nupkg.sha512",
-        "microsoft.aspnetcore.components.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Components.Analyzers/3.0.0": {
-      "sha512": "XqYERMlbxaVzcab5NVv1OyVh8KzEq8cSpfk2QSS6/9qtlkPEuNoDsEyPVlkIDktev66PhRhreq2W85r2siezmQ==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.components.analyzers/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "THIRD-PARTY-NOTICES.txt",
-        "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
-        "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.props",
-        "microsoft.aspnetcore.components.analyzers.3.0.0.nupkg.sha512",
-        "microsoft.aspnetcore.components.analyzers.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Components.Authorization/3.0.0": {
-      "sha512": "3SKnLzUh0zRcjDtXVgS7LoPP5b6ILofPURze2+4yP5CXekKcHSij3xpLJ5zzMBSk0Cju8VPbLYj7lcOaBpHg6w==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.components.authorization/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "THIRD-PARTY-NOTICES.txt",
-        "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.Authorization.dll",
-        "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.Authorization.xml",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Authorization.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Authorization.xml",
-        "microsoft.aspnetcore.components.authorization.3.0.0.nupkg.sha512",
-        "microsoft.aspnetcore.components.authorization.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Components.Forms/3.0.0-rc1.19457.4": {
-      "sha512": "G/woXIBLTdyceIBsw4kj/Id7JnbJdfdUSXYd4Jf1uQVusCMubR9YGEeNwJ4pkSEo8ujW3z1+5itoyW9Q7HH98Q==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.components.forms/3.0.0-rc1.19457.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "THIRD-PARTY-NOTICES.txt",
-        "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.Forms.dll",
-        "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.Forms.xml",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Forms.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Forms.xml",
-        "microsoft.aspnetcore.components.forms.3.0.0-rc1.19457.4.nupkg.sha512",
-        "microsoft.aspnetcore.components.forms.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Components.Web/3.0.0-rc1.19457.4": {
-      "sha512": "It1WRH+9Pcwp6XKJfQfllyJ9OoHhsRruvn1NT/nS8DFYShdspbnAGY1Lr2XSZRDqC7YBv/ugMG3O0evAr2iczA==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.components.web/3.0.0-rc1.19457.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "THIRD-PARTY-NOTICES.txt",
-        "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.Web.dll",
-        "lib/netcoreapp3.0/Microsoft.AspNetCore.Components.Web.xml",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Web.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Web.xml",
-        "microsoft.aspnetcore.components.web.3.0.0-rc1.19457.4.nupkg.sha512",
-        "microsoft.aspnetcore.components.web.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.0": {
@@ -2720,19 +2420,6 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.xml",
         "microsoft.aspnetcore.jsonpatch.3.1.0.nupkg.sha512",
         "microsoft.aspnetcore.jsonpatch.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Metadata/3.0.0": {
-      "sha512": "gXT2t+bocyv4aCwwfrATy8QMHHZTRqZ/grmUzC+76MA1M+S0TIXp+BK3dEkvADVkhsAdERb5DnjqQKX3G/uMYQ==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.metadata/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
-        "microsoft.aspnetcore.metadata.3.0.0.nupkg.sha512",
-        "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.1.0": {
@@ -3311,21 +2998,6 @@
         "ref/xamarinmac20/Microsoft.Identity.Client.xml"
       ]
     },
-    "Microsoft.JSInterop/3.0.0": {
-      "sha512": "1MsiDhjO/GUXYzvhjDGs+xvVNHxsGZ1mlpIAhdVEvmVP5GHiUGoy3DcJVRewmfasyfD3nfFnuLiteLZXlF1ajw==",
-      "type": "package",
-      "path": "microsoft.jsinterop/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netcoreapp3.0/Microsoft.JSInterop.dll",
-        "lib/netcoreapp3.0/Microsoft.JSInterop.xml",
-        "lib/netstandard2.0/Microsoft.JSInterop.dll",
-        "lib/netstandard2.0/Microsoft.JSInterop.xml",
-        "microsoft.jsinterop.3.0.0.nupkg.sha512",
-        "microsoft.jsinterop.nuspec"
-      ]
-    },
     "Microsoft.NETCore.Platforms/2.0.0": {
       "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
       "type": "package",
@@ -3472,19 +3144,6 @@
         "lib/netstandard1.3/Mono.Cecil.dll",
         "mono.cecil.0.10.1.nupkg.sha512",
         "mono.cecil.nuspec"
-      ]
-    },
-    "Mono.WebAssembly.Interop/3.0.0-rc1.19456.10": {
-      "sha512": "8h+VQQk1Rt4o1ubetGndw3/l2Wmp/u0AVX1F9QO7sTxUMzynYjxAfuKcEMjeSpD4cinEJSW1KWhWXvpZXx1Owg==",
-      "type": "package",
-      "path": "mono.webassembly.interop/3.0.0-rc1.19456.10",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Mono.WebAssembly.Interop.dll",
-        "lib/netstandard2.0/Mono.WebAssembly.Interop.xml",
-        "mono.webassembly.interop.3.0.0-rc1.19456.10.nupkg.sha512",
-        "mono.webassembly.interop.nuspec"
       ]
     },
     "NETStandard.Library/1.6.1": {
@@ -7342,27 +7001,6 @@
         "system.text.encoding.extensions.nuspec"
       ]
     },
-    "System.Text.Json/4.6.0-rc1.19456.4": {
-      "sha512": "FSi57lmytkZynDl5eL1VdTfO701YesWU1VRcnU1tyLmiPtb/kSvuBQQaxoF1Efuzazx4nDGVbnhAWUqyEiuIow==",
-      "type": "package",
-      "path": "system.text.json/4.6.0-rc1.19456.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.Text.Json.dll",
-        "lib/net461/System.Text.Json.xml",
-        "lib/netcoreapp3.0/System.Text.Json.dll",
-        "lib/netcoreapp3.0/System.Text.Json.xml",
-        "lib/netstandard2.0/System.Text.Json.dll",
-        "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.4.6.0-rc1.19456.4.nupkg.sha512",
-        "system.text.json.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "System.Text.RegularExpressions/4.3.0": {
       "sha512": "B32manupsDOG/c34wOqVrVX+xaBMQi16WUzZxNmjAzpTClUM1wFU7puxYOf5PrSwUgO7y2oh7iLesN6IW5xBAA==",
       "type": "package",
@@ -7916,18 +7554,13 @@
       "type": "project",
       "path": "../Blazor.Infra.CrossCutting.SharedUI/Blazor.Infra.CrossCutting.SharedUI.csproj",
       "msbuildProject": "../Blazor.Infra.CrossCutting.SharedUI/Blazor.Infra.CrossCutting.SharedUI.csproj"
-    },
-    "Blazor.UI.Client/1.0.0": {
-      "type": "project",
-      "path": "../Blazor.UI/Blazor.UI.Client.csproj",
-      "msbuildProject": "../Blazor.UI/Blazor.UI.Client.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Blazor.DataEFCore >= 1.0.0",
       "Blazor.Domain >= 1.0.0",
-      "Blazor.UI.Client >= 1.0.0",
+      "Blazor.Infra.CrossCutting.SharedUI >= 1.0.0",
       "Microsoft.AspNetCore.Blazor.Server >= 3.1.0-preview4.19579.2",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.0",
@@ -7979,8 +7612,8 @@
             "C:\\Temp\\Blazor-Architecture\\Blazor.Domain\\Blazor.Domain.csproj": {
               "projectPath": "C:\\Temp\\Blazor-Architecture\\Blazor.Domain\\Blazor.Domain.csproj"
             },
-            "C:\\Temp\\Blazor-Architecture\\Blazor.UI\\Blazor.UI.Client.csproj": {
-              "projectPath": "C:\\Temp\\Blazor-Architecture\\Blazor.UI\\Blazor.UI.Client.csproj"
+            "C:\\Temp\\Blazor-Architecture\\Blazor.Infra.CrossCutting.SharedUI\\Blazor.Infra.CrossCutting.SharedUI.csproj": {
+              "projectPath": "C:\\Temp\\Blazor-Architecture\\Blazor.Infra.CrossCutting.SharedUI\\Blazor.Infra.CrossCutting.SharedUI.csproj"
             }
           }
         }

@@ -47,6 +47,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Blazor.DataEFCore\Blazor.DataEFCore.csproj" />
     <ProjectReference Include="..\Blazor.Domain\Blazor.Domain.csproj" />
-    <ProjectReference Include="..\Blazor.UI\Blazor.UI.Client.csproj" />
+    <ProjectReference Include="..\Blazor.Infra.CrossCutting.SharedUI\Blazor.Infra.CrossCutting.SharedUI.csproj" />
   </ItemGroup>
 </Project>
