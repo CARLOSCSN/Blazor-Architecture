@@ -2867,3 +2867,7 @@ fieldset[disabled] .form-control {
   color: #ffffff !important;
   padding: 6px 12px !important;
 }
+
+.modal-max {
+    width: 1100px;
+}

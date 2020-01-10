@@ -40,7 +40,7 @@ else
 }
 
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-max">
         <div class="modal-content">
 
             <div class="panel panel-filled">
@@ -48,53 +48,104 @@ else
                     <div class="panel-tools">
                         <a class="panel-close" data-dismiss="modal"><i class="fa fa-times"></i></a>
                     </div>
-                    <h4 class="modal-title">Cadastro de Nota Fiscal</h4>
+                    <h4 class="modal-title">Cadastro de Venda</h4>
                 </div>
+                <br />
                 <div class="panel-body">
 
                     <form>
                         <div class="row">
                             <div class="form-group">
-                                <div class="col-lg-4">
+                                <div class="col-lg-2">
                                     <label for="NotaFiscal">N.F</label>
                                     <input type="text" class="form-control" id="NotaFiscal" name="NotaFiscal" placeholder="Nota Fiscal">
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-3">
                                     <label for="DataEmissao">Data</label>
                                     <input type="text" class="form-control" id="DataEmissao" name="DataEmissao" placeholder="Data Emissão">
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-5">
                                     <label for="Cliente">Cliente</label>
                                     <input type="text" class="form-control" id="Cliente" name="Cliente" placeholder="Cliente">
                                 </div>
+                                <div class="col-lg-2">
+                                    <label for="ValorCompra">Valor de Venda</label>
+                                    <input type="text" class="form-control" id="ValorVenda" name="ValorVenda" placeholder="Valor de Venda">
+                                </div>
                             </div>
                         </div>
                         <br />
                         <div class="row">
                             <div class="form-group">
-                                <div class="col-lg-4">
-                                    <label for="Descricao">Descrição</label>
-                                    <input type="text" class="form-control" id="Descricao" name="Descricao" placeholder="Descrição">
-                                </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-2">
                                     <label for="ValorCompra">Valor de Compra</label>
                                     <input type="text" class="form-control" id="ValorCompra" name="ValorCompra" placeholder="Valor de Compra">
                                 </div>
-                                <div class="col-lg-4">
-                                    <label for="Imposto">Imposto</label>
-                                    <input type="text" class="form-control" id="Imposto" name="Imposto" placeholder="Imposto">
+                                <div class="col-lg-1">
+                                    <label for="Imposto">% Imposto</label>
+                                    <input type="text" class="form-control" id="Imposto" name="Imposto" placeholder="% Imp.">
+                                </div>
+                                <div class="col-lg-2">
+                                    <label for="Frete1">Frete 01</label>
+                                    <input type="text" class="form-control" id="Frete1" name="Frete1" placeholder="Frete 01">
+                                </div>
+                                <div class="col-lg-2">
+                                    <label for="Frete2">Frete 02</label>
+                                    <input type="text" class="form-control" id="Frete2" name="Frete2" placeholder="Frete 02">
+                                </div>
+                                <div class="col-lg-1">
+                                    <label for="CustoOperacional">% C.O</label>
+                                    <input type="text" class="form-control" id="CustoOperacional" name="CustoOperacional" placeholder="% C.O">
+                                </div>
+                                <div class="col-lg-2">
+                                    <label for="OutrasDespesas">Outras Despesas</label>
+                                    <input type="text" class="form-control" id="OutrasDespesas" name="OutrasDespesas" placeholder="Outras Despesas">
+                                </div>
+                                <div class="col-lg-2">
+                                    <label for="CustoTotal">Custo Total</label>
+                                    <input type="text" class="form-control" id="CustoTotal" name="CustoTotal" placeholder="Custo Total">
                                 </div>
                             </div>
                         </div>
                         <br />
                         <div class="row">
                             <div class="form-group">
+                                <div class="col-lg-2">
+                                    <label for="PercentualComissao">% Comissão</label>
+                                    <input type="text" class="form-control" id="PercentualComissao" name="PercentualComissao" placeholder="% Comissão">
+                                </div>
+                                <div class="col-lg-2">
+                                    <label for="ValorComissao">Valor Comissão</label>
+                                    <input type="text" class="form-control" id="ValorComissao" name="ValorComissao" placeholder="Valor de Comissão">
+                                </div>
+                                <div class="col-lg-2">
+                                    <label for="PercentualLucro">% Lucro</label>
+                                    <input type="text" class="form-control" id="PercentualLucro" name="PercentualLucro" placeholder="% Lucro">
+                                </div>
+                                <div class="col-lg-2">
+                                    <label for="ValorLucro">Valor Lucro</label>
+                                    <input type="text" class="form-control" id="ValorLucro" name="ValorLucro" placeholder="Valor de Lucro">
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class=form-group>
+                                <div class="col-lg-12">
+                                    <label for="Descricao">Descrição</label>
+                                    <textarea class="form-control" rows="3" placeholder="Descrição"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            @*<div class="form-group">
                                 <div class="col-lg-4">
                                     <label>
                                         <input type="checkbox"> Ativo
                                     </label>
                                 </div>
-                            </div>
+                            </div>*@
                         </div>
 
                         <div class="pull-right">
