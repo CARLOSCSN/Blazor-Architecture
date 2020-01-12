@@ -88,7 +88,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -96,7 +96,7 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netstandard2.1": {
             "projectReferences": {
               "C:\\Temp\\Blazor-Architecture\\Blazor.Infra.CrossCutting.SharedUI\\Blazor.Infra.CrossCutting.SharedUI.csproj": {
                 "projectPath": "C:\\Temp\\Blazor-Architecture\\Blazor.Infra.CrossCutting.SharedUI\\Blazor.Infra.CrossCutting.SharedUI.csproj"
@@ -111,39 +111,33 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
+        "netstandard2.1": {
           "dependencies": {
             "Blazored.LocalStorage": {
               "target": "Package",
-              "version": "[2.1.0, )"
+              "version": "[2.1.1, )"
             },
             "Microsoft.AspNetCore.Blazor": {
               "target": "Package",
-              "version": "[3.0.0-preview9.19457.4, )"
+              "version": "[3.1.0-preview4.19579.2, )"
             },
             "Microsoft.AspNetCore.Blazor.Build": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.0-preview9.19457.4, )"
+              "version": "[3.1.0-preview4.19579.2, )"
             },
             "Microsoft.AspNetCore.Blazor.DevServer": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.0-preview9.19457.4, )"
+              "version": "[3.1.0-preview4.19579.2, )"
             },
             "Microsoft.AspNetCore.Blazor.HttpClient": {
               "target": "Package",
-              "version": "[3.0.0-preview9.19457.4, )"
+              "version": "[3.1.0-preview4.19579.2, )"
             },
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
-              "version": "[3.0.0, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
@@ -156,6 +150,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }

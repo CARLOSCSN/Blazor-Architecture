@@ -16,12 +16,23 @@ namespace Blazor.UI.Client
             services.AddScoped<IdentityAuthenticationStateProvider>();
             services.AddScoped<AuthenticationStateProvider>(s => s.GetRequiredService<IdentityAuthenticationStateProvider>());
             services.AddScoped<IAuthorizeApi, AuthorizeApi>();
+
+            //services.AddMatToaster(config =>
+            //{
+            //    config.Position = MatToastPosition.BottomRight;
+            //    config.PreventDuplicates = true;
+            //    config.NewestOnTop = true;
+            //    config.ShowCloseButton = true;
+            //    config.MaximumOpacity = 95;
+            //    config.VisibleStateDuration = 3000;
+            //});
         }
 
         public void Configure(IComponentsApplicationBuilder app)
         {
-            WebAssemblyHttpMessageHandler.DefaultCredentials = FetchCredentialsOption.Include;
+            WebAssemblyHttpMessageHandlerOptions.DefaultCredentials = FetchCredentialsOption.Include;
             app.AddComponent<App>("app");
+            //app.UseLoadingBar();
         }
     }
 }
