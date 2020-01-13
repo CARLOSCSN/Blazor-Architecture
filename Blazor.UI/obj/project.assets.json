@@ -15,6 +15,33 @@
           "lib/netstandard2.0/Blazored.LocalStorage.dll": {}
         }
       },
+      "MatBlazor/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Blazor.HttpClient": "3.1.0-preview4.19579.2",
+          "Microsoft.AspNetCore.Components": "3.1.0",
+          "Microsoft.AspNetCore.Components.Web": "3.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/MatBlazor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MatBlazor.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.1/Properties/launchSettings.json": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/MatBlazor.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/MatBlazor.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/3.1.0": {
         "type": "package",
         "dependencies": {
@@ -242,6 +269,15 @@
           "lib/netstandard2.1/Mono.WebAssembly.Interop.dll": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -331,9 +367,40 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
+      "Toolbelt.Blazor.HttpClientInterceptor/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Blazor": "3.1.0-preview3.19555.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Toolbelt.Blazor.HttpClientInterceptor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Toolbelt.Blazor.HttpClientInterceptor.dll": {}
+        }
+      },
+      "Toolbelt.Blazor.LoadingBar/9.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.0",
+          "Toolbelt.Blazor.HttpClientInterceptor": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Toolbelt.Blazor.LoadingBar.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Toolbelt.Blazor.LoadingBar.dll": {}
+        },
+        "build": {
+          "buildTransitive/Toolbelt.Blazor.LoadingBar.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Toolbelt.Blazor.LoadingBar.props": {}
+        }
+      },
       "Blazor.Infra.CrossCutting.SharedUI/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "System.ComponentModel.Annotations": "4.6.0"
         },
@@ -357,6 +424,26 @@
         "blazored.localstorage.2.1.1.nupkg.sha512",
         "blazored.localstorage.nuspec",
         "lib/netstandard2.0/Blazored.LocalStorage.dll"
+      ]
+    },
+    "MatBlazor/2.0.0": {
+      "sha512": "GbKba1QWDshScVSbDMYn59Qbm+ceelcYNyg8kCxoeYFEgTmffoeai+rOA9j/OH1Bv2S03pq4/iWCQV6i7cNDOw==",
+      "type": "package",
+      "path": "matblazor/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MatBlazor.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/MatBlazor.props",
+        "buildTransitive/MatBlazor.props",
+        "content/Properties/launchSettings.json",
+        "contentFiles/any/netstandard2.1/Properties/launchSettings.json",
+        "lib/netstandard2.1/MatBlazor.dll",
+        "lib/netstandard2.1/MatBlazor.xml",
+        "matblazor.2.0.0.nupkg.sha512",
+        "matblazor.nuspec",
+        "staticwebassets/dist/matBlazor.js"
       ]
     },
     "Microsoft.AspNetCore.Authorization/3.1.0": {
@@ -881,6 +968,37 @@
         "mono.webassembly.interop.nuspec"
       ]
     },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "System.Buffers/4.5.0": {
       "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
       "type": "package",
@@ -1169,6 +1287,38 @@
         "version.txt"
       ]
     },
+    "Toolbelt.Blazor.HttpClientInterceptor/6.0.0": {
+      "sha512": "YyuLmzxGWPMaBfhaXIxoT4Ao6g1JJ5R5ozX9xOjvH5S9tVyhKntr4Fjw3ZEalkwWioknLa63JzF0HyZCwWPOyg==",
+      "type": "package",
+      "path": "toolbelt.blazor.httpclientinterceptor/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Toolbelt.Blazor.HttpClientInterceptor.dll",
+        "lib/netstandard2.0/Toolbelt.Blazor.HttpClientInterceptor.xml",
+        "toolbelt.blazor.httpclientinterceptor.6.0.0.nupkg.sha512",
+        "toolbelt.blazor.httpclientinterceptor.nuspec"
+      ]
+    },
+    "Toolbelt.Blazor.LoadingBar/9.0.0.3": {
+      "sha512": "vNz17vP4VX9ZkxCoE1vCZLwQmgjpWpwiMpo4IK1xXOruTNS7C5nodMojqDUZyIWWieuxmxGCbioMwLe6yzd/rA==",
+      "type": "package",
+      "path": "toolbelt.blazor.loadingbar/9.0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "build/Toolbelt.Blazor.LoadingBar.props",
+        "buildMultiTargeting/Toolbelt.Blazor.LoadingBar.props",
+        "buildTransitive/Toolbelt.Blazor.LoadingBar.props",
+        "lib/netstandard2.0/Toolbelt.Blazor.LoadingBar.dll",
+        "lib/netstandard2.0/Toolbelt.Blazor.LoadingBar.xml",
+        "staticwebassets/script.min.js",
+        "staticwebassets/style.min.css",
+        "toolbelt.blazor.loadingbar.9.0.0.3.nupkg.sha512",
+        "toolbelt.blazor.loadingbar.nuspec"
+      ]
+    },
     "Blazor.Infra.CrossCutting.SharedUI/1.0.0": {
       "type": "project",
       "path": "../Blazor.Infra.CrossCutting.SharedUI/Blazor.Infra.CrossCutting.SharedUI.csproj",
@@ -1179,11 +1329,14 @@
     ".NETStandard,Version=v2.1": [
       "Blazor.Infra.CrossCutting.SharedUI >= 1.0.0",
       "Blazored.LocalStorage >= 2.1.1",
+      "MatBlazor >= 2.0.0",
       "Microsoft.AspNetCore.Blazor >= 3.1.0-preview4.19579.2",
       "Microsoft.AspNetCore.Blazor.Build >= 3.1.0-preview4.19579.2",
       "Microsoft.AspNetCore.Blazor.DevServer >= 3.1.0-preview4.19579.2",
       "Microsoft.AspNetCore.Blazor.HttpClient >= 3.1.0-preview4.19579.2",
-      "Microsoft.AspNetCore.Components.Authorization >= 3.1.0"
+      "Microsoft.AspNetCore.Components.Authorization >= 3.1.0",
+      "Newtonsoft.Json >= 12.0.3",
+      "Toolbelt.Blazor.LoadingBar >= 9.0.0.3"
     ]
   },
   "packageFolders": {
@@ -1239,6 +1392,10 @@
             "target": "Package",
             "version": "[2.1.1, )"
           },
+          "MatBlazor": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "Microsoft.AspNetCore.Blazor": {
             "target": "Package",
             "version": "[3.1.0-preview4.19579.2, )"
@@ -1260,6 +1417,14 @@
           "Microsoft.AspNetCore.Components.Authorization": {
             "target": "Package",
             "version": "[3.1.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.3, )"
+          },
+          "Toolbelt.Blazor.LoadingBar": {
+            "target": "Package",
+            "version": "[9.0.0.3, )"
           }
         },
         "imports": [

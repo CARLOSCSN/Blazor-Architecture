@@ -78,6 +78,11 @@ using Blazor.UI.Client.Services.Implementations;
 
 #line default
 #line hidden
+#line 18 "C:\Temp\Blazor-Architecture\Blazor.UI\_Imports.razor"
+using MatBlazor;
+
+#line default
+#line hidden
 #line 1 "C:\Temp\Blazor-Architecture\Blazor.UI\Pages\Index.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 

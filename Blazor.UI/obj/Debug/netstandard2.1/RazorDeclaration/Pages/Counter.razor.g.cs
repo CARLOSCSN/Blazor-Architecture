@@ -83,6 +83,11 @@ using Blazor.UI.Client.Services.Implementations;
 
 #line default
 #line hidden
+#line 18 "C:\Temp\Blazor-Architecture\Blazor.UI\_Imports.razor"
+using MatBlazor;
+
+#line default
+#line hidden
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {

@@ -2871,3 +2871,55 @@ fieldset[disabled] .form-control {
 .modal-max {
     width: 1100px;
 }
+
+/* MatBlazor temp */
+.mat-toast-body {
+    padding: 8px 5px;
+}
+
+.mat-toast-icon {
+    padding-left: 5px;
+}
+
+.mat-toast-close-button .material-icons {
+    color: white;
+}
+
+.mdc-table th {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+    font-size: 1.543rem !important;
+}
+
+.mdc-paginator {
+    color: white !important;
+}
+
+.mdc-icon-button:disabled {
+    color: white !important;
+}
+
+.mdc-select:not(.mdc-select--disabled) .mdc-select__native-control, .mdc-select:not(.mdc-select--disabled) .mdc-select__selected-text {
+    color: white !important;
+    background-color: #2d3038!important;
+}
+
+.mdc-select:not(.mdc-select--disabled) {
+    background-color: #2d3038 !important;
+}
+
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: #f6a821 !important;
+}
+
+:root {
+    --mdc-theme-primary: #f6a821;
+    --mdc-theme-secondary: #fbaf41;
+    --mdc-theme-on-primary: #495f90;
+    --mdc-theme-on-secondary: #ffe172;
+    --mdc-theme-text-primary: #ffffff;
+    --mdc-theme-text-secondary: #333;
+    --mdc-theme-text-on-primary: #001037;
+    --mdc-theme-text-on-secondary: #c48003;
+    --mdc-theme-surface: #263238;
+}

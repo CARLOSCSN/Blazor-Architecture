@@ -6,9 +6,11 @@
 
 <p>Este componente demonstra a busca de dados do servidor.</p>
 
-<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal1">
+@*<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal1">
     Large Modal
-</button>
+</button>*@
+
+<br /><br />
 
 @if (forecasts == null)
 {
@@ -16,27 +18,21 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <MatTable Class="mat-elevation-z5 table table-striped table-hover" Items="@forecasts" LoadInitialData="true" Striped="true" 
+              FilterByColumnName="Summary" DebounceMilliseconds="150" PageSize="10">
+        <MatTableHeader>
+            <th>Date</th>
+            <th style="min-width: 135px;">Temp. (C)</th>
+            <th style="min-width: 135px;">Temp. (F)</th>
+            <th>Summary</th>
+        </MatTableHeader>
+        <MatTableRow Context="forecast">
+            <td>@forecast.Date.ToShortDateString()</td>
+            <td>@forecast.TemperatureC</td>
+            <td>@forecast.TemperatureF</td>
+            <td>@forecast.Summary</td>
+        </MatTableRow>
+    </MatTable>
 
 }
 
