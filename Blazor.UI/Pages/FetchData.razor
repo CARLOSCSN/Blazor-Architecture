@@ -6,11 +6,7 @@
 
 <p>Este componente demonstra a busca de dados do servidor.</p>
 
-@*<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal1">
-    Large Modal
-</button>*@
-
-<br /><br />
+<br />
 
 @if (forecasts == null)
 {
@@ -18,19 +14,39 @@
 }
 else
 {
-    <MatTable Class="mat-elevation-z5 table table-striped table-hover" Items="@forecasts" LoadInitialData="true" Striped="true" 
-              FilterByColumnName="Summary" DebounceMilliseconds="150" PageSize="10">
+    <MatTable Class="mat-elevation-z5 table table-striped table-hover" 
+              Items="@forecasts" 
+              LoadInitialData="true" 
+              Striped="true" 
+              DebounceMilliseconds="150" 
+              PageSize="5" 
+              PageRecordCountLabel="Itens por página:" 
+              PageLabel="Página"
+              FilterByColumnName="Summary" 
+              SearchTermFieldLabel="Pesquisar">
         <MatTableHeader>
+            <th>
+                <div style="width:135px;">
+                    <MatButton class="btn btn-default" data-toggle="modal" data-target="#myModal1"
+                        Icon="playlist_add" 
+                        Label="Adicionar" 
+                        Raised="true">
+                    </MatButton>
+                </div>
+            </th>
+            <th>Summary</th>
             <th>Date</th>
             <th style="min-width: 135px;">Temp. (C)</th>
             <th style="min-width: 135px;">Temp. (F)</th>
-            <th>Summary</th>
         </MatTableHeader>
         <MatTableRow Context="forecast">
+            <td>
+                <MatIconButton Icon="delete"></MatIconButton>
+            </td>
+            <td>@forecast.Summary</td>
             <td>@forecast.Date.ToShortDateString()</td>
             <td>@forecast.TemperatureC</td>
             <td>@forecast.TemperatureF</td>
-            <td>@forecast.Summary</td>
         </MatTableRow>
     </MatTable>
 
@@ -137,12 +153,12 @@ else
                         <br />
                         <div class="row">
                             @*<div class="form-group">
-                                    <div class="col-lg-4">
-                                        <label>
-                                            <input type="checkbox"> Ativo
-                                        </label>
-                                    </div>
-                                </div>*@
+                                <div class="col-lg-4">
+                                    <label>
+                                        <input type="checkbox"> Ativo
+                                    </label>
+                                </div>
+                            </div>*@
                         </div>
 
                         <div class="pull-right">

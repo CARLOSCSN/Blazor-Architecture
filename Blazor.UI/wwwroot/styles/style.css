@@ -900,9 +900,9 @@ body {
   margin: 0;
 }
 .container-center {
-  max-width: 400px;
-  margin: 10% auto 0;
-  padding: 20px;
+    max-width: 400px;
+    margin: 10% 25% 0;
+    padding: 20px;
 }
 .container-center.sm {
   max-width: 200px;
@@ -2910,6 +2910,27 @@ fieldset[disabled] .form-control {
 
 .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
     color: #f6a821 !important;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) {
+    background-color: #343640 !important;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white!important;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__icon {
+    color: white!important;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: white!important;
+}
+
+.mdc-button--raised:not(:disabled), .mdc-button--unelevated:not(:disabled) {
+    background-color: #ffffff!important;
+    margin-left: 10px!important;
 }
 
 :root {
