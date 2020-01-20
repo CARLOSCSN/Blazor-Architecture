@@ -74,8 +74,10 @@ else
                                     <input type="text" class="form-control" id="NotaFiscal" name="NotaFiscal" placeholder="Nota Fiscal">
                                 </div>
                                 <div class="col-lg-3">
-                                    <label for="DataEmissao">Data</label>
-                                    <input type="text" class="form-control" id="DataEmissao" name="DataEmissao" placeholder="Data Emissão">
+                                    <p>
+                                        <label for="Data">Data</label>
+                                        <MatDatePicker Required="true" @bind-Value="Date1" AllowInput="false" Format="dd/MM/yyyy"></MatDatePicker>
+                                    </p>
                                 </div>
                                 <div class="col-lg-5">
                                     <label for="Cliente">Cliente</label>
@@ -174,6 +176,8 @@ else
 </div>
 
 @code {
+    public DateTime? Date1 { get; set; } = DateTime.Now.AddDays(-10);
+
     WeatherForecastViewModel[] forecasts;
 
     protected override async Task OnInitializedAsync()
