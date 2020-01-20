@@ -66,12 +66,18 @@ else
                 <br />
                 <div class="panel-body">
 
-                    <form>
+                    <EditForm Model="@Model" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+                        <div class="alert @StatusClass">@StatusMessage</div>
+
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-lg-2">
-                                    <label for="NotaFiscal">N.F</label>
-                                    <input type="text" class="form-control" id="NotaFiscal" name="NotaFiscal" placeholder="Nota Fiscal">
+                                    <label for="NotaFiscal">N.F: </label>
+                                    <InputText Id="NotaFiscal" Class="form-control" @bind-Value="@Model.Summary"></InputText>
+                                    <ValidationMessage For="@(() => Model.Summary)" />
                                 </div>
                                 <div class="col-lg-3">
                                     <p>
@@ -84,8 +90,9 @@ else
                                     </p>
                                 </div>
                                 <div class="col-lg-5">
-                                    <label for="Cliente">Cliente</label>
-                                    <input type="text" class="form-control" id="Cliente" name="Cliente" placeholder="Cliente">
+                                    <label for="Cliente">Cliente: </label>
+                                    <InputText Id="Cliente" Class="form-control" @bind-Value="@Model.Summary"></InputText>
+                                    <ValidationMessage For="@(() => Model.Summary)" />
                                 </div>
                                 <div class="col-lg-2">
                                     <label for="ValorCompra">Valor de Venda</label>
@@ -159,19 +166,20 @@ else
                         <br />
                         <div class="row">
                             @*<div class="form-group">
-                                    <div class="col-lg-4">
-                                        <label>
-                                            <input type="checkbox"> Ativo
-                                        </label>
-                                    </div>
-                                </div>*@
+                                <div class="col-lg-4">
+                                    <label>
+                                        <input type="checkbox"> Ativo
+                                    </label>
+                                </div>
+                            </div>*@
                         </div>
 
                         <div class="pull-right">
-                            <button type="button" class="btn btn-accent">Salvar</button>
+                            <button type="submit" class="btn btn-accent" disabled="@OkayDisabled">Salvar</button>
                         </div>
                         <br />
-                    </form>
+
+                    </EditForm>
                 </div>
             </div>
 
@@ -181,12 +189,56 @@ else
 
 @code {
     public DateTime? Date1 { get; set; } = DateTime.Now.AddDays(-10);
-
+    private string StatusMessage;
+    private string StatusClass;
+    private EditContext EditContext;
+    private WeatherForecastViewModel Model = new WeatherForecastViewModel();
+    protected string OkayDisabled { get; set; } = "disabled";
     WeatherForecastViewModel[] forecasts;
+
+    protected void HandleValidSubmit()
+    {
+        StatusClass = "alert-info";
+        StatusMessage = DateTime.Now + " Handle valid submit";
+    }
+
+    protected void HandleInvalidSubmit()
+    {
+        StatusClass = "alert-danger";
+        StatusMessage = DateTime.Now + " Handle invalid submit";
+    }
 
     protected override async Task OnInitializedAsync()
     {
         forecasts = await Http.GetJsonAsync<WeatherForecastViewModel[]>("https://localhost:44301/api/weatherforecast");
+        EditContext = new EditContext(Model);
+        EditContext.OnFieldChanged += EditContext_OnFieldChanged;
+
+        base.OnInitialized();
+    }
+
+    protected override void OnAfterRender(bool param)
+    {
+        base.OnAfterRender(true);
+
+        SetOkDisabledStatus();
+    }
+
+    private void EditContext_OnFieldChanged(object sender, FieldChangedEventArgs e)
+    {
+        SetOkDisabledStatus();
+    }
+
+    private void SetOkDisabledStatus()
+    {
+        if (EditContext.Validate())
+        {
+            OkayDisabled = null;
+        }
+        else
+        {
+            OkayDisabled = "disabled";
+        }
     }
 
 }
