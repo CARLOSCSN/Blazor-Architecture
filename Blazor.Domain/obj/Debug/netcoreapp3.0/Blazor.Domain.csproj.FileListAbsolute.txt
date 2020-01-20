@@ -1,0 +1,8 @@
+C:\Temp\Blazor-Architecture\Blazor.Domain\bin\Debug\netcoreapp3.0\Blazor.Domain.deps.json
+C:\Temp\Blazor-Architecture\Blazor.Domain\bin\Debug\netcoreapp3.0\Blazor.Domain.dll
+C:\Temp\Blazor-Architecture\Blazor.Domain\bin\Debug\netcoreapp3.0\Blazor.Domain.pdb
+C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.0\Blazor.Domain.csprojAssemblyReference.cache
+C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.0\Blazor.Domain.AssemblyInfoInputs.cache
+C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.0\Blazor.Domain.AssemblyInfo.cs
+C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.0\Blazor.Domain.dll
+C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.0\Blazor.Domain.pdb

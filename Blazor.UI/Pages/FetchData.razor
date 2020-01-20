@@ -14,23 +14,23 @@
 }
 else
 {
-    <MatTable Class="mat-elevation-z5 table table-striped table-hover" 
-              Items="@forecasts" 
-              LoadInitialData="true" 
-              Striped="true" 
-              DebounceMilliseconds="150" 
-              PageSize="5" 
-              PageRecordCountLabel="Itens por página:" 
+    <MatTable Class="mat-elevation-z5 table table-striped table-hover"
+              Items="@forecasts"
+              LoadInitialData="true"
+              Striped="true"
+              DebounceMilliseconds="150"
+              PageSize="5"
+              PageRecordCountLabel="Itens por página:"
               PageLabel="Página"
-              FilterByColumnName="Summary" 
+              FilterByColumnName="Summary"
               SearchTermFieldLabel="Pesquisar">
         <MatTableHeader>
             <th>
                 <div style="width:135px;">
                     <MatButton class="btn btn-default" data-toggle="modal" data-target="#myModal1"
-                        Icon="playlist_add" 
-                        Label="Adicionar" 
-                        Raised="true">
+                               Icon="playlist_add"
+                               Label="Adicionar"
+                               Raised="true">
                     </MatButton>
                 </div>
             </th>
@@ -76,7 +76,11 @@ else
                                 <div class="col-lg-3">
                                     <p>
                                         <label for="Data">Data</label>
-                                        <MatDatePicker Required="true" @bind-Value="Date1" AllowInput="false" Format="dd/MM/yyyy"></MatDatePicker>
+                                        <MatDatePicker Required="true"
+                                                       @bind-Value="Date1"
+                                                       AllowInput="false"
+                                                       Format="dd/MM/yyyy">
+                                        </MatDatePicker>
                                     </p>
                                 </div>
                                 <div class="col-lg-5">
@@ -155,12 +159,12 @@ else
                         <br />
                         <div class="row">
                             @*<div class="form-group">
-                                <div class="col-lg-4">
-                                    <label>
-                                        <input type="checkbox"> Ativo
-                                    </label>
-                                </div>
-                            </div>*@
+                                    <div class="col-lg-4">
+                                        <label>
+                                            <input type="checkbox"> Ativo
+                                        </label>
+                                    </div>
+                                </div>*@
                         </div>
 
                         <div class="pull-right">

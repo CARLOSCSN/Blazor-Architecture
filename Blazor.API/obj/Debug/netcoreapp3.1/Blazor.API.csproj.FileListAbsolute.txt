@@ -52,11 +52,11 @@ C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Blazor.Infra.Cros
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\Blazor.API.csprojAssemblyReference.cache
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\staticwebassets\Blazor.API.StaticWebAssets.Manifest.cache
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\staticwebassets\Blazor.API.StaticWebAssets.xml
+C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\Blazor.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\Blazor.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\Blazor.API.AssemblyInfoInputs.cache
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\Blazor.API.AssemblyInfo.cs
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\Blazor.API.RazorTargetAssemblyInfo.cache
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\Blazor.API.csproj.CopyComplete
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\Blazor.API.dll
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\Blazor.API.pdb
-C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\Blazor.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\Blazor.API.MvcApplicationPartsAssemblyInfo.cache
