@@ -1,5 +1,5 @@
-﻿using Blazor.DataEFCore.IdentityModel;
-using Blazor.Infra.CrossCutting.SharedUI.ViewModel;
+﻿using DataEFCore.IdentityModel;
+using Common.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Blazor.API.Controllers
+namespace API.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]

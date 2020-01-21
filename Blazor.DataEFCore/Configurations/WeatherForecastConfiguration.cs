@@ -1,9 +1,9 @@
-﻿using Blazor.Domain.Entities;
+﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace Blazor.DataEFCore.Configurations
+namespace DataEFCore.Configurations
 {
     public class WeatherForecastConfiguration
     {

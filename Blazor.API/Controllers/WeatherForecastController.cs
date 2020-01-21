@@ -6,12 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 using Newtonsoft.Json;
 using System.Diagnostics;
-using Blazor.Domain.Supervisor;
-using Blazor.Domain.ApiModels;
+using Domain.Supervisor;
+using Domain.ApiModels;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.Extensions.Logging;
 
-namespace Blazor.API.Controllers
+namespace API.Controllers
 {
     [Route("api/[controller]")]
     [EnableCors("CorsPolicy")]

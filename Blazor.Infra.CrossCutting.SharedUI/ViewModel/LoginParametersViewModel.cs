@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Blazor.Infra.CrossCutting.SharedUI.ViewModel
+namespace Common.ViewModel
 {
     public class LoginParametersViewModel
     {

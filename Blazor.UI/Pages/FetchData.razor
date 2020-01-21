@@ -1,5 +1,5 @@
 ﻿@page "/fetchdata"
-@using Blazor.Infra.CrossCutting.SharedUI.ViewModel
+@using Common.ViewModel
 @inject HttpClient Http
 
 <h1>Previsão do tempo</h1>
@@ -69,7 +69,7 @@ else
                     <EditForm Model="@Model" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
                         <div class="alert @StatusClass">@StatusMessage</div>
 
-                        <DataAnnotationsValidator />
+                        <FluentValidationValidator />
                         <ValidationSummary />
 
                         <div class="row">
@@ -166,12 +166,12 @@ else
                         <br />
                         <div class="row">
                             @*<div class="form-group">
-                                <div class="col-lg-4">
-                                    <label>
-                                        <input type="checkbox"> Ativo
-                                    </label>
-                                </div>
-                            </div>*@
+                                    <div class="col-lg-4">
+                                        <label>
+                                            <input type="checkbox"> Ativo
+                                        </label>
+                                    </div>
+                                </div>*@
                         </div>
 
                         <div class="pull-right">

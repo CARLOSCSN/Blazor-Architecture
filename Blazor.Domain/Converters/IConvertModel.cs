@@ -1,4 +1,4 @@
-﻿namespace Blazor.Domain.Converters
+﻿namespace Domain.Converters
 {
     public interface IConvertModel<TSource, TTarget>
     {

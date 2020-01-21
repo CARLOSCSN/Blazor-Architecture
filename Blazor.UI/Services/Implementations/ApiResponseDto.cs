@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Blazor.UI.Client.Services.Implementations
+namespace Client.Services.Implementations
 {
     [DataContract]
     public class ApiResponseDto

@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Blazor.Domain.Converters;
-using Blazor.Domain.Entities;
+using Domain.Converters;
+using Domain.Entities;
 using Newtonsoft.Json;
 
-namespace Blazor.Domain.ApiModels
+namespace Domain.ApiModels
 {
     public class PlaylistTrackApiModel : IConvertModel<PlaylistTrackApiModel, PlaylistTrack>
     {

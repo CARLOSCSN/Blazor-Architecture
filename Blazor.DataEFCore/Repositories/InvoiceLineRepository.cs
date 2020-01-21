@@ -2,11 +2,11 @@
 using System.Threading.Tasks;
 using System.Threading;
 using System.Collections.Generic;
-using Blazor.Domain.Repositories;
-using Blazor.Domain.Entities;
+using Domain.Repositories;
+using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Blazor.DataEFCore.Repositories
+namespace DataEFCore.Repositories
 {
     public class InvoiceLineRepository : IInvoiceLineRepository
     {

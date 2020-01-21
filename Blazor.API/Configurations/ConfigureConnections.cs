@@ -3,9 +3,9 @@ using System.Runtime.InteropServices;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Blazor.DataEFCore;
+using DataEFCore;
 
-namespace Blazor.API.Configurations
+namespace API.Configurations
 {
     public static class ConfigureConnections
     {

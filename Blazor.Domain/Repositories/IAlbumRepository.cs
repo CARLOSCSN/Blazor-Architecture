@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Blazor.Domain.Entities;
+using Domain.Entities;
 
-namespace Blazor.Domain.Repositories
+namespace Domain.Repositories
 {
     public interface IAlbumRepository : IDisposable
     {

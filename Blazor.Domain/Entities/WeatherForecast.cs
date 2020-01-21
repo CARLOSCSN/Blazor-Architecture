@@ -1,12 +1,12 @@
-﻿using Blazor.Domain.Converters;
-using Blazor.Domain.ApiModels;
+﻿using Domain.Converters;
+using Domain.ApiModels;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Newtonsoft.Json;
 using System;
 
-namespace Blazor.Domain.Entities
+namespace Domain.Entities
 {
     public sealed class WeatherForecast : IConvertModel<WeatherForecast, WeatherForecastApiModel>
     {

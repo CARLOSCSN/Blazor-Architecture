@@ -1,0 +1,13 @@
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\bin\Debug\netcoreapp3.1\DataEFCore.deps.json
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\bin\Debug\netcoreapp3.1\DataEFCore.runtimeconfig.json
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\bin\Debug\netcoreapp3.1\DataEFCore.runtimeconfig.dev.json
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\bin\Debug\netcoreapp3.1\DataEFCore.dll
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\bin\Debug\netcoreapp3.1\DataEFCore.pdb
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\obj\Debug\netcoreapp3.1\DataEFCore.csprojAssemblyReference.cache
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\obj\Debug\netcoreapp3.1\DataEFCore.AssemblyInfoInputs.cache
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\obj\Debug\netcoreapp3.1\DataEFCore.AssemblyInfo.cs
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\obj\Debug\netcoreapp3.1\DataEFCore.csproj.CopyComplete
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\obj\Debug\netcoreapp3.1\DataEFCore.dll
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\obj\Debug\netcoreapp3.1\DataEFCore.pdb

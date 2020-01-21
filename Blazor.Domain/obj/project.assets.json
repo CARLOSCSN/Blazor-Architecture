@@ -474,9 +474,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\Blazor-Architecture\\Blazor.Domain\\Blazor.Domain.csproj",
-      "projectName": "Blazor.Domain",
-      "projectPath": "C:\\Temp\\Blazor-Architecture\\Blazor.Domain\\Blazor.Domain.csproj",
+      "projectUniqueName": "C:\\Temp\\Blazor-Architecture\\Blazor.Domain\\Domain.csproj",
+      "projectName": "Domain",
+      "projectPath": "C:\\Temp\\Blazor-Architecture\\Blazor.Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
       "outputPath": "C:\\Temp\\Blazor-Architecture\\Blazor.Domain\\obj\\",
       "projectStyle": "PackageReference",

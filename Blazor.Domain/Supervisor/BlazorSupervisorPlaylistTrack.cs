@@ -1,4 +1,4 @@
-namespace Blazor.Domain.Supervisor
+namespace Domain.Supervisor
 {
     public partial class BlazorSupervisor
     {

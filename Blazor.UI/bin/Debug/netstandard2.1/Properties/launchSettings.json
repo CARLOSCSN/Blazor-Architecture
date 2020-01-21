@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Blazor.UI.Client": {
+    "Client": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

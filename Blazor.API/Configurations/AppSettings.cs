@@ -1,4 +1,4 @@
-﻿namespace Blazor.API.Configurations
+﻿namespace API.Configurations
 {
     public abstract class AppSettings
     {

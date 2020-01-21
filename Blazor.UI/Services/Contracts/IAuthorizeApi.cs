@@ -1,10 +1,10 @@
-﻿using Blazor.Infra.CrossCutting.SharedUI.ViewModel;
+﻿using Common.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Blazor.UI.Client.Services.Contracts
+namespace Client.Services.Contracts
 {
     public interface IAuthorizeApi
     {

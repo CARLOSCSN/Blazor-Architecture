@@ -2,11 +2,11 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Blazor.Domain.Entities;
-using Blazor.Domain.Repositories;
+using Domain.Entities;
+using Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace Blazor.DataEFCore.Repositories
+namespace DataEFCore.Repositories
 {
     /// <summary>
     /// The invoice repository.

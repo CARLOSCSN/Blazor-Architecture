@@ -1,5 +1,5 @@
 ﻿<linker>
-  <assembly fullname="Blazor.UI.Client">
+  <assembly fullname="Client">
     <type fullname="*" required="true" />
   </assembly>
 </linker>

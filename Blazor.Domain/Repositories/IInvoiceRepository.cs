@@ -1,10 +1,10 @@
-﻿using Blazor.Domain.Entities;
+﻿using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Blazor.Domain.Repositories
+namespace Domain.Repositories
 {
     public interface IInvoiceRepository : IDisposable
     {

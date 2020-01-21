@@ -1,7 +1,7 @@
-﻿using Blazor.Domain.Repositories;
+﻿using Domain.Repositories;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace Blazor.Domain.Supervisor
+namespace Domain.Supervisor
 {
     public partial class BlazorSupervisor : IBlazorSupervisor
     {

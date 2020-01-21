@@ -1,5 +1,5 @@
-using Blazor.UI.Client.Services.Contracts;
-using Blazor.UI.Client.Services.Implementations;
+using Client.Services.Contracts;
+using Client.Services.Implementations;
 
 using MatBlazor;
 
@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Toolbelt.Blazor.Extensions.DependencyInjection;
 
-namespace Blazor.UI.Client
+namespace Client
 {
     public class Startup
     {

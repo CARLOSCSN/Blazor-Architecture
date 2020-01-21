@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Blazor.API.Controllers
+namespace API.Controllers
 {
     public class HomeController : Controller
     {

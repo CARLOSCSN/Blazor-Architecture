@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Blazor.Infra.CrossCutting.SharedUI.ViewModel
+namespace Common.ViewModel
 {
     public class UserInfoViewModel
     {

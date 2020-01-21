@@ -1,6 +1,7 @@
-obj\Debug\netstandard2.1\blazor\linker\Blazor.Infra.CrossCutting.SharedUI.dll
-obj\Debug\netstandard2.1\blazor\linker\Blazor.UI.Client.dll
 obj\Debug\netstandard2.1\blazor\linker\Blazored.LocalStorage.dll
+obj\Debug\netstandard2.1\blazor\linker\Client.dll
+obj\Debug\netstandard2.1\blazor\linker\Common.dll
+obj\Debug\netstandard2.1\blazor\linker\FluentValidation.dll
 obj\Debug\netstandard2.1\blazor\linker\MatBlazor.dll
 obj\Debug\netstandard2.1\blazor\linker\Microsoft.AspNetCore.Authorization.dll
 obj\Debug\netstandard2.1\blazor\linker\Microsoft.AspNetCore.Blazor.dll
@@ -37,5 +38,5 @@ obj\Debug\netstandard2.1\blazor\linker\Toolbelt.Blazor.HttpClientInterceptor.dll
 obj\Debug\netstandard2.1\blazor\linker\Toolbelt.Blazor.LoadingBar.dll
 obj\Debug\netstandard2.1\blazor\linker\WebAssembly.Bindings.dll
 obj\Debug\netstandard2.1\blazor\linker\WebAssembly.Net.Http.dll
-obj\Debug\netstandard2.1\blazor\linker\Blazor.Infra.CrossCutting.SharedUI.pdb
-obj\Debug\netstandard2.1\blazor\linker\Blazor.UI.Client.pdb
+obj\Debug\netstandard2.1\blazor\linker\Client.pdb
+obj\Debug\netstandard2.1\blazor\linker\Common.pdb

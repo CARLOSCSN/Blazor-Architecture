@@ -1,8 +1,8 @@
-﻿using Blazor.Domain.Converters;
+﻿using Domain.Converters;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Blazor.Domain.Extensions
+namespace Domain.Extensions
 {
     public static class ConvertExtensions
     {

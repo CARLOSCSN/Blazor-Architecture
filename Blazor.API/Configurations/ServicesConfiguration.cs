@@ -1,11 +1,11 @@
-﻿using Blazor.DataEFCore.Repositories;
-using Blazor.Domain.Repositories;
-using Blazor.Domain.Supervisor;
+﻿using DataEFCore.Repositories;
+using Domain.Repositories;
+using Domain.Supervisor;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace Blazor.API.Configurations
+namespace API.Configurations
 {
     public static class ServicesConfiguration
     {

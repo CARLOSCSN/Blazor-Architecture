@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Blazor.Domain.ApiModels;
+using Domain.ApiModels;
 
-namespace Blazor.Domain.Supervisor
+namespace Domain.Supervisor
 {
     public interface IBlazorSupervisor
     {

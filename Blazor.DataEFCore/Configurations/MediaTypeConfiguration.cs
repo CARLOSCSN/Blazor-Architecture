@@ -1,7 +1,7 @@
-﻿using Blazor.Domain.Entities;
+﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Blazor.DataEFCore.Configurations
+namespace DataEFCore.Configurations
 {
     public class MediaTypeConfiguration
     {

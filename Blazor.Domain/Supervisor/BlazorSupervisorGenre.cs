@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Blazor.Domain.Extensions;
-using Blazor.Domain.ApiModels;
+using Domain.Extensions;
+using Domain.ApiModels;
 using System.Linq;
-using Blazor.Domain.Entities;
+using Domain.Entities;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace Blazor.Domain.Supervisor
+namespace Domain.Supervisor
 {
     public partial class BlazorSupervisor
     {

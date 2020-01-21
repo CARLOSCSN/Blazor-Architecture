@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Blazor.Domain.Entities;
+using Domain.Entities;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Blazor.Domain.Repositories
+namespace Domain.Repositories
 {
     public interface IArtistRepository : IDisposable
     {

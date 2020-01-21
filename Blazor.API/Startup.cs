@@ -3,20 +3,20 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Blazor.API.Configurations;
+using API.Configurations;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.AspNetCore.Identity;
 using System;
 using Microsoft.EntityFrameworkCore;
-using Blazor.DataEFCore;
-using Blazor.DataEFCore.IdentityModel;
+using DataEFCore;
+using DataEFCore.IdentityModel;
 using Microsoft.AspNetCore.ResponseCompression;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 
-namespace Blazor.API
+namespace API
 {
     public class Startup
     {

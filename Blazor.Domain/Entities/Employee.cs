@@ -1,12 +1,12 @@
-﻿using Blazor.Domain.Converters;
-using Blazor.Domain.ApiModels;
+﻿using Domain.Converters;
+using Domain.ApiModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Newtonsoft.Json;
 
-namespace Blazor.Domain.Entities
+namespace Domain.Entities
 {
     public class Employee : IConvertModel<Employee, EmployeeApiModel>
     {

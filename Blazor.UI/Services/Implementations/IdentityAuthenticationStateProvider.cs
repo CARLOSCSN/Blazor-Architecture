@@ -1,5 +1,5 @@
-﻿using Blazor.UI.Client.Services.Contracts;
-using Blazor.Infra.CrossCutting.SharedUI.ViewModel;
+﻿using Client.Services.Contracts;
+using Common.ViewModel;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.JSInterop;
@@ -11,7 +11,7 @@ using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace Blazor.UI.Client.Services.Implementations
+namespace Client.Services.Implementations
 {
     public class IdentityAuthenticationStateProvider : AuthenticationStateProvider
     {

@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Blazor.DataEFCore.Configurations;
-using Blazor.DataEFCore.IdentityModel;
-using Blazor.Domain.Entities;
+using DataEFCore.Configurations;
+using DataEFCore.IdentityModel;
+using Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Blazor.DataEFCore
+namespace DataEFCore
 {
     public class BlazorContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
     {
