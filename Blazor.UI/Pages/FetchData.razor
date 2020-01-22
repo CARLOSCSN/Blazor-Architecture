@@ -1,6 +1,7 @@
 ﻿@page "/fetchdata"
 @using Common.ViewModel
 @inject HttpClient Http
+@inject IJSRuntime JSRuntime
 
 <h1>Previsão do tempo</h1>
 
@@ -69,7 +70,7 @@ else
                     <br />
                     <div class="panel-body">
 
-                        <EditForm Model="@Model" EditContext="@EditContext" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+                        <EditForm Model="@Model" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
                             <div class="alert @StatusClass">@StatusMessage</div>
 
                             <FluentValidationValidator />
@@ -79,8 +80,8 @@ else
                                 <div class="form-group">
                                     <div class="col-lg-2">
                                         <label for="NotaFiscal">N.F: </label>
-                                        <InputText Id="NotaFiscal" Class="form-control" @bind-Value="@Model.Summary"></InputText>
-                                        <ValidationMessage For="@(() => Model.Summary)" />
+                                        <InputDate Id="NotaFiscal" Class="form-control" @bind-Value="@Model.Date"></InputDate>
+                                            <ValidationMessage For="@(() => Model.Date)" />
                                     </div>
                                     <div class="col-lg-3">
                                         <p>
@@ -178,7 +179,7 @@ else
                             </div>
 
                             <div class="pull-right">
-                                <button type="submit" class="btn btn-accent" disabled="@OkayDisabled">Salvar</button>
+                                <button type="submit" class="btn btn-accent">Salvar</button>
                             </div>
                             <br />
 
@@ -197,7 +198,6 @@ else
     private string StatusClass;
     private EditContext EditContext;
     private WeatherForecastViewModel Model = new WeatherForecastViewModel();
-    protected string OkayDisabled { get; set; } = "disabled";
     WeatherForecastViewModel[] forecasts;
     bool ModalOpen { get; set; }
     string modalTitle { get; set; }
@@ -237,14 +237,13 @@ else
 
     private void SetOkDisabledStatus()
     {
-        if (EditContext.Validate())
-        {
-            OkayDisabled = null;
-        }
-        else
-        {
-            OkayDisabled = "disabled";
-        }
+        var validator = EditContextFluentValidationExtensions.GetValidatorForModel(Model);
+        var validationResults = validator.Validate(Model);
+        var isInvalid = validationResults.Errors.Count == 0 ? false : true;
+        //Console.WriteLine(validationResults.Errors.Count);
+
+        var task = controlInputTypeSubmit(isInvalid);
+        task.GetAwaiter();
     }
 
     void openModal(int hash)
@@ -259,4 +258,12 @@ else
         this.ModalOpen = false;
     }
 
+    // Call Functions Jquery
+    private async Task controlInputTypeSubmit(bool isInvalid)
+    {
+        var result = await JSRuntime.InvokeAsync<bool>("controlInputTypeSubmit", isInvalid);
+
+        StateHasChanged();
+    }
 }
+

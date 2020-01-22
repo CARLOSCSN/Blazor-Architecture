@@ -59,7 +59,7 @@ namespace Common.Validation
             editContext.NotifyValidationStateChanged();
         }
 
-        private static IValidator GetValidatorForModel(object model)
+        public static IValidator GetValidatorForModel(object model)
         {
             var abstractValidatorType = typeof(AbstractValidator<>).MakeGenericType(model.GetType());
             var modelValidatorType = Assembly.GetExecutingAssembly().GetTypes().FirstOrDefault(t => t.IsSubclassOf(abstractValidatorType));
