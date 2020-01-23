@@ -70,3 +70,5 @@ C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.Extensi
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.JSInterop.dll
+C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.csproj.CoreCompileInputs.cache
+C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.genruntimeconfig.cache

@@ -6,3 +6,4 @@ C:\Temp\Blazor-Architecture\Blazor.Infra.CrossCutting.SharedUI\obj\Debug\netstan
 C:\Temp\Blazor-Architecture\Blazor.Infra.CrossCutting.SharedUI\obj\Debug\netstandard2.1\Common.AssemblyInfo.cs
 C:\Temp\Blazor-Architecture\Blazor.Infra.CrossCutting.SharedUI\obj\Debug\netstandard2.1\Common.dll
 C:\Temp\Blazor-Architecture\Blazor.Infra.CrossCutting.SharedUI\obj\Debug\netstandard2.1\Common.pdb
+C:\Temp\Blazor-Architecture\Blazor.Infra.CrossCutting.SharedUI\obj\Debug\netstandard2.1\Common.csproj.CoreCompileInputs.cache

@@ -476,6 +476,69 @@ namespace DataEFCore.Migrations
                     b.ToTable("Track");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Venda", b =>
+                {
+                    b.Property<int>("VendaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DataNF")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NomeCliente")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumeroNotaFiscal")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("PercentualComissao")
+                        .HasColumnType("float");
+
+                    b.Property<double>("PercentualCustoOperacional")
+                        .HasColumnType("float");
+
+                    b.Property<double>("PercentualImposto")
+                        .HasColumnType("float");
+
+                    b.Property<double>("PercentualLucro")
+                        .HasColumnType("float");
+
+                    b.Property<decimal>("ValorComissao")
+                        .HasColumnType("decimal(16,2)");
+
+                    b.Property<decimal>("ValorCompra")
+                        .HasColumnType("decimal(16,2)");
+
+                    b.Property<decimal>("ValorCustoTotal")
+                        .HasColumnType("decimal(16,2)");
+
+                    b.Property<decimal>("ValorFrete1")
+                        .HasColumnType("decimal(16,2)");
+
+                    b.Property<decimal>("ValorFrete2")
+                        .HasColumnType("decimal(16,2)");
+
+                    b.Property<decimal>("ValorLucro")
+                        .HasColumnType("decimal(16,2)");
+
+                    b.Property<decimal>("ValorOutrasDespesas")
+                        .HasColumnType("decimal(16,2)");
+
+                    b.Property<decimal>("ValorVenda")
+                        .HasColumnType("decimal(16,2)");
+
+                    b.HasKey("VendaId");
+
+                    b.ToTable("Venda");
+                });
+
             modelBuilder.Entity("Domain.Entities.WeatherForecast", b =>
                 {
                     b.Property<int>("WeatherForecastId")
@@ -501,70 +564,70 @@ namespace DataEFCore.Migrations
                         new
                         {
                             WeatherForecastId = 1,
-                            Date = new DateTime(2020, 1, 8, 2, 30, 0, 849, DateTimeKind.Local).AddTicks(5619),
+                            Date = new DateTime(2020, 1, 23, 1, 1, 33, 732, DateTimeKind.Local).AddTicks(3912),
                             Summary = "Warm",
                             TemperatureC = -10
                         },
                         new
                         {
                             WeatherForecastId = 2,
-                            Date = new DateTime(2020, 1, 11, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8541),
+                            Date = new DateTime(2020, 1, 26, 1, 1, 33, 734, DateTimeKind.Local).AddTicks(2764),
                             Summary = "Very Hot",
                             TemperatureC = 45
                         },
                         new
                         {
                             WeatherForecastId = 3,
-                            Date = new DateTime(2020, 1, 14, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8700),
+                            Date = new DateTime(2020, 1, 29, 1, 1, 33, 734, DateTimeKind.Local).AddTicks(2959),
                             Summary = "Bracing",
                             TemperatureC = 12
                         },
                         new
                         {
                             WeatherForecastId = 4,
-                            Date = new DateTime(2020, 1, 8, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8706),
+                            Date = new DateTime(2020, 1, 23, 1, 1, 33, 734, DateTimeKind.Local).AddTicks(2969),
                             Summary = "Frying",
                             TemperatureC = 50
                         },
                         new
                         {
                             WeatherForecastId = 5,
-                            Date = new DateTime(2020, 1, 22, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8708),
+                            Date = new DateTime(2020, 2, 6, 1, 1, 33, 734, DateTimeKind.Local).AddTicks(2971),
                             Summary = "Cold",
                             TemperatureC = 2
                         },
                         new
                         {
                             WeatherForecastId = 6,
-                            Date = new DateTime(2020, 3, 8, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8710),
+                            Date = new DateTime(2020, 3, 23, 1, 1, 33, 734, DateTimeKind.Local).AddTicks(2976),
                             Summary = "Very Cold",
                             TemperatureC = -5
                         },
                         new
                         {
                             WeatherForecastId = 7,
-                            Date = new DateTime(2020, 1, 8, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8712),
+                            Date = new DateTime(2020, 1, 23, 1, 1, 33, 734, DateTimeKind.Local).AddTicks(2979),
                             Summary = "Hot",
                             TemperatureC = 40
                         },
                         new
                         {
                             WeatherForecastId = 8,
-                            Date = new DateTime(2020, 2, 10, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8714),
+                            Date = new DateTime(2020, 2, 25, 1, 1, 33, 734, DateTimeKind.Local).AddTicks(2981),
                             Summary = "Good",
                             TemperatureC = 22
                         },
                         new
                         {
                             WeatherForecastId = 9,
-                            Date = new DateTime(2020, 3, 27, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8716),
+                            Date = new DateTime(2020, 4, 11, 1, 1, 33, 734, DateTimeKind.Local).AddTicks(2984),
                             Summary = "Summer",
                             TemperatureC = 35
                         },
                         new
                         {
                             WeatherForecastId = 10,
-                            Date = new DateTime(2020, 1, 8, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8718),
+                            Date = new DateTime(2020, 1, 23, 1, 1, 33, 734, DateTimeKind.Local).AddTicks(2986),
                             Summary = "Warm",
                             TemperatureC = 55
                         });

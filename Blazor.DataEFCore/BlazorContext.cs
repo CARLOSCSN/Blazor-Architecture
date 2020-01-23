@@ -149,6 +149,17 @@ namespace DataEFCore
             EF.CompileQuery((BlazorContext db, int id) =>
                 db.WeatherForecast.Where(a => a.WeatherForecastId == id).AsNoTracking());
 
+
+        /// <summary>
+        /// Venda
+        /// </summary>
+        private static readonly Func<BlazorContext, IEnumerable<Venda>> _queryGetAllVenda =
+            EF.CompileQuery((BlazorContext db) => db.Venda.AsNoTracking());
+
+        private static readonly Func<BlazorContext, int, IEnumerable<Venda>> _queryGetVenda =
+            EF.CompileQuery((BlazorContext db, int id) =>
+                db.Venda.Where(a => a.VendaId == id).AsNoTracking());
+
         public BlazorContext(DbContextOptions options) : base(options)
         {
             //Interlocked.Increment(ref InstanceCount);
@@ -170,6 +181,7 @@ namespace DataEFCore
         public virtual DbSet<PlaylistTrack> PlaylistTrack { get; set; }
         public virtual DbSet<Track> Track { get; set; }
         public virtual DbSet<WeatherForecast> WeatherForecast { get; set; }
+        public virtual DbSet<Venda> Venda { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -187,6 +199,7 @@ namespace DataEFCore
             new PlaylistTrackConfiguration(modelBuilder.Entity<PlaylistTrack>());
             new TrackConfiguration(modelBuilder.Entity<Track>());
             new WeatherForecastConfiguration(modelBuilder.Entity<WeatherForecast>());
+            new VendaConfiguration(modelBuilder.Entity<Venda>());
         }
 
 
@@ -282,5 +295,16 @@ namespace DataEFCore
 
         public async Task<List<WeatherForecast>> GetWeatherForecastAsync(int id) => 
             _queryGetWeatherForecast(this, id).ToList();
+
+        /// <summary>
+        /// Venda
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<Venda>> GetAllVendaAsync() =>
+            _queryGetAllVenda(this).ToList();
+
+        public async Task<List<Venda>> GetVendaAsync(int id) =>
+            _queryGetVenda(this, id).ToList();
+
     }
 }

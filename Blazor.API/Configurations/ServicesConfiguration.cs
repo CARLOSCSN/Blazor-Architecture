@@ -21,7 +21,8 @@ namespace API.Configurations
                 .AddScoped<IMediaTypeRepository, MediaTypeRepository>()
                 .AddScoped<IPlaylistRepository, PlaylistRepository>()
                 .AddScoped<ITrackRepository, TrackRepository>()
-                .AddScoped<IWeatherForecastRepository, WeatherForecastRepository>();
+                .AddScoped<IWeatherForecastRepository, WeatherForecastRepository>()
+                .AddScoped<IVendaRepository, VendaRepository>();
 
             return services;
         }

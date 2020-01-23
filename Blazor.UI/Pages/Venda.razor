@@ -1,0 +1,294 @@
+﻿@page "/venda"
+@using Common.ViewModel
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
+
+<h1>Vendas</h1>
+
+<p>Lista de vendas.</p>
+
+<br />
+
+@if (vendas == null)
+{
+    <p><em>Carregando...</em></p>
+}
+else
+{
+    <MatTable Class="mat-elevation-z5 table table-striped table-hover"
+              Items="@vendas"
+              LoadInitialData="true"
+              Striped="true"
+              DebounceMilliseconds="150"
+              PageSize="5"
+              PageRecordCountLabel="Itens por página:"
+              PageLabel="Página"
+              FilterByColumnName="NomeCliente"
+              SearchTermFieldPlaceHolder="Cliente"
+              SearchTermFieldLabel="Pesquisar">
+        <MatTableHeader>
+            <th>
+                <div style="width:135px;">
+                    <MatButton class="btn btn-default"
+                               @onclick="@( () => openModal(1))"
+                               Icon="playlist_add"
+                               Label="Adicionar"
+                               Raised="true">
+                    </MatButton>
+                </div>
+            </th>
+            <th>Venda ID</th>
+            <th>Nota Fiscal</th>
+            <th>Data N.F</th>
+            <th>Cliente</th>
+            <th>Valor Venda</th>
+            <th>Valor Compra</th>
+            <th>% Imposto</th>
+            <th>Frete 01</th>
+            <th>Frete 02</th>
+            <th>% C.O</th>
+            <th>Outras Despesas</th>
+            <th>Custo Total</th>
+            <th>% Comissão</th>
+            <th>Valor Comissão</th>
+            <th>% Lucro</th>
+            <th>Valor Lucro</th>
+            <th>Descrição</th>
+        </MatTableHeader>
+        <MatTableRow Context="venda">
+            <td>
+                <MatIconButton Icon="delete"></MatIconButton>
+            </td>
+            <td>@venda.VendaId</td>
+            <td>@venda.NumeroNotaFiscal</td>
+            <td>@venda.DataNF</td>
+            <td>@venda.NomeCliente</td>
+            <td>@venda.ValorVenda</td>
+            <td>@venda.ValorCompra</td>
+            <td>@venda.PercentualImposto</td>
+            <td>@venda.ValorFrete1</td>
+            <td>@venda.ValorFrete2</td>
+            <td>@venda.PercentualCustoOperacional</td>
+            <td>@venda.ValorOutrasDespesas</td>
+            <td>@venda.ValorCustoTotal</td>
+            <td>@venda.PercentualComissao</td>
+            <td>@venda.ValorComissao</td>
+            <td>@venda.PercentualLucro</td>
+            <td>@venda.ValorLucro</td>
+            <td>@venda.Descricao</td>
+        </MatTableRow>
+    </MatTable>
+
+}
+
+@if (ModalOpen)
+{
+    <div class="modal" tabindex="-1" style="display:block" role="dialog">
+        <div class="modal-dialog modal-max">
+            <div class="modal-content">
+
+                <div class="panel panel-filled">
+                    <div class="panel-heading">
+                        <div class="panel-tools">
+                            <a class="panel-close" @onclick="closeModal"><i class="fa fa-times"></i></a>
+                        </div>
+                        <h4 class="modal-title">@modalTitle</h4>
+                    </div>
+                    <div class="panel-body">
+
+                        <EditForm Model="@Model" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+                            <div class="alert @StatusClass">@StatusMessage</div>
+
+                            <FluentValidationValidator />
+                            <ValidationSummary />
+
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-lg-2">
+                                        <label for="NumeroNotaFiscal">N.F</label>
+                                        <InputText Id="NumeroNotaFiscal" name="NumeroNotaFiscal" Class="form-control" @bind-Value="Model.NumeroNotaFiscal"></InputText>
+                                        <ValidationMessage For="(() => Model.NumeroNotaFiscal)" />
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p>
+                                            <label for="Data">Data N.F</label>
+                                            <MatDatePicker Required="true"
+                                                           @bind-Value="Model.DataNF"
+                                                           AllowInput="false"
+                                                           Format="dd/MM/yyyy">
+                                            </MatDatePicker>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <label for="NomeCliente">Cliente</label>
+                                        <InputText Id="NomeCliente" name="NomeCliente" Class="form-control" @bind-Value="Model.NomeCliente"></InputText>
+                                        <ValidationMessage For="(() => Model.NomeCliente)" />
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label for="ValorVenda">Valor de Venda</label>
+                                        <input type="text" class="form-control" id="ValorVenda" name="ValorVenda" placeholder="Valor de Venda">
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-lg-2">
+                                        <label for="ValorCompra">Valor de Compra</label>
+                                        <input type="text" class="form-control" id="ValorCompra" name="ValorCompra" placeholder="Valor de Compra">
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <label for="PercentualImposto">% Imposto</label>
+                                        <input type="text" class="form-control" id="PercentualImposto" name="PercentualImposto" placeholder="% Imp.">
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label for="ValorFrete1">Frete 01</label>
+                                        <input type="text" class="form-control" id="ValorFrete1" name="ValorFrete1" placeholder="Frete 01">
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label for="ValorFrete2">Frete 02</label>
+                                        <input type="text" class="form-control" id="ValorFrete2" name="ValorFrete2" placeholder="Frete 02">
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <label for="PercentualCustoOperacional">% C.O</label>
+                                        <input type="text" class="form-control" id="PercentualCustoOperacional" name="PercentualCustoOperacional" placeholder="% C.O">
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label for="ValorOutrasDespesas">Outras Despesas</label>
+                                        <input type="text" class="form-control" id="ValorOutrasDespesas" name="ValorOutrasDespesas" placeholder="Outras Despesas">
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label for="ValorCustoTotal">Custo Total</label>
+                                        <input type="text" class="form-control" id="ValorCustoTotal" name="ValorCustoTotal" placeholder="Custo Total">
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-lg-2">
+                                        <label for="PercentualComissao">% Comissão</label>
+                                        <input type="text" class="form-control" id="PercentualComissao" name="PercentualComissao" placeholder="% Comissão">
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label for="ValorComissao">Valor Comissão</label>
+                                        <input type="text" class="form-control" id="ValorComissao" name="ValorComissao" placeholder="Valor de Comissão">
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label for="PercentualLucro">% Lucro</label>
+                                        <input type="text" class="form-control" id="PercentualLucro" name="PercentualLucro" placeholder="% Lucro">
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label for="ValorLucro">Valor Lucro</label>
+                                        <input type="text" class="form-control" id="ValorLucro" name="ValorLucro" placeholder="Valor de Lucro">
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class=form-group>
+                                    <div class="col-lg-12">
+                                        <label for="Descricao">Descrição</label>
+                                        <textarea class="form-control" rows="3" placeholder="Descrição"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                @*<div class="form-group">
+                                    <div class="col-lg-4">
+                                        <label>
+                                            <input type="checkbox"> Ativo
+                                        </label>
+                                    </div>
+                                </div>*@
+                            </div>
+
+                            <div class="pull-right">
+                                <button type="submit" class="btn btn-accent">Salvar</button>
+                            </div>
+                            <br />
+
+                        </EditForm>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private string StatusMessage;
+    private string StatusClass;
+    private EditContext EditContext;
+    private VendaViewModel Model = new VendaViewModel();
+    VendaViewModel[] vendas;
+    bool ModalOpen { get; set; }
+    string modalTitle { get; set; }
+
+    protected void HandleValidSubmit()
+    {
+        StatusClass = "alert-info";
+        StatusMessage = DateTime.Now + " Handle valid submit";
+    }
+
+    protected void HandleInvalidSubmit()
+    {
+        StatusClass = "alert-danger";
+        StatusMessage = DateTime.Now + " Handle invalid submit";
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        vendas = await Http.GetJsonAsync<VendaViewModel[]>("https://localhost:44301/api/Venda");
+        EditContext = new EditContext(Model);
+        EditContext.OnFieldChanged += EditContext_OnFieldChanged;
+
+        base.OnInitialized();
+    }
+
+    protected override void OnAfterRender(bool param)
+    {
+        base.OnAfterRender(true);
+
+        SetOkDisabledStatus();
+    }
+
+    private void EditContext_OnFieldChanged(object sender, FieldChangedEventArgs e)
+    {
+        SetOkDisabledStatus();
+    }
+
+    private void SetOkDisabledStatus()
+    {
+        var validator = EditContextFluentValidationExtensions.GetValidatorForModel(Model);
+        var validationResults = validator.Validate(Model);
+        var isInvalid = validationResults.Errors.Count == 0 ? false : true;
+        //Console.WriteLine(validationResults.Errors.Count);
+
+        var task = controlInputTypeSubmit(isInvalid);
+        task.GetAwaiter();
+    }
+
+    void openModal(int hash)
+    {
+        this.Model = new VendaViewModel();
+        this.modalTitle = "Cadastro de Venda";
+        this.ModalOpen = true;
+
+    }
+    protected void closeModal()
+    {
+        this.ModalOpen = false;
+    }
+
+    // Call Functions Jquery
+    private async Task controlInputTypeSubmit(bool isInvalid)
+    {
+        var result = await JSRuntime.InvokeAsync<bool>("controlInputTypeSubmit", isInvalid);
+
+        StateHasChanged();
+    }
+}
+

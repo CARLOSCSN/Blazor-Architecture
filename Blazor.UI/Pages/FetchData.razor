@@ -79,8 +79,8 @@ else
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-lg-2">
-                                        <label for="NotaFiscal">N.F: </label>
-                                        <InputDate Id="NotaFiscal" Class="form-control" @bind-Value="@Model.Date"></InputDate>
+                                        <label for="NumeroNotaFiscal">N.F: </label>
+                                        <InputDate Id="NumeroNotaFiscal" name="NumeroNotaFiscal" Class="form-control" @bind-Value="@Model.Date"></InputDate>
                                             <ValidationMessage For="@(() => Model.Date)" />
                                     </div>
                                     <div class="col-lg-3">
@@ -94,12 +94,12 @@ else
                                         </p>
                                     </div>
                                     <div class="col-lg-5">
-                                        <label for="Cliente">Cliente: </label>
-                                        <InputText Id="Cliente" Class="form-control" @bind-Value="@Model.Summary"></InputText>
+                                        <label for="NomeCliente">Cliente: </label>
+                                        <InputText Id="NomeCliente" name="NomeCliente" Class="form-control" @bind-Value="@Model.Summary"></InputText>
                                         <ValidationMessage For="@(() => Model.Summary)" />
                                     </div>
                                     <div class="col-lg-2">
-                                        <label for="ValorCompra">Valor de Venda</label>
+                                        <label for="ValorVenda">Valor de Venda</label>
                                         <input type="text" class="form-control" id="ValorVenda" name="ValorVenda" placeholder="Valor de Venda">
                                     </div>
                                 </div>
@@ -112,28 +112,28 @@ else
                                         <input type="text" class="form-control" id="ValorCompra" name="ValorCompra" placeholder="Valor de Compra">
                                     </div>
                                     <div class="col-lg-1">
-                                        <label for="Imposto">% Imposto</label>
-                                        <input type="text" class="form-control" id="Imposto" name="Imposto" placeholder="% Imp.">
+                                        <label for="PercentualImposto">% Imposto</label>
+                                        <input type="text" class="form-control" id="PercentualImposto" name="PercentualImposto" placeholder="% Imp.">
                                     </div>
                                     <div class="col-lg-2">
-                                        <label for="Frete1">Frete 01</label>
-                                        <input type="text" class="form-control" id="Frete1" name="Frete1" placeholder="Frete 01">
+                                        <label for="ValorFrete1">Frete 01</label>
+                                        <input type="text" class="form-control" id="ValorFrete1" name="ValorFrete1" placeholder="Frete 01">
                                     </div>
                                     <div class="col-lg-2">
-                                        <label for="Frete2">Frete 02</label>
-                                        <input type="text" class="form-control" id="Frete2" name="Frete2" placeholder="Frete 02">
+                                        <label for="ValorFrete2">Frete 02</label>
+                                        <input type="text" class="form-control" id="ValorFrete2" name="ValorFrete2" placeholder="Frete 02">
                                     </div>
                                     <div class="col-lg-1">
-                                        <label for="CustoOperacional">% C.O</label>
-                                        <input type="text" class="form-control" id="CustoOperacional" name="CustoOperacional" placeholder="% C.O">
+                                        <label for="PercentualCustoOperacional">% C.O</label>
+                                        <input type="text" class="form-control" id="PercentualCustoOperacional" name="PercentualCustoOperacional" placeholder="% C.O">
                                     </div>
                                     <div class="col-lg-2">
-                                        <label for="OutrasDespesas">Outras Despesas</label>
-                                        <input type="text" class="form-control" id="OutrasDespesas" name="OutrasDespesas" placeholder="Outras Despesas">
+                                        <label for="ValorOutrasDespesas">Outras Despesas</label>
+                                        <input type="text" class="form-control" id="ValorOutrasDespesas" name="ValorOutrasDespesas" placeholder="Outras Despesas">
                                     </div>
                                     <div class="col-lg-2">
-                                        <label for="CustoTotal">Custo Total</label>
-                                        <input type="text" class="form-control" id="CustoTotal" name="CustoTotal" placeholder="Custo Total">
+                                        <label for="ValorCustoTotal">Custo Total</label>
+                                        <input type="text" class="form-control" id="ValorCustoTotal" name="ValorCustoTotal" placeholder="Custo Total">
                                     </div>
                                 </div>
                             </div>

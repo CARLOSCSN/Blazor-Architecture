@@ -119,3 +119,6 @@ C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\blazor\linker.des
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\blazor\blazor.boot.json
 C:\Temp\Blazor-Architecture\Blazor.UI\bin\Debug\netstandard2.1\dist\_framework\_bin\FluentValidation.dll
 C:\Temp\Blazor-Architecture\Blazor.UI\bin\Debug\netstandard2.1\FluentValidation.dll
+C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Client.csproj.CoreCompileInputs.cache
+C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Venda.razor.g.cs
+C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Pages\Venda.razor.g.cs

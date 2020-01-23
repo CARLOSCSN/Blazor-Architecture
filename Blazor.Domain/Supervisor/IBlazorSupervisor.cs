@@ -134,5 +134,12 @@ namespace Domain.Supervisor
         Task<WeatherForecastApiModel> AddWeatherForecastAsync(WeatherForecastApiModel newWeatherForecastApiModel, CancellationToken ct = default);
         Task<bool> UpdateWeatherForecastAsync(WeatherForecastApiModel weatherForecastApiModel, CancellationToken ct = default);
         Task<bool> DeleteWeatherForecastAsync(int id, CancellationToken ct = default);
+
+
+        Task<IEnumerable<VendaApiModel>> GetAllVendaAsync(CancellationToken ct = default);
+        Task<VendaApiModel> GetVendaByIdAsync(int id, CancellationToken ct = default);
+        Task<VendaApiModel> AddVendaAsync(VendaApiModel newVendaApiModel, CancellationToken ct = default);
+        Task<bool> UpdateVendaAsync(VendaApiModel VendaApiModel, CancellationToken ct = default);
+        Task<bool> DeleteVendaAsync(int id, CancellationToken ct = default);
     }
 }

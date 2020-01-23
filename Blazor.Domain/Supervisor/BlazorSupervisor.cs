@@ -17,6 +17,7 @@ namespace Domain.Supervisor
         private readonly ITrackRepository _trackRepository;
         private readonly IMemoryCache _cache;
         private readonly IWeatherForecastRepository _weatherForecastRepository;
+        private readonly IVendaRepository _vendaRepository;
 
         public BlazorSupervisor()
         {
@@ -33,7 +34,8 @@ namespace Domain.Supervisor
             IPlaylistRepository playlistRepository,
             ITrackRepository trackRepository,
             IMemoryCache memoryCache,
-            IWeatherForecastRepository weatherForecastRepository
+            IWeatherForecastRepository weatherForecastRepository,
+            IVendaRepository vendaRepository
         )
         {
             _albumRepository = albumRepository;
@@ -48,6 +50,7 @@ namespace Domain.Supervisor
             _trackRepository = trackRepository;
             _cache = memoryCache;
             _weatherForecastRepository = weatherForecastRepository;
+            _vendaRepository = vendaRepository;
         }
     }
 }

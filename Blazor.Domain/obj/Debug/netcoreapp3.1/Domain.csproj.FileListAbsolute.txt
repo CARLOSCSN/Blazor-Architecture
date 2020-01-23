@@ -6,3 +6,4 @@ C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.Assembl
 C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
 C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.dll
 C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.pdb
+C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache

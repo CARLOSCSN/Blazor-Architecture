@@ -11,3 +11,5 @@ C:\Temp\Blazor-Architecture\Blazor.DataEFCore\obj\Debug\netcoreapp3.1\DataEFCore
 C:\Temp\Blazor-Architecture\Blazor.DataEFCore\obj\Debug\netcoreapp3.1\DataEFCore.csproj.CopyComplete
 C:\Temp\Blazor-Architecture\Blazor.DataEFCore\obj\Debug\netcoreapp3.1\DataEFCore.dll
 C:\Temp\Blazor-Architecture\Blazor.DataEFCore\obj\Debug\netcoreapp3.1\DataEFCore.pdb
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\obj\Debug\netcoreapp3.1\DataEFCore.csproj.CoreCompileInputs.cache
+C:\Temp\Blazor-Architecture\Blazor.DataEFCore\obj\Debug\netcoreapp3.1\DataEFCore.genruntimeconfig.cache
