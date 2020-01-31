@@ -7,7 +7,7 @@ namespace Common.Validation
     {
         public VendaValidator()
         {
-            //RuleFor(p => p.Summary).NotEmpty().WithMessage("You must enter a name");
+            RuleFor(p => p.NomeCliente).NotEmpty().WithMessage("Campo obrigatório");
             //RuleFor(p => p.Summary).MaximumLength(50).WithMessage("Name cannot be longer than 50 characters");
         }
     }
