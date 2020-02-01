@@ -1,7 +1,12 @@
 ﻿@page "/venda"
 @using Common.ViewModel
+
 @inject HttpClient Http
 @inject IJSRuntime JSRuntime
+
+@inject NavigationManager navigationManager
+@inject WebApiServices webApiServices
+@inject IMatToaster matToaster
 
 <h1>Vendas</h1>
 
@@ -61,7 +66,7 @@ else
             </td>
             <td>@venda.VendaId</td>
             <td>@venda.NumeroNotaFiscal</td>
-            <td>@venda.DataNF</td>
+            <td>@venda.DataNF.ToString("dd//MM/yyyy")</td>
             <td>@venda.NomeCliente</td>
             <td>@venda.ValorVenda</td>
             <td>@venda.ValorCompra</td>
@@ -88,7 +93,6 @@ else
             <div class="modal-content">
 
                 <div class="panel panel-filled">
-                    <br />
                     <div class="panel-heading">
                         <div class="panel-tools">
                             <a class="panel-close" @onclick="closeModal"><i class="fa fa-times"></i></a>
@@ -97,13 +101,14 @@ else
                     </div>
                     <div class="panel-body">
 
-                        <EditForm Model="@Model" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
-                            <div class="alert @StatusClass">@StatusMessage</div>
+                        <EditForm Model="@Model"
+                                  OnValidSubmit="@HandleValidSubmit"
+                                  OnInvalidSubmit="@HandleInvalidSubmit">
 
                             <FluentValidationValidator />
-                            <ValidationSummary />
+                            @*<ValidationSummary />*@
 
-                            <div class="row">
+                            <div class="row mb-20">
                                 <div class="form-group">
                                     <div class="col-lg-2">
                                         <label for="NumeroNotaFiscal">N.F</label>
@@ -131,8 +136,8 @@ else
                                     </div>
                                 </div>
                             </div>
-                            <br />
-                            <div class="row">
+
+                            <div class="row mb-20">
                                 <div class="form-group">
                                     <div class="col-lg-2">
                                         <label for="ValorCompra">Valor de Compra</label>
@@ -164,8 +169,8 @@ else
                                     </div>
                                 </div>
                             </div>
-                            <br />
-                            <div class="row">
+
+                            <div class="row mb-20">
                                 <div class="form-group">
                                     <div class="col-lg-2">
                                         <label for="PercentualComissao">% Comissão</label>
@@ -185,8 +190,8 @@ else
                                     </div>
                                 </div>
                             </div>
-                            <br />
-                            <div class="row">
+
+                            <div class="row mb-20">
                                 <div class=form-group>
                                     <div class="col-lg-12">
                                         <label for="Descricao">Descrição</label>
@@ -194,21 +199,10 @@ else
                                     </div>
                                 </div>
                             </div>
-                            <br />
-                            <div class="row">
-                                @*<div class="form-group">
-                                    <div class="col-lg-4">
-                                        <label>
-                                            <input type="checkbox"> Ativo
-                                        </label>
-                                    </div>
-                                </div>*@
-                            </div>
 
-                            <div class="pull-right">
+                            <div class="pull-right mb-20">
                                 <button type="submit" class="btn btn-accent">Salvar</button>
                             </div>
-                            <br />
 
                         </EditForm>
                     </div>
@@ -220,28 +214,39 @@ else
 }
 
 @code {
-    private string StatusMessage;
-    private string StatusClass;
     private EditContext EditContext;
     private VendaViewModel Model = new VendaViewModel();
-    VendaViewModel[] vendas;
-    bool ModalOpen { get; set; }
-    string modalTitle { get; set; }
+    private VendaViewModel[] vendas;
+    private bool ModalOpen { get; set; }
+    private string modalTitle { get; set; }
 
-    protected void HandleValidSubmit()
+    protected async Task HandleValidSubmit()
     {
-        StatusClass = "alert-info";
-        StatusMessage = DateTime.Now + " Handle valid submit";
+        try
+        {
+            await webApiServices.Post<VendaViewModel>(Model, "api/Venda");
+            navigationManager.NavigateTo("/venda");
+
+            closeModal();
+            matToaster.Add("Venda cadastrada.", MatToastType.Success, "Sucesso");
+            vendas = await Http.GetJsonAsync<VendaViewModel[]>("https://localhost:44301/api/Venda");
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            matToaster.Add(ex.Message, MatToastType.Danger, "Erro");
+            Console.WriteLine(ex.Message);
+        }
     }
 
     protected void HandleInvalidSubmit()
     {
-        StatusClass = "alert-danger";
-        StatusMessage = DateTime.Now + " Handle invalid submit";
+        matToaster.Add("Não foi possivel realizar o cadastro.", MatToastType.Warning, "Atenção");
     }
 
     protected override async Task OnInitializedAsync()
     {
+
         vendas = await Http.GetJsonAsync<VendaViewModel[]>("https://localhost:44301/api/Venda");
         EditContext = new EditContext(Model);
         EditContext.OnFieldChanged += EditContext_OnFieldChanged;
@@ -283,6 +288,7 @@ else
     protected void closeModal()
     {
         this.ModalOpen = false;
+        StateHasChanged();
     }
 
     // Call Functions Jquery

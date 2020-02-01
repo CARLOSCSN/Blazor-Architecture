@@ -62,15 +62,15 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<VendaApiModel>> Post([FromBody] VendaApiModel input,
+        public async Task<ActionResult<VendaApiModel>> Post([FromBody] VendaApiModel entity,
             CancellationToken ct = default)
         {
             try
             {
-                if (input == null)
+                if (entity == null)
                     return BadRequest();
 
-                return StatusCode(201, await _BlazorSupervisor.AddVendaAsync(input, ct));
+                return StatusCode(201, await _BlazorSupervisor.AddVendaAsync(entity, ct));
             }
             catch (Exception ex)
             {

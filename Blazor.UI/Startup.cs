@@ -19,6 +19,7 @@ namespace Client
             services.AddScoped<IdentityAuthenticationStateProvider>();
             services.AddScoped<AuthenticationStateProvider>(s => s.GetRequiredService<IdentityAuthenticationStateProvider>());
             services.AddScoped<IAuthorizeApi, AuthorizeApi>();
+            services.AddScoped<WebApiServices>();
             services.AddLoadingBar();
             services.AddMatToaster(config =>
             {
