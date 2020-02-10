@@ -7,8 +7,11 @@ namespace Common.Validation
     {
         public VendaValidator()
         {
-            RuleFor(p => p.NomeCliente).NotEmpty().WithMessage("Campo obrigatório");
-            //RuleFor(p => p.Summary).MaximumLength(50).WithMessage("Name cannot be longer than 50 characters");
+            RuleFor(p => p.NumeroNotaFiscal)
+                .NotEmpty()
+                .WithMessage("Campo obrigatório")
+                .Matches(@"^\d{4}$")
+                .WithMessage("Nota Fiscal deve ter 4 caracteres numericos");
         }
     }
 }

@@ -3,13 +3,12 @@
 
 <AuthorizeView>
     <Authorized>
-        <h1>Hello @context.User.Identity.Name !!</h1>
+        <h1>Olá @context.User.Identity.Name.ToUpper() !!</h1>
 
-        <p>Welcome to your new app.</p>
+        <p>Bem-vindo ao seu novo aplicativo.</p>
 
-        @*<SurveyPrompt Title="How is Blazor working for you?" />*@
     </Authorized>
     <Authorizing>
-        <h1>Loading ...</h1>
+        <h1>Carregando ...</h1>
     </Authorizing>
 </AuthorizeView>

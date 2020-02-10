@@ -27,12 +27,12 @@
           "lib/netstandard2.0/FluentValidation.dll": {}
         }
       },
-      "MatBlazor/2.0.0": {
+      "MatBlazor/2.1.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Blazor.HttpClient": "3.1.0-preview4.19579.2",
-          "Microsoft.AspNetCore.Components": "3.1.0",
-          "Microsoft.AspNetCore.Components.Web": "3.1.0"
+          "Microsoft.AspNetCore.Blazor.HttpClient": "3.2.0-preview1.20073.1",
+          "Microsoft.AspNetCore.Components": "3.1.1",
+          "Microsoft.AspNetCore.Components.Web": "3.1.1"
         },
         "compile": {
           "lib/netstandard2.1/MatBlazor.dll": {}
@@ -98,7 +98,7 @@
           "build/Microsoft.AspNetCore.Blazor.DevServer.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Blazor.HttpClient/3.1.0-preview4.19579.2": {
+      "Microsoft.AspNetCore.Blazor.HttpClient/3.2.0-preview1.20073.1": {
         "type": "package",
         "dependencies": {
           "System.Text.Json": "4.7.0"
@@ -164,13 +164,13 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Components.Forms.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Components.Web/3.1.0": {
+      "Microsoft.AspNetCore.Components.Web/3.1.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "3.1.0",
-          "Microsoft.AspNetCore.Components.Forms": "3.1.0",
-          "Microsoft.Extensions.DependencyInjection": "3.1.0",
-          "Microsoft.JSInterop": "3.1.0"
+          "Microsoft.AspNetCore.Components": "3.1.1",
+          "Microsoft.AspNetCore.Components.Forms": "3.1.1",
+          "Microsoft.Extensions.DependencyInjection": "3.1.1",
+          "Microsoft.JSInterop": "3.1.1"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Components.Web.dll": {}
@@ -200,10 +200,10 @@
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.0": {
+      "Microsoft.Extensions.DependencyInjection/3.1.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.1"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
@@ -459,10 +459,10 @@
         "lib/netstandard2.0/FluentValidation.xml"
       ]
     },
-    "MatBlazor/2.0.0": {
-      "sha512": "GbKba1QWDshScVSbDMYn59Qbm+ceelcYNyg8kCxoeYFEgTmffoeai+rOA9j/OH1Bv2S03pq4/iWCQV6i7cNDOw==",
+    "MatBlazor/2.1.1": {
+      "sha512": "pTbQKw7txoPXH0Ccy61jV9+UMvWyr5ixm1mpkTBiWZNWwkR/Y0oXdqeQoftA95sI+PuFlfOrzWjfwSc5bmyA1w==",
       "type": "package",
-      "path": "matblazor/2.0.0",
+      "path": "matblazor/2.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -474,8 +474,9 @@
         "contentFiles/any/netstandard2.1/Properties/launchSettings.json",
         "lib/netstandard2.1/MatBlazor.dll",
         "lib/netstandard2.1/MatBlazor.xml",
-        "matblazor.2.0.0.nupkg.sha512",
+        "matblazor.2.1.1.nupkg.sha512",
         "matblazor.nuspec",
+        "staticwebassets/dist/matBlazor.css",
         "staticwebassets/dist/matBlazor.js"
       ]
     },
@@ -566,17 +567,17 @@
         "tools/blazor-devserver.runtimeconfig.json"
       ]
     },
-    "Microsoft.AspNetCore.Blazor.HttpClient/3.1.0-preview4.19579.2": {
-      "sha512": "+0jdcwNQAibSkiKxSJhzgezVsN3z3CP8zcYbVjIgNELIxdQDRMnossFw+s5L/tlOBA+HQCMT7WLBuaFOStZuRA==",
+    "Microsoft.AspNetCore.Blazor.HttpClient/3.2.0-preview1.20073.1": {
+      "sha512": "Zc4JRv7D3WZlWk7Vd2crO6tSsz+mZp+HWTCNkb1F1WRTJ998y2cMCQEKA0JIpJeb6PWjT/Cd62l0c2+Ex2os2w==",
       "type": "package",
-      "path": "microsoft.aspnetcore.blazor.httpclient/3.1.0-preview4.19579.2",
+      "path": "microsoft.aspnetcore.blazor.httpclient/3.2.0-preview1.20073.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "THIRD-PARTY-NOTICES.txt",
         "lib/netstandard2.0/Microsoft.AspNetCore.Blazor.HttpClient.dll",
-        "microsoft.aspnetcore.blazor.httpclient.3.1.0-preview4.19579.2.nupkg.sha512",
+        "microsoft.aspnetcore.blazor.httpclient.3.2.0-preview1.20073.1.nupkg.sha512",
         "microsoft.aspnetcore.blazor.httpclient.nuspec"
       ]
     },
@@ -835,10 +836,10 @@
         "microsoft.aspnetcore.components.forms.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Web/3.1.0": {
-      "sha512": "wuoKzEIt/4nGU5Adohw93oVM/i2Bszcumm4RQ4XY8ruZCqtq0LmeTE1y1bqRtiRjNgvaUe6cH/ogh2pZ1LQovA==",
+    "Microsoft.AspNetCore.Components.Web/3.1.1": {
+      "sha512": "Qf/sWul2eAk2/Lop1DC3p637eWqGvbh0uxcQQXb45DPty4NEg9hf/bZlPPlSB1g9f2CaZIA56piM+CbRuLAzTg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.web/3.1.0",
+      "path": "microsoft.aspnetcore.components.web/3.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -848,7 +849,7 @@
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Web.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Components.Web.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Components.Web.xml",
-        "microsoft.aspnetcore.components.web.3.1.0.nupkg.sha512",
+        "microsoft.aspnetcore.components.web.3.1.1.nupkg.sha512",
         "microsoft.aspnetcore.components.web.nuspec"
       ]
     },
@@ -890,13 +891,14 @@
         "version.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection/3.1.0": {
-      "sha512": "KVkv3aF2MQpmGFRh4xRx2CNbc2sjDFk+lH4ySrjWSOS+XoY1Xc+sJphw3N0iYOpoeCCq8976ceVYDH8sdx2qIQ==",
+    "Microsoft.Extensions.DependencyInjection/3.1.1": {
+      "sha512": "Jg48cM12C8iqjpFMNXWEmJR/2jnmScV8Y8txVOayycLqHatLV2Cn4wuwj56KSOc/xVWwlWmq9Y5ebDH6awnexw==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection/3.1.0",
+      "path": "microsoft.extensions.dependencyinjection/3.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
         "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll",
@@ -905,9 +907,8 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
-        "microsoft.extensions.dependencyinjection.3.1.0.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.nuspec",
-        "packageIcon.png"
+        "microsoft.extensions.dependencyinjection.3.1.1.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec"
       ]
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.1": {
@@ -1362,11 +1363,11 @@
     ".NETStandard,Version=v2.1": [
       "Blazored.LocalStorage >= 2.1.1",
       "Common >= 1.0.0",
-      "MatBlazor >= 2.0.0",
+      "MatBlazor >= 2.1.1",
       "Microsoft.AspNetCore.Blazor >= 3.1.0-preview4.19579.2",
       "Microsoft.AspNetCore.Blazor.Build >= 3.1.0-preview4.19579.2",
       "Microsoft.AspNetCore.Blazor.DevServer >= 3.1.0-preview4.19579.2",
-      "Microsoft.AspNetCore.Blazor.HttpClient >= 3.1.0-preview4.19579.2",
+      "Microsoft.AspNetCore.Blazor.HttpClient >= 3.2.0-preview1.20073.1",
       "Microsoft.AspNetCore.Components.Authorization >= 3.1.0",
       "Newtonsoft.Json >= 12.0.3",
       "Toolbelt.Blazor.LoadingBar >= 9.0.0.3"
@@ -1427,7 +1428,7 @@
           },
           "MatBlazor": {
             "target": "Package",
-            "version": "[2.0.0, )"
+            "version": "[2.1.1, )"
           },
           "Microsoft.AspNetCore.Blazor": {
             "target": "Package",
@@ -1445,7 +1446,7 @@
           },
           "Microsoft.AspNetCore.Blazor.HttpClient": {
             "target": "Package",
-            "version": "[3.1.0-preview4.19579.2, )"
+            "version": "[3.2.0-preview1.20073.1, )"
           },
           "Microsoft.AspNetCore.Components.Authorization": {
             "target": "Package",
