@@ -42,23 +42,43 @@ else
                     </MatButton>
                 </div>
             </th>
-            <th>Venda ID</th>
-            <th>Nota Fiscal</th>
-            <th>Data N.F</th>
-            <th>Cliente</th>
-            <th>Valor Venda</th>
-            <th>Valor Compra</th>
-            <th>% Imposto</th>
-            <th>Frete 01</th>
-            <th>Frete 02</th>
-            <th>% C.O</th>
-            <th>Outras Despesas</th>
-            <th>Custo Total</th>
-            <th>% Comissão</th>
-            <th>Valor Comissão</th>
-            <th>% Lucro</th>
-            <th>Valor Lucro</th>
-            <th>Descrição</th>
+            <th>
+                <div style="width:150px;">
+                    Venda ID
+                </div>
+            </th>
+            <th>
+                <div style="width:150px;">
+                    Nota Fiscal
+                </div>
+            </th>
+            <th>
+                <div style="width:150px;">
+                    Data N.F
+                </div>
+            </th>
+            <th>
+                <div style="width:150px;">
+                    Valor Venda
+                </div>
+            </th>
+            <th>
+                <div style="width:400px;">
+                    Cliente
+                </div>
+            </th>
+            @*<th>Valor Compra</th>
+        <th>% Imposto</th>
+        <th>Frete 01</th>
+        <th>Frete 02</th>
+        <th>% C.O</th>
+        <th>Outras Despesas</th>
+        <th>Custo Total</th>
+        <th>% Comissão</th>
+        <th>Valor Comissão</th>
+        <th>% Lucro</th>
+        <th>Valor Lucro</th>
+        <th>Descrição</th>*@
         </MatTableHeader>
         <MatTableRow Context="venda">
             <td>
@@ -67,9 +87,9 @@ else
             <td>@venda.VendaId</td>
             <td>@venda.NumeroNotaFiscal</td>
             <td>@venda.DataNF.ToString("dd//MM/yyyy")</td>
-            <td>@venda.NomeCliente</td>
             <td>@venda.ValorVenda</td>
-            <td>@venda.ValorCompra</td>
+            <td>@venda.NomeCliente</td>
+            @*<td>@venda.ValorCompra</td>
             <td>@venda.PercentualImposto</td>
             <td>@venda.ValorFrete1</td>
             <td>@venda.ValorFrete2</td>
@@ -80,10 +100,9 @@ else
             <td>@venda.ValorComissao</td>
             <td>@venda.PercentualLucro</td>
             <td>@venda.ValorLucro</td>
-            <td>@venda.Descricao</td>
+            <td>@venda.Descricao</td>*@
         </MatTableRow>
     </MatTable>
-
 }
 
 @if (ModalOpen)

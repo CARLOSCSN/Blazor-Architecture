@@ -3555,3 +3555,20 @@ div.dt-button-info {
 .mb-20 {
     margin-bottom: 20px;
 }
+
+.mat-option mdc-list-item{
+    color: white!important;
+}
+
+.mdc-list {
+    color: white !important;
+}
+
+.mdc-list-item--selected {
+    color: #f4a721 !important;
+}
+
+.mdc-select:not(.mdc-select--disabled) .mdc-select__anchor {
+    background-color: #f5f5f5;
+    width: 120px;
+}
