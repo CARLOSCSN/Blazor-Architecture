@@ -3436,7 +3436,7 @@ div.dt-button-info {
 
 .mdc-select:not(.mdc-select--disabled) .mdc-select__native-control, .mdc-select:not(.mdc-select--disabled) .mdc-select__selected-text {
     color: white !important;
-    background-color: #2d3038 !important;
+    background-color: #343640 !important;
 }
 
 .mdc-select:not(.mdc-select--disabled) {

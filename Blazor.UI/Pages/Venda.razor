@@ -8,11 +8,10 @@
 @inject WebApiServices webApiServices
 @inject IMatToaster matToaster
 
-<h1>Vendas</h1>
-
-<p>Lista de vendas.</p>
-
-<br />
+<div class="mb-20">
+    <h1>Vendas</h1>
+    <p>Lista de vendas.</p>
+</div>
 
 @if (vendas == null)
 {
@@ -35,7 +34,7 @@ else
             <th>
                 <div style="width:135px;">
                     <MatButton class="btn btn-default"
-                               @onclick="@( () => openModal(1))"
+                               @onclick="@( () => OpenModal(1))"
                                Icon="playlist_add"
                                Label="Adicionar"
                                Raised="true">
@@ -105,7 +104,7 @@ else
     </MatTable>
 }
 
-@if (ModalOpen)
+@if (modalOpen)
 {
     <div class="modal" tabindex="-1" style="display:block" role="dialog">
         <div class="modal-dialog modal-max">
@@ -114,13 +113,14 @@ else
                 <div class="panel panel-filled">
                     <div class="panel-heading">
                         <div class="panel-tools">
-                            <a class="panel-close" @onclick="closeModal"><i class="fa fa-times"></i></a>
+                            <a class="panel-close" @onclick="CloseModal"><i class="fa fa-times"></i></a>
                         </div>
                         <h3 class="modal-title">@modalTitle</h3>
                     </div>
+                    <br />
                     <div class="panel-body">
 
-                        <EditForm Model="@Model"
+                        <EditForm Model="@model"
                                   OnValidSubmit="@HandleValidSubmit"
                                   OnInvalidSubmit="@HandleInvalidSubmit">
 
@@ -131,27 +131,40 @@ else
                                 <div class="form-group">
                                     <div class="col-lg-2">
                                         <label for="NumeroNotaFiscal">N.F</label>
-                                        <InputText Id="NumeroNotaFiscal" name="NumeroNotaFiscal" Class="form-control" @bind-Value="Model.NumeroNotaFiscal"></InputText>
-                                        <ValidationMessage For="(() => Model.NumeroNotaFiscal)" />
+                                        <InputText Class="form-control" 
+                                                   Id="NumeroNotaFiscal" 
+                                                   name="NumeroNotaFiscal" 
+                                                   @bind-Value="model.NumeroNotaFiscal"></InputText>
+                                        <ValidationMessage For="(() => model.NumeroNotaFiscal)" />
                                     </div>
                                     <div class="col-lg-3">
                                         <p>
-                                            <label for="Data">Data N.F</label>
+                                            <label for="DataNF">Data N.F</label>
                                             <MatDatePicker Required="true"
-                                                           @bind-Value="Model.DataNF"
+                                                           Id="DataNF"
+                                                           name="DataNF"
                                                            AllowInput="false"
-                                                           Format="dd/MM/yyyy">
+                                                           Format="dd/MM/yyyy"
+                                                           @bind-Value="model.DataNF">
                                             </MatDatePicker>
+                                            <ValidationMessage For="(() => model.DataNF)" />
                                         </p>
                                     </div>
                                     <div class="col-lg-5">
                                         <label for="NomeCliente">Cliente</label>
-                                        <InputText Id="NomeCliente" name="NomeCliente" Class="form-control" @bind-Value="Model.NomeCliente"></InputText>
-                                        <ValidationMessage For="(() => Model.NomeCliente)" />
+                                        <InputText Class="form-control" 
+                                                   Id="NomeCliente" 
+                                                   name="NomeCliente" 
+                                                   @bind-Value="model.NomeCliente"></InputText>
+                                        <ValidationMessage For="(() => model.NomeCliente)" />
                                     </div>
                                     <div class="col-lg-2">
                                         <label for="ValorVenda">Valor de Venda</label>
-                                        <input type="text" class="form-control" id="ValorVenda" name="ValorVenda" placeholder="Valor de Venda">
+                                        <MatInputTextComponent class="form-control"
+                                                   id="ValorVenda"
+                                                   name="ValorVenda"
+                                                   @bind-Value="model.ValorVenda"></MatInputTextComponent>
+                                        <ValidationMessage For="(() => model.ValorVenda)" />
                                     </div>
                                 </div>
                             </div>
@@ -214,7 +227,9 @@ else
                                 <div class=form-group>
                                     <div class="col-lg-12">
                                         <label for="Descricao">Descrição</label>
-                                        <InputTextArea class="form-control" @bind-Value="Model.Descricao" rows="3" placeholder="Descrição"></InputTextArea>
+                                        <InputTextArea class="form-control" 
+                                                       rows="3" 
+                                                       @bind-Value="model.Descricao"></InputTextArea>
                                     </div>
                                 </div>
                             </div>
@@ -233,20 +248,20 @@ else
 }
 
 @code {
-    private EditContext EditContext;
-    private VendaViewModel Model = new VendaViewModel();
+    private EditContext editContext;
+    private VendaViewModel model = new VendaViewModel();
     private VendaViewModel[] vendas;
-    private bool ModalOpen { get; set; }
+    private bool modalOpen { get; set; }
     private string modalTitle { get; set; }
 
     protected async Task HandleValidSubmit()
     {
         try
         {
-            await webApiServices.Post<VendaViewModel>(Model, "api/Venda");
+            await webApiServices.Post<VendaViewModel>(model, "api/Venda");
             navigationManager.NavigateTo("/venda");
 
-            closeModal();
+            CloseModal();
             matToaster.Add("Venda cadastrada.", MatToastType.Success, "Sucesso");
             vendas = await Http.GetJsonAsync<VendaViewModel[]>("https://localhost:44301/api/Venda");
             StateHasChanged();
@@ -267,8 +282,8 @@ else
     {
 
         vendas = await Http.GetJsonAsync<VendaViewModel[]>("https://localhost:44301/api/Venda");
-        EditContext = new EditContext(Model);
-        EditContext.OnFieldChanged += EditContext_OnFieldChanged;
+        editContext = new EditContext(model);
+        editContext.OnFieldChanged += EditContext_OnFieldChanged;
 
         base.OnInitialized();
     }
@@ -287,33 +302,40 @@ else
 
     private void SetOkDisabledStatus()
     {
-        var validator = EditContextFluentValidationExtensions.GetValidatorForModel(Model);
-        var validationResults = validator.Validate(Model);
+        var validator = EditContextFluentValidationExtensions.GetValidatorForModel(model);
+        var validationResults = validator.Validate(model);
         var isInvalid = validationResults.Errors.Count == 0 ? false : true;
         //Console.WriteLine(validationResults.Errors.Count);
 
-        var task = controlInputTypeSubmit(isInvalid);
+        var task = ControlInputTypeSubmit(isInvalid);
         task.GetAwaiter();
     }
 
-    protected void openModal(int hash)
+    protected async Task OpenModal(int hash)
     {
-        this.Model = new VendaViewModel();
+        this.model = new VendaViewModel();
         this.modalTitle = "Cadastro de Venda";
-        this.ModalOpen = true;
-
+        this.modalOpen = true;
+        await ApplyInputMask();
     }
 
-    protected void closeModal()
+    protected void CloseModal()
     {
-        this.ModalOpen = false;
+        this.modalOpen = false;
         StateHasChanged();
     }
 
     // Call Functions Jquery
-    private async Task controlInputTypeSubmit(bool isInvalid)
+    private async Task ControlInputTypeSubmit(bool isInvalid)
     {
         var result = await JSRuntime.InvokeAsync<bool>("controlInputTypeSubmit", isInvalid);
+
+        StateHasChanged();
+    }
+
+    private async Task ApplyInputMask()
+    {
+        var result = await JSRuntime.InvokeAsync<dynamic>("applyInputMask");
 
         StateHasChanged();
     }

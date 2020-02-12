@@ -2,9 +2,20 @@
 flatpickr.localize(flatpickr.l10ns.pt);
 
 function controlInputTypeSubmit(isInvalid) {
-    //console.log(isInvalid);
+    console.log(isInvalid);
     $(':input[type="submit"]').prop('disabled', isInvalid);
 }
 
-//// teste mask
-//$('#Cliente').mask('00/00/0000');
+function applyInputMask() {
+    setTimeout(function () {
+
+        $('[name="NumeroNotaFiscal"]').inputmask("9999");
+
+        $('[name="ValorVenda"]').maskMoney({
+            prefix: "R$:",
+            decimal: ",",
+            thousands: "."
+        });
+
+    }, 500);
+}
