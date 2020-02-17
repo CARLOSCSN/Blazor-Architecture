@@ -67,17 +67,17 @@ else
                 </div>
             </th>
             @*<th>Valor Compra</th>
-        <th>% Imposto</th>
-        <th>Frete 01</th>
-        <th>Frete 02</th>
-        <th>% C.O</th>
-        <th>Outras Despesas</th>
-        <th>Custo Total</th>
-        <th>% Comissão</th>
-        <th>Valor Comissão</th>
-        <th>% Lucro</th>
-        <th>Valor Lucro</th>
-        <th>Descrição</th>*@
+            <th>% Imposto</th>
+            <th>Frete 01</th>
+            <th>Frete 02</th>
+            <th>% C.O</th>
+            <th>Outras Despesas</th>
+            <th>Custo Total</th>
+            <th>% Comissão</th>
+            <th>Valor Comissão</th>
+            <th>% Lucro</th>
+            <th>Valor Lucro</th>
+            <th>Descrição</th>*@
         </MatTableHeader>
         <MatTableRow Context="venda">
             <td>
@@ -160,11 +160,15 @@ else
                                     </div>
                                     <div class="col-lg-2">
                                         <label for="ValorVenda">Valor de Venda</label>
-                                        <MatInputTextComponent class="form-control"
+                                        @*<MatInputTextComponent class="form-control"
                                                    id="ValorVenda"
                                                    name="ValorVenda"
                                                    @bind-Value="model.ValorVenda"></MatInputTextComponent>
-                                        <ValidationMessage For="(() => model.ValorVenda)" />
+                                        <ValidationMessage For="(() => model.ValorVenda)" />*@
+
+                                        <SwInputText Label="Catalogue"
+                                                     @bind-Value="model.ValorVenda"
+                                                     ValidationFor="@(() => model.ValorVenda)" />
                                     </div>
                                 </div>
                             </div>

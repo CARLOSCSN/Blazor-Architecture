@@ -122,3 +122,7 @@ C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Shared\Main
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Shared\NavMenu.razor.g.cs
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Shared\SurveyPrompt.razor.g.cs
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\_Imports.razor.g.cs
+C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\RazorDeclaration\Pages\CustomInputSelect.razor.g.cs
+C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\RazorDeclaration\Pages\SwInputText.razor.g.cs
+C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Pages\CustomInputSelect.razor.g.cs
+C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Pages\SwInputText.razor.g.cs
