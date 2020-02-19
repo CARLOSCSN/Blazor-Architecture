@@ -6,16 +6,4 @@ function controlInputTypeSubmit(isInvalid) {
     $(':input[type="submit"]').prop('disabled', isInvalid);
 }
 
-function applyInputMask() {
-    setTimeout(function () {
-
-        $('[name="NumeroNotaFiscal"]').inputmask("9999");
-
-        $('[name="ValorVenda"]').maskMoney({
-            prefix: "R$:",
-            decimal: ",",
-            thousands: "."
-        });
-
-    }, 500);
-}
+$('[name="NumeroNotaFiscal"]').mask("9999");

@@ -159,14 +159,8 @@ else
                                         <ValidationMessage For="(() => model.NomeCliente)" />
                                     </div>
                                     <div class="col-lg-2">
-                                        <label for="ValorVenda">Valor de Venda</label>
-                                        @*<MatInputTextComponent class="form-control"
-                                                   id="ValorVenda"
-                                                   name="ValorVenda"
-                                                   @bind-Value="model.ValorVenda"></MatInputTextComponent>
-                                        <ValidationMessage For="(() => model.ValorVenda)" />*@
-
-                                        <SwInputText Label="Catalogue"
+                                        <SwInputText Label="Valor de Venda"
+                                                     Name="ValorVenda"
                                                      @bind-Value="model.ValorVenda"
                                                      ValidationFor="@(() => model.ValorVenda)" />
                                     </div>
@@ -320,7 +314,6 @@ else
         this.model = new VendaViewModel();
         this.modalTitle = "Cadastro de Venda";
         this.modalOpen = true;
-        await ApplyInputMask();
     }
 
     protected void CloseModal()
@@ -333,13 +326,6 @@ else
     private async Task ControlInputTypeSubmit(bool isInvalid)
     {
         var result = await JSRuntime.InvokeAsync<bool>("controlInputTypeSubmit", isInvalid);
-
-        StateHasChanged();
-    }
-
-    private async Task ApplyInputMask()
-    {
-        var result = await JSRuntime.InvokeAsync<dynamic>("applyInputMask");
 
         StateHasChanged();
     }

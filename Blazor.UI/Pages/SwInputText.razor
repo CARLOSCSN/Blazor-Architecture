@@ -6,8 +6,8 @@
 
 <!-- Control with label -->
 <div class="form-control-wrapper">
-    <label class="form-control-label" for="catalogue">Catalogue</label>
-    <InputText class="form-control" id="catalogue" @bind-Value="CurrentValueAsString" />
+    <label class="form-control-label" for="@uniqueId">@Label</label>
+    <InputText class="form-control" id="@uniqueId" name="@Name" @bind-Value="CurrentValueAsString" />
     <div class="form-control-validation">
         <ValidationMessage For="@ValidationFor" />
     </div>
@@ -18,9 +18,12 @@
 
     [Parameter] public string Id { get; set; }
     [Parameter] public string Label { get; set; }
+    [Parameter] public string Name { get; set; }
     [Parameter] public Expression<Func<T>> ValidationFor { get; set; }
     [Parameter] public RenderFragment ChildContent { get; set; }
     [Parameter] public bool ShowDefaultOpton { get; set; } = true;
+
+    private string uniqueId = Guid.NewGuid().ToString("N");
 
     protected override bool TryParseValueFromString(string value, out T result, out string validationErrorMessage)
     {

@@ -157,10 +157,6 @@
             "Toolbelt.Blazor.LoadingBar": {
               "target": "Package",
               "version": "[9.0.0.3, )"
-            },
-            "jQuery.InputMask": {
-              "target": "Package",
-              "version": "[5.0.2, )"
             }
           },
           "imports": [

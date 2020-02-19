@@ -27,9 +27,6 @@
           "lib/netstandard2.0/FluentValidation.dll": {}
         }
       },
-      "jQuery.InputMask/5.0.2": {
-        "type": "package"
-      },
       "MatBlazor/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -460,23 +457,6 @@
         "lib/netstandard1.6/FluentValidation.xml",
         "lib/netstandard2.0/FluentValidation.dll",
         "lib/netstandard2.0/FluentValidation.xml"
-      ]
-    },
-    "jQuery.InputMask/5.0.2": {
-      "sha512": "Yu+Xgd4mcf4t4olLL+J7+kTBUqkJ9DEB/BNt36TlBHucrAxvtIHvj6odLzwJt42+w36XhDtW+bf1d0HrID1LcA==",
-      "type": "package",
-      "path": "jquery.inputmask/5.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Readme.txt",
-        "content/Scripts/inputmask/bindings/inputmask.binding.js",
-        "content/Scripts/inputmask/inputmask.js",
-        "content/Scripts/inputmask/inputmask.min.js",
-        "content/Scripts/inputmask/jquery.inputmask.js",
-        "content/Scripts/inputmask/jquery.inputmask.min.js",
-        "jquery.inputmask.5.0.2.nupkg.sha512",
-        "jquery.inputmask.nuspec"
       ]
     },
     "MatBlazor/2.1.1": {
@@ -1390,8 +1370,7 @@
       "Microsoft.AspNetCore.Blazor.HttpClient >= 3.2.0-preview1.20073.1",
       "Microsoft.AspNetCore.Components.Authorization >= 3.1.0",
       "Newtonsoft.Json >= 12.0.3",
-      "Toolbelt.Blazor.LoadingBar >= 9.0.0.3",
-      "jQuery.InputMask >= 5.0.2"
+      "Toolbelt.Blazor.LoadingBar >= 9.0.0.3"
     ]
   },
   "packageFolders": {
@@ -1480,10 +1459,6 @@
           "Toolbelt.Blazor.LoadingBar": {
             "target": "Package",
             "version": "[9.0.0.3, )"
-          },
-          "jQuery.InputMask": {
-            "target": "Package",
-            "version": "[5.0.2, )"
           }
         },
         "imports": [
