@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s0AhOum8c0IGr3I81UoL1FS9Xvhyd+SFsNKvQ8AqpbAllr1qn5O6VnfHE/e4l3YzJSpSh0gFMzvGfH6+0E/7xA==",
+  "dgSpecHash": "2vkmihFlV4Z9oQ8g1DD5bPmLW8sq/QUfLQhb/msvgC+NPek3lHc6TG2+Mn0CtTAIMnE5NK8/alvclt7/3XGUqQ==",
   "success": true,
   "projectFilePath": "C:\\Temp\\Blazor-Architecture\\Blazor.DataEFCore\\DataEFCore.csproj",
   "expectedPackageFiles": [

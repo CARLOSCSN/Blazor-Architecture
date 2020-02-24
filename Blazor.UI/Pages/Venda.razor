@@ -278,7 +278,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-
         vendas = await Http.GetJsonAsync<VendaViewModel[]>("https://localhost:44301/api/Venda");
         editContext = new EditContext(model);
         editContext.OnFieldChanged += EditContext_OnFieldChanged;
