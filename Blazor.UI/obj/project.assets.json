@@ -15,11 +15,8 @@
           "lib/netstandard2.0/Blazored.LocalStorage.dll": {}
         }
       },
-      "FluentValidation/8.6.1": {
+      "FluentValidation/9.0.0-preview3": {
         "type": "package",
-        "dependencies": {
-          "System.ComponentModel.Annotations": "4.4.1"
-        },
         "compile": {
           "lib/netstandard2.0/FluentValidation.dll": {}
         },
@@ -414,7 +411,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "FluentValidation": "8.6.1",
+          "FluentValidation": "9.0.0-preview3",
           "Microsoft.AspNetCore.Components": "3.1.1",
           "Microsoft.AspNetCore.Components.Forms": "3.1.1"
         },
@@ -440,21 +437,17 @@
         "lib/netstandard2.0/Blazored.LocalStorage.dll"
       ]
     },
-    "FluentValidation/8.6.1": {
-      "sha512": "g0xw/YCVgJ1IYpBgKF9iuci/Arf6Dsq9H/WeeT9zaBpjrEA+Cr2GjWXHu1F0DKqVzp4J4hta4gGrRt6H4aESqQ==",
+    "FluentValidation/9.0.0-preview3": {
+      "sha512": "VEuZONZMULGRGFC52HuZ1t1mOA4d1HxSS4O+CYaofK4TVjpFEPBbibTSEEln/TWzOKp+dOFNbNKaHpRBSkUhlg==",
       "type": "package",
-      "path": "fluentvalidation/8.6.1",
+      "path": "fluentvalidation/9.0.0-preview3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "fluentvalidation.8.6.1.nupkg.sha512",
+        "fluentvalidation.9.0.0-preview3.nupkg.sha512",
         "fluentvalidation.nuspec",
-        "lib/net45/FluentValidation.dll",
-        "lib/net45/FluentValidation.xml",
-        "lib/netstandard1.1/FluentValidation.dll",
-        "lib/netstandard1.1/FluentValidation.xml",
-        "lib/netstandard1.6/FluentValidation.dll",
-        "lib/netstandard1.6/FluentValidation.xml",
+        "lib/net461/FluentValidation.dll",
+        "lib/net461/FluentValidation.xml",
         "lib/netstandard2.0/FluentValidation.dll",
         "lib/netstandard2.0/FluentValidation.xml"
       ]

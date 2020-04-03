@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "6GoUaYX/sgmP8Z0bAeQCB7dXbAiNLwmQcRst9L/UJmaDJEZA3bWTpIoeteYVkT5sFQHGFXE/MJnzS8c9cog3qQ==",
+  "dgSpecHash": "b0EGXFgeNWgYFwZMZFD8ph3Hbd/UOG7nFU0awo2RReYgt9T4hpNWykPxqDByFtBl7ogse2lMKTwuA/COl4VoKA==",
   "success": true,
   "projectFilePath": "C:\\Temp\\Blazor-Architecture\\Blazor.Infra.CrossCutting.SharedUI\\Common.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\carlo\\.nuget\\packages\\fluentvalidation\\8.6.1\\fluentvalidation.8.6.1.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\fluentvalidation\\9.0.0-preview3\\fluentvalidation.9.0.0-preview3.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.1\\microsoft.aspnetcore.authorization.3.1.1.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.1\\microsoft.aspnetcore.components.3.1.1.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\3.1.1\\microsoft.aspnetcore.components.analyzers.3.1.1.nupkg.sha512",
