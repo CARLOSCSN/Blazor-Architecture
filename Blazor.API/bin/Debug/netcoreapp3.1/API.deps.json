@@ -28,7 +28,6 @@
           "DataEFCore": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.AspNetCore.Blazor.Server": "3.1.0-preview4.19579.2",
-          "Microsoft.Extensions.Logging": "5.0.0-preview.2.20160.3",
           "Newtonsoft.Json": "12.0.3",
           "Swashbuckle.AspNetCore": "5.3.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -1604,7 +1603,6 @@
       "Common/1.0.0": {
         "dependencies": {
           "FluentValidation": "9.0.0-preview3",
-          "Microsoft.AspNetCore.Components": "3.1.1",
           "Microsoft.AspNetCore.Components.Forms": "3.1.1"
         },
         "runtime": {
