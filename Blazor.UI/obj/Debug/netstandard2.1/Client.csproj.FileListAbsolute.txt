@@ -126,3 +126,11 @@ C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Client.dll
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Client.pdb
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\blazor\linker.descriptor.xml
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\blazor\blazor.boot.json
+C:\Temp\Blazor-Architecture\Blazor.UI\bin\Debug\netstandard2.1\dist\_framework\_bin\Microsoft.AspNetCore.Components.WebAssembly.dll
+C:\Temp\Blazor-Architecture\Blazor.UI\bin\Debug\netstandard2.1\dist\_framework\_bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Temp\Blazor-Architecture\Blazor.UI\bin\Debug\netstandard2.1\dist\_framework\_bin\Microsoft.Extensions.Configuration.dll
+C:\Temp\Blazor-Architecture\Blazor.UI\bin\Debug\netstandard2.1\dist\_framework\_bin\Microsoft.JSInterop.WebAssembly.dll
+C:\Temp\Blazor-Architecture\Blazor.UI\bin\Debug\netstandard2.1\Microsoft.AspNetCore.Components.WebAssembly.dll
+C:\Temp\Blazor-Architecture\Blazor.UI\bin\Debug\netstandard2.1\Microsoft.Extensions.Configuration.dll
+C:\Temp\Blazor-Architecture\Blazor.UI\bin\Debug\netstandard2.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Temp\Blazor-Architecture\Blazor.UI\bin\Debug\netstandard2.1\Microsoft.JSInterop.WebAssembly.dll

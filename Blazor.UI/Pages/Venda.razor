@@ -308,7 +308,7 @@ else
         task.GetAwaiter();
     }
 
-    protected async Task OpenModal(int hash)
+    protected void OpenModal(int hash)
     {
         this.model = new VendaViewModel();
         this.modalTitle = "Cadastro de Venda";
@@ -324,9 +324,9 @@ else
     // Call Functions Jquery
     private async Task ControlInputTypeSubmit(bool isInvalid)
     {
-        var result = await JSRuntime.InvokeAsync<bool>("controlInputTypeSubmit", isInvalid);
+        //var result = await JSRuntime.InvokeAsync<bool>("controlInputTypeSubmit", isInvalid);
 
-        StateHasChanged();
+        //StateHasChanged();
     }
 }
 

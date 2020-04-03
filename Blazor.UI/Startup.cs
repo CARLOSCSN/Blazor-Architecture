@@ -36,7 +36,6 @@ namespace Client
         {
             WebAssemblyHttpMessageHandlerOptions.DefaultCredentials = FetchCredentialsOption.Include;
             app.AddComponent<App>("app");
-            app.UseLoadingBar();
         }
     }
 }
