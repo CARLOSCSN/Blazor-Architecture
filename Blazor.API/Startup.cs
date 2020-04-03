@@ -63,7 +63,7 @@ namespace API
                 };
             });
 
-            services.AddControllers().AddNewtonsoftJson();
+            services.AddControllers(); //.AddNewtonsoftJson();
             services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(

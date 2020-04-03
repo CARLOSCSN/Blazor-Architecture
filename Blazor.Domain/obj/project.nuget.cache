@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fBW04p9Ydz8PHhg7B5eM6Nbirl8hVedeGhYtnZ0M/4/lvic8BCwlRHLcF5Ye5oJr7mmJadL8G7roNItBur3Aaw==",
+  "dgSpecHash": "2f9Lew0PrCEOmCYeS51CFqhqQg9ZkEUAGZ/ENZ3FsZhR8QxgbIwrF+l2BYKpVwn1Z1z3l6wKQSIcGZkMvx1vqA==",
   "success": true,
   "projectFilePath": "C:\\Temp\\Blazor-Architecture\\Blazor.Domain\\Domain.csproj",
   "expectedPackageFiles": [

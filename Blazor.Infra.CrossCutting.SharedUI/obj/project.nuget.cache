@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UzZq1Kw1H5St2gRd5tBVlDivCgdYIEfLhYXt26BLaUEqHUr+nJLxGzGaos4wvqMe9AC6OAcKJUf3PRSqYDh0cg==",
+  "dgSpecHash": "6GoUaYX/sgmP8Z0bAeQCB7dXbAiNLwmQcRst9L/UJmaDJEZA3bWTpIoeteYVkT5sFQHGFXE/MJnzS8c9cog3qQ==",
   "success": true,
   "projectFilePath": "C:\\Temp\\Blazor-Architecture\\Blazor.Infra.CrossCutting.SharedUI\\Common.csproj",
   "expectedPackageFiles": [
