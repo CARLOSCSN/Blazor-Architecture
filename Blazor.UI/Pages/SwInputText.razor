@@ -7,7 +7,7 @@
 <!-- Control with label -->
 <div class="form-control-wrapper">
     <label class="form-control-label" for="@uniqueId">@Label</label>
-    <InputText class="form-control" id="@uniqueId" name="@Name" @bind-Value="CurrentValueAsString" />
+    <input class="form-control @CssClass" id="@uniqueId" name="@Name" @bind="CurrentValueAsString" />
     <div class="form-control-validation">
         <ValidationMessage For="@ValidationFor" />
     </div>
@@ -37,6 +37,14 @@
         else if (typeof(T) == typeof(int))
         {
             int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsedValue);
+            result = (T)(object)parsedValue;
+            validationErrorMessage = null;
+
+            return true;
+        }
+        else if (typeof(T) == typeof(decimal))
+        {
+            decimal.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsedValue);
             result = (T)(object)parsedValue;
             validationErrorMessage = null;
 

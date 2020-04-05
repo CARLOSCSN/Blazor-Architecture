@@ -3578,7 +3578,19 @@ div.dt-button-info {
     padding-bottom: 15px !important;
 }
 
+.mdc-text-field__input.invalid {
+    border: 1px solid red !important;
+}
+
 /*remove effect matblazor to datapicker*/
 .mat-date-picker .mdc-line-ripple {
     display: none !important;
+}
+
+.custom-valid {
+    border: 1px solid #26b050 !important;
+}
+
+.custom-invalid {
+    border: 1px solid red !important;
 }
