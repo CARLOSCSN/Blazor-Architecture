@@ -4,7 +4,7 @@ namespace Common.ViewModel
 {
     public class VendaViewModel
     {
-        public int VendaId { get; set; }
+        public virtual int VendaId { get; set; }
 
         public string NumeroNotaFiscal { get; set; }
 
@@ -32,7 +32,7 @@ namespace Common.ViewModel
 
         public decimal ValorComissao { get; set; }
 
-        public double PercentualLucro { get; set; }
+        public decimal PercentualLucro { get; set; }
 
         public decimal ValorLucro { get; set; }
 

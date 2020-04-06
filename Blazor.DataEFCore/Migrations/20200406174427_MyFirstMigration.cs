@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataEFCore.Migrations
 {
-    public partial class init : Migration
+    public partial class MyFirstMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -128,6 +128,34 @@ namespace DataEFCore.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Playlist", x => x.PlaylistId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Venda",
+                columns: table => new
+                {
+                    VendaId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    NumeroNotaFiscal = table.Column<string>(nullable: false),
+                    DataNF = table.Column<DateTime>(nullable: false),
+                    NomeCliente = table.Column<string>(nullable: false),
+                    ValorVenda = table.Column<decimal>(type: "decimal(16,2)", nullable: false),
+                    ValorCompra = table.Column<decimal>(type: "decimal(16,2)", nullable: false),
+                    PercentualImposto = table.Column<decimal>(nullable: false),
+                    ValorFrete1 = table.Column<decimal>(type: "decimal(16,2)", nullable: false),
+                    ValorFrete2 = table.Column<decimal>(type: "decimal(16,2)", nullable: false),
+                    PercentualCustoOperacional = table.Column<decimal>(nullable: false),
+                    ValorOutrasDespesas = table.Column<decimal>(type: "decimal(16,2)", nullable: false),
+                    ValorCustoTotal = table.Column<decimal>(type: "decimal(16,2)", nullable: false),
+                    PercentualComissao = table.Column<double>(nullable: false),
+                    ValorComissao = table.Column<decimal>(type: "decimal(16,2)", nullable: false),
+                    PercentualLucro = table.Column<decimal>(nullable: false),
+                    ValorLucro = table.Column<decimal>(type: "decimal(16,2)", nullable: false),
+                    Descricao = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Venda", x => x.VendaId);
                 });
 
             migrationBuilder.CreateTable(
@@ -422,16 +450,16 @@ namespace DataEFCore.Migrations
                 columns: new[] { "WeatherForecastId", "Date", "Summary", "TemperatureC" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2020, 1, 8, 2, 30, 0, 849, DateTimeKind.Local).AddTicks(5619), "Warm", -10 },
-                    { 2, new DateTime(2020, 1, 11, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8541), "Very Hot", 45 },
-                    { 3, new DateTime(2020, 1, 14, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8700), "Bracing", 12 },
-                    { 4, new DateTime(2020, 1, 8, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8706), "Frying", 50 },
-                    { 5, new DateTime(2020, 1, 22, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8708), "Cold", 2 },
-                    { 6, new DateTime(2020, 3, 8, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8710), "Very Cold", -5 },
-                    { 7, new DateTime(2020, 1, 8, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8712), "Hot", 40 },
-                    { 8, new DateTime(2020, 2, 10, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8714), "Good", 22 },
-                    { 9, new DateTime(2020, 3, 27, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8716), "Summer", 35 },
-                    { 10, new DateTime(2020, 1, 8, 2, 30, 0, 850, DateTimeKind.Local).AddTicks(8718), "Warm", 55 }
+                    { 1, new DateTime(2020, 4, 6, 14, 44, 27, 26, DateTimeKind.Local).AddTicks(6292), "Warm", -10 },
+                    { 2, new DateTime(2020, 4, 9, 14, 44, 27, 27, DateTimeKind.Local).AddTicks(9473), "Very Hot", 45 },
+                    { 3, new DateTime(2020, 4, 12, 14, 44, 27, 27, DateTimeKind.Local).AddTicks(9604), "Bracing", 12 },
+                    { 4, new DateTime(2020, 4, 6, 14, 44, 27, 27, DateTimeKind.Local).AddTicks(9611), "Frying", 50 },
+                    { 5, new DateTime(2020, 4, 20, 14, 44, 27, 27, DateTimeKind.Local).AddTicks(9613), "Cold", 2 },
+                    { 6, new DateTime(2020, 6, 5, 14, 44, 27, 27, DateTimeKind.Local).AddTicks(9616), "Very Cold", -5 },
+                    { 7, new DateTime(2020, 4, 6, 14, 44, 27, 27, DateTimeKind.Local).AddTicks(9619), "Hot", 40 },
+                    { 8, new DateTime(2020, 5, 9, 14, 44, 27, 27, DateTimeKind.Local).AddTicks(9621), "Good", 22 },
+                    { 9, new DateTime(2020, 6, 24, 14, 44, 27, 27, DateTimeKind.Local).AddTicks(9623), "Summer", 35 },
+                    { 10, new DateTime(2020, 4, 6, 14, 44, 27, 27, DateTimeKind.Local).AddTicks(9625), "Warm", 55 }
                 });
 
             migrationBuilder.CreateIndex(
@@ -551,6 +579,9 @@ namespace DataEFCore.Migrations
 
             migrationBuilder.DropTable(
                 name: "PlaylistTrack");
+
+            migrationBuilder.DropTable(
+                name: "Venda");
 
             migrationBuilder.DropTable(
                 name: "WeatherForecast");

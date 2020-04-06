@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Domain/1.0.0": {
         "dependencies": {
+          "Common": "1.0.0",
           "Microsoft.EntityFrameworkCore.Abstractions": "5.0.0-preview.2.20159.4",
           "Microsoft.Extensions.Caching.Abstractions": "5.0.0-preview.2.20160.3",
           "Microsoft.Extensions.Logging": "5.0.0-preview.2.20160.3",
@@ -15,6 +16,60 @@
         },
         "runtime": {
           "Domain.dll": {}
+        }
+      },
+      "FluentValidation/9.0.0-preview3": {
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authorization/3.1.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "3.1.1",
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0-preview.2.20160.3",
+          "Microsoft.Extensions.Options": "5.0.0-preview.2.20160.3"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.100.119.61510"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components/3.1.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "3.1.1",
+          "Microsoft.AspNetCore.Components.Analyzers": "3.1.1",
+          "Microsoft.JSInterop": "3.1.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.100.119.61510"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components.Analyzers/3.1.1": {},
+      "Microsoft.AspNetCore.Components.Forms/3.1.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Forms.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.100.119.61510"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Metadata/3.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.100.119.61510"
+          }
         }
       },
       "Microsoft.EntityFrameworkCore.Abstractions/5.0.0-preview.2.20159.4": {
@@ -135,6 +190,14 @@
           }
         }
       },
+      "Microsoft.JSInterop/3.1.1": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.JSInterop.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.100.119.61404"
+          }
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -159,6 +222,15 @@
             "fileVersion": "5.0.20.16006"
           }
         }
+      },
+      "Common/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "9.0.0-preview3",
+          "Microsoft.AspNetCore.Components.Forms": "3.1.1"
+        },
+        "runtime": {
+          "Common.dll": {}
+        }
       }
     }
   },
@@ -167,6 +239,48 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FluentValidation/9.0.0-preview3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VEuZONZMULGRGFC52HuZ1t1mOA4d1HxSS4O+CYaofK4TVjpFEPBbibTSEEln/TWzOKp+dOFNbNKaHpRBSkUhlg==",
+      "path": "fluentvalidation/9.0.0-preview3",
+      "hashPath": "fluentvalidation.9.0.0-preview3.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authorization/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z4VtFGjHPUACePEz25Q4btFs5jjWh/3sfO1ozCzUJebL/nq4J4kQUOhkSFZhlTikxbsYpqp6ZamH77btGzZA9w==",
+      "path": "microsoft.aspnetcore.authorization/3.1.1",
+      "hashPath": "microsoft.aspnetcore.authorization.3.1.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CcbE+dq3U7+BIY5tYvjMmCn+fovTn/ZL+rFl8mkwJLgckudDCnGeoJXpO0oW1uI35Gu737wa2qE29z68/jcKzw==",
+      "path": "microsoft.aspnetcore.components/3.1.1",
+      "hashPath": "microsoft.aspnetcore.components.3.1.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.Analyzers/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S//jhO3BHKZFEs1eVEvmxaQ0woUVbvzw6I0QEwIOl2r3hDqRIpYqBqDFM/Ha9Qs8y5BgqOETCHskAq0t9QX0zQ==",
+      "path": "microsoft.aspnetcore.components.analyzers/3.1.1",
+      "hashPath": "microsoft.aspnetcore.components.analyzers.3.1.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.Forms/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FZ7IF9sTbfkeBlqBH/7aFIYv+I65hYQH/9hmw/ZpnmNp4yuyZvnr/1PQwlSKGHDYFrM5H4ccsrozwxoM0q1CrA==",
+      "path": "microsoft.aspnetcore.components.forms/3.1.1",
+      "hashPath": "microsoft.aspnetcore.components.forms.3.1.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Metadata/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jfe4+whbBwqTxKabSNf4zy9NdNqbrnmVcYjO8r1N2BomimcZS+LRr+OvTtZJwqqBLebvEgwv2Ei0ZbwFtDtW0g==",
+      "path": "microsoft.aspnetcore.metadata/3.1.1",
+      "hashPath": "microsoft.aspnetcore.metadata.3.1.1.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Abstractions/5.0.0-preview.2.20159.4": {
       "type": "package",
@@ -245,6 +359,13 @@
       "path": "microsoft.extensions.primitives/5.0.0-preview.2.20160.3",
       "hashPath": "microsoft.extensions.primitives.5.0.0-preview.2.20160.3.nupkg.sha512"
     },
+    "Microsoft.JSInterop/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-icBxjPwn1iNkyvaiqZf03+Gxfrc6rOT+8a0/FKsDMZnpHPXe7p1Dianh4Kk9RI5Cyzf/6+e6+QMdOaKgwhhR5w==",
+      "path": "microsoft.jsinterop/3.1.1",
+      "hashPath": "microsoft.jsinterop.3.1.1.nupkg.sha512"
+    },
     "Newtonsoft.Json/12.0.3": {
       "type": "package",
       "serviceable": true,
@@ -272,6 +393,11 @@
       "sha512": "sha512-wZAKKvdMSgxyDKMDE2cAdRULqdREhx4N6k539XeS4h8vnnrSQSBMs+FJKyqoYp+mcTbQldWaf/0ucKUIbw3MYg==",
       "path": "system.runtime.compilerservices.unsafe/5.0.0-preview.2.20160.6",
       "hashPath": "system.runtime.compilerservices.unsafe.5.0.0-preview.2.20160.6.nupkg.sha512"
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

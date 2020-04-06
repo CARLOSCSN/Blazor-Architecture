@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using API.Configurations;
 using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.AspNetCore.Identity;
 using System;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +14,10 @@ using Microsoft.AspNetCore.ResponseCompression;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
+using FluentValidation.AspNetCore;
+using FluentValidation;
+using Common.Validation;
+using Domain.ApiModels;
 
 namespace API
 {
@@ -88,7 +91,9 @@ namespace API
             });
 
             services.AddMvc()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
+                .AddFluentValidation(fvc =>
+                            fvc.RegisterValidatorsFromAssemblyContaining<Startup>());
 
             services.ConfigureRepositories()
                 .ConfigureSupervisor()
@@ -101,8 +106,12 @@ namespace API
             services.AddSwaggerGen(s => s.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
             {
                 Title = "Blazor API",
-                Description = "Blazor Music Store API"
+                Description = "API for Blazor Wasm"
             }));
+
+
+            /// *** Validators Fluent
+            services.AddTransient<IValidator<VendaApiModel>, VendaValidator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
