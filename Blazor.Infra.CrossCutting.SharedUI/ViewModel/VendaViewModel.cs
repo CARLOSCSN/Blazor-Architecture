@@ -16,13 +16,13 @@ namespace Common.ViewModel
 
         public decimal ValorCompra { get; set; }
 
-        public double PercentualImposto { get; set; }
+        public decimal PercentualImposto { get; set; }
 
         public decimal ValorFrete1 { get; set; }
 
         public decimal ValorFrete2 { get; set; }
 
-        public double PercentualCustoOperacional { get; set; }
+        public decimal PercentualCustoOperacional { get; set; }
 
         public decimal ValorOutrasDespesas { get; set; }
 

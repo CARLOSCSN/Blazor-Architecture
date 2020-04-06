@@ -50,6 +50,14 @@
 
             return true;
         }
+        else if (typeof(T) == typeof(double))
+        {
+            double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsedValue);
+            result = (T)(object)parsedValue;
+            validationErrorMessage = null;
+
+            return true;
+        }
         else if (typeof(T) == typeof(Guid))
         {
             Guid.TryParse(value, out var parsedValue);

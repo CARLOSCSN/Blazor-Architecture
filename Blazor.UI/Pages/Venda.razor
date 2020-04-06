@@ -170,32 +170,46 @@ else
                             <div class="row mb-20">
                                 <div class="form-group">
                                     <div class="col-lg-2">
-                                        <label for="ValorCompra">Valor de Compra</label>
-                                        <input type="text" class="form-control" id="ValorCompra" name="ValorCompra" placeholder="Valor de Compra">
+                                        <SwInputText Label="Valor de Compra"
+                                                     Name="ValorCompra"
+                                                     @bind-Value="model.ValorCompra"
+                                                     ValidationFor="@(() => model.ValorCompra)" />
                                     </div>
                                     <div class="col-lg-1">
-                                        <label for="PercentualImposto">% Imposto</label>
-                                        <input type="text" class="form-control" id="PercentualImposto" name="PercentualImposto" placeholder="% Imp.">
+                                        <SwInputText Label="% Imposto"
+                                                     Name="PercentualImposto"
+                                                     @bind-Value="model.PercentualImposto"
+                                                     ValidationFor="@(() => model.PercentualImposto)" />
                                     </div>
                                     <div class="col-lg-2">
-                                        <label for="ValorFrete1">Frete 01</label>
-                                        <input type="text" class="form-control" id="ValorFrete1" name="ValorFrete1" placeholder="Frete 01">
+                                        <SwInputText Label="Frete 01"
+                                                     Name="ValorFrete1"
+                                                     @bind-Value="model.ValorFrete1"
+                                                     ValidationFor="@(() => model.ValorFrete1)" />
                                     </div>
                                     <div class="col-lg-2">
-                                        <label for="ValorFrete2">Frete 02</label>
-                                        <input type="text" class="form-control" id="ValorFrete2" name="ValorFrete2" placeholder="Frete 02">
+                                        <SwInputText Label="Frete 02"
+                                                     Name="ValorFrete2"
+                                                     @bind-Value="model.ValorFrete2"
+                                                     ValidationFor="@(() => model.ValorFrete2)" />
                                     </div>
                                     <div class="col-lg-1">
-                                        <label for="PercentualCustoOperacional">% C.O</label>
-                                        <input type="text" class="form-control" id="PercentualCustoOperacional" name="PercentualCustoOperacional" placeholder="% C.O">
+                                        <SwInputText Label="% C.O"
+                                                     Name="PercentualCustoOperacional"
+                                                     @bind-Value="model.PercentualCustoOperacional"
+                                                     ValidationFor="@(() => model.PercentualCustoOperacional)" />
                                     </div>
                                     <div class="col-lg-2">
-                                        <label for="ValorOutrasDespesas">Outras Despesas</label>
-                                        <input type="text" class="form-control" id="ValorOutrasDespesas" name="ValorOutrasDespesas" placeholder="Outras Despesas">
+                                        <SwInputText Label="Outras Despesas"
+                                                     Name="ValorOutrasDespesas"
+                                                     @bind-Value="model.ValorOutrasDespesas"
+                                                     ValidationFor="@(() => model.ValorOutrasDespesas)" />
                                     </div>
                                     <div class="col-lg-2">
-                                        <label for="ValorCustoTotal">Custo Total</label>
-                                        <input type="text" class="form-control" id="ValorCustoTotal" name="ValorCustoTotal" placeholder="Custo Total">
+                                        <SwInputText Label="Custo Total"
+                                                     Name="ValorCustoTotal"
+                                                     @bind-Value="model.ValorCustoTotal"
+                                                     ValidationFor="@(() => model.ValorCustoTotal)" />
                                     </div>
                                 </div>
                             </div>
@@ -203,20 +217,28 @@ else
                             <div class="row mb-20">
                                 <div class="form-group">
                                     <div class="col-lg-2">
-                                        <label for="PercentualComissao">% Comissão</label>
-                                        <input type="text" class="form-control" id="PercentualComissao" name="PercentualComissao" placeholder="% Comissão">
+                                        <SwInputText Label="% Comissão"
+                                                     Name="PercentualComissao"
+                                                     @bind-Value="model.PercentualComissao"
+                                                     ValidationFor="@(() => model.PercentualComissao)" />
                                     </div>
                                     <div class="col-lg-2">
-                                        <label for="ValorComissao">Valor Comissão</label>
-                                        <input type="text" class="form-control" id="ValorComissao" name="ValorComissao" placeholder="Valor de Comissão">
+                                        <SwInputText Label="Valor Comissão"
+                                                     Name="ValorComissao"
+                                                     @bind-Value="model.ValorComissao"
+                                                     ValidationFor="@(() => model.ValorComissao)" />
                                     </div>
                                     <div class="col-lg-2">
-                                        <label for="PercentualLucro">% Lucro</label>
-                                        <input type="text" class="form-control" id="PercentualLucro" name="PercentualLucro" placeholder="% Lucro">
+                                        <SwInputText Label="% Lucro"
+                                                     Name="PercentualLucro"
+                                                     @bind-Value="model.PercentualLucro"
+                                                     ValidationFor="@(() => model.PercentualLucro)" />
                                     </div>
                                     <div class="col-lg-2">
-                                        <label for="ValorLucro">Valor Lucro</label>
-                                        <input type="text" class="form-control" id="ValorLucro" name="ValorLucro" placeholder="Valor de Lucro">
+                                        <SwInputText Label="Valor Lucro"
+                                                     Name="ValorLucro"
+                                                     @bind-Value="model.ValorLucro"
+                                                     ValidationFor="@(() => model.ValorLucro)" />
                                     </div>
                                 </div>
                             </div>
@@ -287,14 +309,14 @@ else
 
     protected override void OnAfterRender(bool param)
     {
-        base.OnAfterRender(true);
+        CalcCustoTotal();
 
-        SetOkDisabledStatus();
+        base.OnAfterRender(true);
     }
 
     private void EditContext_OnFieldChanged(object sender, FieldChangedEventArgs e)
     {
-        SetOkDisabledStatus();
+        CalcCustoTotal();
     }
 
     private void SetOkDisabledStatus()
@@ -303,9 +325,6 @@ else
         var validationResults = validator.Validate(model);
         var isInvalid = validationResults.Errors.Count == 0 ? false : true;
         //Console.WriteLine(validationResults.Errors.Count);
-
-        var task = ControlInputTypeSubmit(isInvalid);
-        task.GetAwaiter();
     }
 
     protected void OpenModal(int hash)
@@ -319,6 +338,21 @@ else
     {
         this.modalOpen = false;
         StateHasChanged();
+    }
+
+    private void CalcCustoTotal()
+    {
+        var vlrImposto = ((model.PercentualImposto * model.ValorVenda) / 100);
+        var vlrCO = ((model.PercentualCustoOperacional * model.ValorVenda) / 100);
+
+        model.ValorCustoTotal = model.ValorCompra + model.ValorFrete1 + model.ValorFrete2
+            + vlrImposto + vlrCO + model.ValorOutrasDespesas;
+
+        model.ValorCustoTotal = model.ValorCustoTotal;
+
+        Console.WriteLine(model.ValorCustoTotal);
+
+        return;
     }
 
     // Call Functions Jquery
