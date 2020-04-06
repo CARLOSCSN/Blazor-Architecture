@@ -79,7 +79,7 @@ namespace API
                        .AllowAnyMethod()
                        .AllowAnyHeader()
                        .AllowCredentials()
-                       .WithOrigins("http://localhost:50010");
+                       .WithOrigins("https://localhost:44306");
             }));
 
             services.AddControllersWithViews();

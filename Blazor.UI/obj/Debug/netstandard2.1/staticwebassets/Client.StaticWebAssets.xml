@@ -1,4 +1,5 @@
 ﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Temp\Blazor-Architecture\Blazor.UI\bin\Debug\netstandard2.1\wwwroot\" />
   <ContentRoot BasePath="_content/MatBlazor" Path="C:\Users\carlo\.nuget\packages\matblazor\2.3.0\build\..\staticwebassets\" />
   <ContentRoot BasePath="_content/Toolbelt.Blazor.LoadingBar" Path="C:\Users\carlo\.nuget\packages\toolbelt.blazor.loadingbar\11.0.0.1\build\..\staticwebassets\" />
 </StaticWebAssets>

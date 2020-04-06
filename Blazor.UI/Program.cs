@@ -1,16 +1,45 @@
-﻿using Microsoft.AspNetCore.Blazor.Hosting;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Text;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Client.Services.Implementations;
+using Microsoft.AspNetCore.Components.Authorization;
+using Client.Services.Contracts;
+using Toolbelt.Blazor.Extensions.DependencyInjection;
+using MatBlazor;
+using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 namespace Client
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
-        }
+            var builder = WebAssemblyHostBuilder.CreateDefault(args);
+            WebAssemblyHttpMessageHandlerOptions.DefaultCredentials = FetchCredentialsOption.Include;
+            builder.RootComponents.Add<App>("app");
 
-        public static IWebAssemblyHostBuilder CreateHostBuilder(string[] args) =>
-            BlazorWebAssemblyHost.CreateDefaultBuilder()
-                .UseBlazorStartup<Startup>();
+            builder.Services.AddBaseAddressHttpClient();
+
+            builder.Services.AddAuthorizationCore();
+            builder.Services.AddScoped<IdentityAuthenticationStateProvider>();
+            builder.Services.AddScoped<AuthenticationStateProvider>(s => s.GetRequiredService<IdentityAuthenticationStateProvider>());
+            builder.Services.AddScoped<IAuthorizeApi, AuthorizeApi>();
+            builder.Services.AddScoped<WebApiServices>();
+            builder.Services.AddLoadingBar();
+            builder.Services.AddMatToaster(config =>
+            {
+                config.Position = MatToastPosition.BottomRight;
+                config.PreventDuplicates = true;
+                config.NewestOnTop = true;
+                config.ShowCloseButton = true;
+                config.MaximumOpacity = 95;
+                config.VisibleStateDuration = 3000;
+            });
+
+            await builder.Build().RunAsync();
+        }
     }
 }

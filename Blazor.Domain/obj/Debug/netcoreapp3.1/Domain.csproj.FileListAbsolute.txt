@@ -1,12 +1,12 @@
 C:\Temp\Blazor-Architecture\Blazor.Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
 C:\Temp\Blazor-Architecture\Blazor.Domain\bin\Debug\netcoreapp3.1\Domain.dll
 C:\Temp\Blazor-Architecture\Blazor.Domain\bin\Debug\netcoreapp3.1\Domain.pdb
-C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
-C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
-C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
-C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.dll
-C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.pdb
 C:\Temp\Blazor-Architecture\Blazor.Domain\bin\Debug\netcoreapp3.1\Common.dll
 C:\Temp\Blazor-Architecture\Blazor.Domain\bin\Debug\netcoreapp3.1\Common.pdb
 C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.csprojAssemblyReference.cache
+C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
+C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
 C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CopyComplete
+C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.dll
+C:\Temp\Blazor-Architecture\Blazor.Domain\obj\Debug\netcoreapp3.1\Domain.pdb

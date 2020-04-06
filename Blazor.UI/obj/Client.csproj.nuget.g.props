@@ -23,13 +23,13 @@
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)toolbelt.blazor.loadingbar\11.0.0.1\buildTransitive\Toolbelt.Blazor.LoadingBar.props" Condition="Exists('$(NuGetPackageRoot)toolbelt.blazor.loadingbar\11.0.0.1\buildTransitive\Toolbelt.Blazor.LoadingBar.props')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.blazor.mono\3.1.0-preview4.19578.1\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Mono.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.blazor.mono\3.1.0-preview4.19578.1\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Mono.props')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.blazor.build\3.1.0-preview4.19579.2\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Build.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.blazor.build\3.1.0-preview4.19579.2\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Build.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.runtime\3.2.0-preview3.20168.1\build\netstandard1.0\Microsoft.AspNetCore.Components.WebAssembly.Runtime.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.runtime\3.2.0-preview3.20168.1\build\netstandard1.0\Microsoft.AspNetCore.Components.WebAssembly.Runtime.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.build\3.2.0-preview3.20168.3\build\netstandard1.0\Microsoft.AspNetCore.Components.WebAssembly.Build.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.build\3.2.0-preview3.20168.3\build\netstandard1.0\Microsoft.AspNetCore.Components.WebAssembly.Build.props')" />
     <Import Project="$(NuGetPackageRoot)matblazor\2.3.0\buildTransitive\MatBlazor.props" Condition="Exists('$(NuGetPackageRoot)matblazor\2.3.0\buildTransitive\MatBlazor.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_AspNetCore_Blazor_Mono Condition=" '$(PkgMicrosoft_AspNetCore_Blazor_Mono)' == '' ">C:\Users\carlo\.nuget\packages\microsoft.aspnetcore.blazor.mono\3.1.0-preview4.19578.1</PkgMicrosoft_AspNetCore_Blazor_Mono>
-    <PkgMicrosoft_AspNetCore_Blazor_DevServer Condition=" '$(PkgMicrosoft_AspNetCore_Blazor_DevServer)' == '' ">C:\Users\carlo\.nuget\packages\microsoft.aspnetcore.blazor.devserver\3.1.0-preview4.19579.2</PkgMicrosoft_AspNetCore_Blazor_DevServer>
-    <PkgMicrosoft_AspNetCore_Blazor_Build Condition=" '$(PkgMicrosoft_AspNetCore_Blazor_Build)' == '' ">C:\Users\carlo\.nuget\packages\microsoft.aspnetcore.blazor.build\3.1.0-preview4.19579.2</PkgMicrosoft_AspNetCore_Blazor_Build>
+    <PkgMicrosoft_AspNetCore_Components_WebAssembly_Runtime Condition=" '$(PkgMicrosoft_AspNetCore_Components_WebAssembly_Runtime)' == '' ">C:\Users\carlo\.nuget\packages\microsoft.aspnetcore.components.webassembly.runtime\3.2.0-preview3.20168.1</PkgMicrosoft_AspNetCore_Components_WebAssembly_Runtime>
+    <PkgMicrosoft_AspNetCore_Components_WebAssembly_DevServer Condition=" '$(PkgMicrosoft_AspNetCore_Components_WebAssembly_DevServer)' == '' ">C:\Users\carlo\.nuget\packages\microsoft.aspnetcore.components.webassembly.devserver\3.2.0-preview3.20168.3</PkgMicrosoft_AspNetCore_Components_WebAssembly_DevServer>
+    <PkgMicrosoft_AspNetCore_Components_WebAssembly_Build Condition=" '$(PkgMicrosoft_AspNetCore_Components_WebAssembly_Build)' == '' ">C:\Users\carlo\.nuget\packages\microsoft.aspnetcore.components.webassembly.build\3.2.0-preview3.20168.3</PkgMicrosoft_AspNetCore_Components_WebAssembly_Build>
   </PropertyGroup>
 </Project>

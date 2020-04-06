@@ -8,6 +8,8 @@ C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\API.runtimeconfig
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\API.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\API.pdb
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Blazor.Server.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.dll
@@ -19,6 +21,7 @@ C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetC
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
@@ -73,6 +76,9 @@ C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Common.pdb
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.csprojAssemblyReference.cache
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.AssemblyInfoInputs.cache
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.AssemblyInfo.cs
+C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.csproj.CoreCompileInputs.cache
+C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cache
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.RazorTargetAssemblyInfo.cache
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.csproj.CopyComplete
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\staticwebassets\API.StaticWebAssets.Manifest.cache
@@ -80,9 +86,3 @@ C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\staticwebassets\A
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.dll
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.pdb
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.genruntimeconfig.cache
-C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
-C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
-C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.csproj.CoreCompileInputs.cache
-C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cs
-C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cache

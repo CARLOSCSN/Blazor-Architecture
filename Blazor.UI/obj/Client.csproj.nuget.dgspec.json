@@ -124,27 +124,25 @@
               "target": "Package",
               "version": "[2.3.0, )"
             },
-            "Microsoft.AspNetCore.Blazor": {
-              "target": "Package",
-              "version": "[3.1.0-preview4.19579.2, )"
-            },
-            "Microsoft.AspNetCore.Blazor.Build": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.0-preview4.19579.2, )"
-            },
-            "Microsoft.AspNetCore.Blazor.DevServer": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.0-preview4.19579.2, )"
-            },
             "Microsoft.AspNetCore.Blazor.HttpClient": {
               "target": "Package",
               "version": "[3.2.0-preview3.20168.3, )"
             },
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[5.0.0-preview.2.20167.3, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[3.2.0-preview3.20168.3, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Build": {
+              "target": "Package",
+              "version": "[3.2.0-preview3.20168.3, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "target": "Package",
+              "version": "[3.2.0-preview3.20168.3, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

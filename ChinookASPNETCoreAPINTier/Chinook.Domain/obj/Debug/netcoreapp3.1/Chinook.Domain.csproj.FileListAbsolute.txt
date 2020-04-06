@@ -1,8 +1,0 @@
-C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.Domain\bin\Debug\netcoreapp3.1\Chinook.Domain.deps.json
-C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.Domain\bin\Debug\netcoreapp3.1\Chinook.Domain.dll
-C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.Domain\bin\Debug\netcoreapp3.1\Chinook.Domain.pdb
-C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.Domain\obj\Debug\netcoreapp3.1\Chinook.Domain.AssemblyInfoInputs.cache
-C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.Domain\obj\Debug\netcoreapp3.1\Chinook.Domain.AssemblyInfo.cs
-C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.Domain\obj\Debug\netcoreapp3.1\Chinook.Domain.dll
-C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.Domain\obj\Debug\netcoreapp3.1\Chinook.Domain.pdb
-C:\Users\carlo\Downloads\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier-master\ChinookASPNETCoreAPINTier\Chinook.Domain\obj\Debug\netcoreapp3.1\Chinook.Domain.csprojAssemblyReference.cache

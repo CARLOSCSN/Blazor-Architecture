@@ -1,4 +1,0 @@
-DELETE http://localhost:52460/api/Album/6
-Accept: application/json
-
-###
