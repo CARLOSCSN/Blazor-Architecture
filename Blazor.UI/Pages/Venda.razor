@@ -160,8 +160,8 @@ else
                                     </div>
                                     <div class="col-lg-2">
                                         <SwInputText Label="Valor de Venda"
-                                                     OnFocusOutFunc="CalcCustoTotal"
                                                      Name="ValorVenda"
+                                                     OnFocusOutFunc="CalcCustoTotal"
                                                      @bind-Value="model.ValorVenda"
                                                      ValidationFor="@(() => model.ValorVenda)" />
                                     </div>
@@ -316,8 +316,6 @@ else
 
     protected override void OnAfterRender(bool param)
     {
-        //CalcCustoTotal();
-
         base.OnAfterRender(true);
     }
 
@@ -336,13 +334,12 @@ else
 
     private void CalcCustoTotal()
     {
-        var vlrImposto = ((model.PercentualImposto * model.ValorCompra) / 100);
-        var vlrCO = ((model.PercentualCustoOperacional * model.ValorCompra) / 100);
+        var vlrImposto = ((model.PercentualImposto * model.ValorVenda) / 100);
+        var vlrVendaMaisImp = model.ValorVenda + vlrImposto;
+        var vlrCustoOperac = ((model.PercentualCustoOperacional * vlrVendaMaisImp) / 100);
 
         model.ValorCustoTotal = model.ValorCompra + model.ValorFrete1 + model.ValorFrete2
-            + vlrImposto + vlrCO + model.ValorOutrasDespesas;
-
-        model.ValorCustoTotal = model.ValorCustoTotal;
+            + vlrImposto + vlrCustoOperac + model.ValorOutrasDespesas;
 
         //Console.WriteLine(model.ValorCustoTotal);
 
