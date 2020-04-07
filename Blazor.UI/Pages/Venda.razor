@@ -160,6 +160,7 @@ else
                                     </div>
                                     <div class="col-lg-2">
                                         <SwInputText Label="Valor de Venda"
+                                                     OnFocusOutFunc="CalcCustoTotal"
                                                      Name="ValorVenda"
                                                      @bind-Value="model.ValorVenda"
                                                      ValidationFor="@(() => model.ValorVenda)" />
@@ -172,42 +173,49 @@ else
                                     <div class="col-lg-2">
                                         <SwInputText Label="Valor de Compra"
                                                      Name="ValorCompra"
+                                                     OnFocusOutFunc="CalcCustoTotal"
                                                      @bind-Value="model.ValorCompra"
                                                      ValidationFor="@(() => model.ValorCompra)" />
                                     </div>
                                     <div class="col-lg-1">
                                         <SwInputText Label="% Imposto"
                                                      Name="PercentualImposto"
+                                                     OnFocusOutFunc="CalcCustoTotal"
                                                      @bind-Value="model.PercentualImposto"
                                                      ValidationFor="@(() => model.PercentualImposto)" />
                                     </div>
                                     <div class="col-lg-2">
                                         <SwInputText Label="Frete 01"
                                                      Name="ValorFrete1"
+                                                     OnFocusOutFunc="CalcCustoTotal"
                                                      @bind-Value="model.ValorFrete1"
                                                      ValidationFor="@(() => model.ValorFrete1)" />
                                     </div>
                                     <div class="col-lg-2">
                                         <SwInputText Label="Frete 02"
                                                      Name="ValorFrete2"
+                                                     OnFocusOutFunc="CalcCustoTotal"
                                                      @bind-Value="model.ValorFrete2"
                                                      ValidationFor="@(() => model.ValorFrete2)" />
                                     </div>
                                     <div class="col-lg-1">
                                         <SwInputText Label="% C.O"
                                                      Name="PercentualCustoOperacional"
+                                                     OnFocusOutFunc="CalcCustoTotal"
                                                      @bind-Value="model.PercentualCustoOperacional"
                                                      ValidationFor="@(() => model.PercentualCustoOperacional)" />
                                     </div>
                                     <div class="col-lg-2">
                                         <SwInputText Label="Outras Despesas"
                                                      Name="ValorOutrasDespesas"
+                                                     OnFocusOutFunc="CalcCustoTotal"
                                                      @bind-Value="model.ValorOutrasDespesas"
                                                      ValidationFor="@(() => model.ValorOutrasDespesas)" />
                                     </div>
                                     <div class="col-lg-2">
                                         <SwInputText Label="Custo Total"
                                                      Name="ValorCustoTotal"
+                                                     Readonly="true"
                                                      @bind-Value="model.ValorCustoTotal"
                                                      ValidationFor="@(() => model.ValorCustoTotal)" />
                                     </div>
@@ -302,29 +310,15 @@ else
     {
         vendas = await Http.GetJsonAsync<VendaViewModel[]>("https://localhost:44301/api/Venda");
         editContext = new EditContext(model);
-        editContext.OnFieldChanged += EditContext_OnFieldChanged;
 
         base.OnInitialized();
     }
 
     protected override void OnAfterRender(bool param)
     {
-        CalcCustoTotal();
+        //CalcCustoTotal();
 
         base.OnAfterRender(true);
-    }
-
-    private void EditContext_OnFieldChanged(object sender, FieldChangedEventArgs e)
-    {
-        CalcCustoTotal();
-    }
-
-    private void SetOkDisabledStatus()
-    {
-        var validator = EditContextFluentValidationExtensions.GetValidatorForModel(model);
-        var validationResults = validator.Validate(model);
-        var isInvalid = validationResults.Errors.Count == 0 ? false : true;
-        //Console.WriteLine(validationResults.Errors.Count);
     }
 
     protected void OpenModal(int hash)
@@ -342,25 +336,17 @@ else
 
     private void CalcCustoTotal()
     {
-        var vlrImposto = ((model.PercentualImposto * model.ValorVenda) / 100);
-        var vlrCO = ((model.PercentualCustoOperacional * model.ValorVenda) / 100);
+        var vlrImposto = ((model.PercentualImposto * model.ValorCompra) / 100);
+        var vlrCO = ((model.PercentualCustoOperacional * model.ValorCompra) / 100);
 
         model.ValorCustoTotal = model.ValorCompra + model.ValorFrete1 + model.ValorFrete2
             + vlrImposto + vlrCO + model.ValorOutrasDespesas;
 
         model.ValorCustoTotal = model.ValorCustoTotal;
 
-        Console.WriteLine(model.ValorCustoTotal);
+        //Console.WriteLine(model.ValorCustoTotal);
 
-        ShouldRender();
-    }
-
-    // Call Functions Jquery
-    private async Task ControlInputTypeSubmit(bool isInvalid)
-    {
-        //var result = await JSRuntime.InvokeAsync<bool>("controlInputTypeSubmit", isInvalid);
-
-        //StateHasChanged();
+        StateHasChanged();
     }
 }
 

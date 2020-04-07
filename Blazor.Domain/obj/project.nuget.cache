@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "dgSpecHash": "DGg8tTWasDduGwJJrsCzclbQpmEICJ2SktcA99cf9lunqw1KR9f1KRXvS1Qiyowyql/y4CNBpGElRcpexyw6WA==",
+  "success": true,
+  "projectFilePath": "C:\\Temp\\Blazor-Architecture\\Blazor.Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\carlo\\.nuget\\packages\\fluentvalidation\\9.0.0-preview3\\fluentvalidation.9.0.0-preview3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.1\\microsoft.aspnetcore.authorization.3.1.1.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.1\\microsoft.aspnetcore.components.3.1.1.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\3.1.1\\microsoft.aspnetcore.components.analyzers.3.1.1.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\3.1.1\\microsoft.aspnetcore.components.forms.3.1.1.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.aspnetcore.metadata\\3.1.1\\microsoft.aspnetcore.metadata.3.1.1.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.0-preview.2.20159.4\\microsoft.entityframeworkcore.abstractions.5.0.0-preview.2.20159.4.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0-preview.2.20160.3\\microsoft.extensions.caching.abstractions.5.0.0-preview.2.20160.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0-preview.2.20160.3\\microsoft.extensions.configuration.5.0.0-preview.2.20160.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0-preview.2.20160.3\\microsoft.extensions.configuration.abstractions.5.0.0-preview.2.20160.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.configuration.binder\\5.0.0-preview.2.20160.3\\microsoft.extensions.configuration.binder.5.0.0-preview.2.20160.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0-preview.2.20160.3\\microsoft.extensions.dependencyinjection.5.0.0-preview.2.20160.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0-preview.2.20160.3\\microsoft.extensions.dependencyinjection.abstractions.5.0.0-preview.2.20160.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0-preview.2.20160.3\\microsoft.extensions.logging.5.0.0-preview.2.20160.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0-preview.2.20160.3\\microsoft.extensions.logging.abstractions.5.0.0-preview.2.20160.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.options\\5.0.0-preview.2.20160.3\\microsoft.extensions.options.5.0.0-preview.2.20160.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0-preview.2.20160.3\\microsoft.extensions.primitives.5.0.0-preview.2.20160.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.jsinterop\\3.1.1\\microsoft.jsinterop.3.1.1.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0-preview.2.20160.6\\system.componentmodel.annotations.5.0.0-preview.2.20160.6.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\system.memory\\4.5.2\\system.memory.4.5.2.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0-preview.2.20160.6\\system.runtime.compilerservices.unsafe.5.0.0-preview.2.20160.6.nupkg.sha512"
+  ],
+  "logs": []
+}
