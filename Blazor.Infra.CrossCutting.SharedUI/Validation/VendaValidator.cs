@@ -33,11 +33,11 @@ namespace Common.Validation
                 .NotEmpty()
                 .WithMessage("Campo Obrigatório");
 
-            RuleFor(p => p.PercentualImposto)
-                .LessThan(101)
-                .WithMessage("Valor Inválido")
-                .GreaterThan(-1)
-                .WithMessage("Valor Inválido");
+            RuleFor(p => p.PercentualImposto);
+                //.LessThan(101)
+                //.WithMessage("Valor Inválido")
+                //.GreaterThan(-1)
+                //.WithMessage("Valor Inválido");
 
             RuleFor(p => p.ValorFrete1)
                 .GreaterThan(-1)
@@ -47,15 +47,19 @@ namespace Common.Validation
                 .GreaterThan(-1)
                 .WithMessage("Valor Inválido");
 
-            RuleFor(p => p.PercentualCustoOperacional)
-                .LessThan(101)
-                .WithMessage("Valor Inválido")
+            RuleFor(p => p.PercentualCustoOperacional);
+                //.LessThan(101)
+                //.WithMessage("Valor Inválido")
+                //.GreaterThan(-1)
+                //.WithMessage("Valor Inválido");
+
+            RuleFor(p => p.ValorOutrasDespesas)
                 .GreaterThan(-1)
                 .WithMessage("Valor Inválido");
 
-            RuleFor(p => p.ValorOutrasDespesas);
-
-            RuleFor(p => p.ValorCustoTotal);
+            RuleFor(p => p.ValorCustoTotal)
+                .GreaterThan(-1)
+                .WithMessage("Valor Inválido");
 
             RuleFor(p => p.PercentualComissao)
                 .LessThan(101)
@@ -63,17 +67,21 @@ namespace Common.Validation
                 .GreaterThan(-1)
                 .WithMessage("Valor Inválido");
 
-            RuleFor(p => p.ValorComissao);
-
-            RuleFor(p => p.PercentualLucro)
-                .NotEmpty()
-                .WithMessage("Campo Obrigatório")
-                .LessThan(101)
-                .WithMessage("Valor Inválido")
+            RuleFor(p => p.ValorComissao)
                 .GreaterThan(-1)
                 .WithMessage("Valor Inválido");
 
-            RuleFor(p => p.Descricao);
+            RuleFor(p => p.PercentualLucro);
+                //.NotEmpty()
+                //.WithMessage("Campo Obrigatório")
+                //.LessThan(101)
+                //.WithMessage("Valor Inválido")
+                //.GreaterThan(-1)
+                //.WithMessage("Valor Inválido");
+
+            RuleFor(p => p.Descricao)
+                .NotEmpty()
+                .WithMessage("Campo Obrigatório");
         }
     }
 }

@@ -181,6 +181,7 @@ C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\RazorDeclaration\
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\RazorDeclaration\Pages\CustomInputSelect.razor.g.cs
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\RazorDeclaration\Pages\FetchData.razor.g.cs
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Index.razor.g.cs
+C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\RazorDeclaration\Pages\InputMoney.razor.g.cs
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Login.razor.g.cs
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Register.razor.g.cs
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\RazorDeclaration\Pages\SwInputText.razor.g.cs
@@ -199,6 +200,7 @@ C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Pages\Count
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Pages\CustomInputSelect.razor.g.cs
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Pages\FetchData.razor.g.cs
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Pages\Index.razor.g.cs
+C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Pages\InputMoney.razor.g.cs
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Pages\Login.razor.g.cs
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Pages\Register.razor.g.cs
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Razor\Pages\SwInputText.razor.g.cs

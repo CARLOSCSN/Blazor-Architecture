@@ -36,7 +36,7 @@ namespace Domain.Entities
 
         public decimal ValorCustoTotal { get; set; }
 
-        public double PercentualComissao { get; set; }
+        public decimal PercentualComissao { get; set; }
 
         public decimal ValorComissao { get; set; }
 

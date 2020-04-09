@@ -1,0 +1,104 @@
+﻿@using System.Linq.Expressions
+@using System.Globalization;
+
+@typeparam T
+@inherits InputBase<T>
+@inject IJSRuntime JSRuntime
+
+    <!-- Component -->
+    <div class="form-control-wrapper">
+        @if (!string.IsNullOrWhiteSpace(Label))
+        {
+            <label class="form-control-label" for="@uniqueId">@Label</label>
+        }
+
+        <input class="form-control @CssClass" id="@uniqueId" name="@Name"
+               @onblur="@OnFocusOutFunc"
+               @onfocusout="@OnFocusOutFunc"
+               @onfocusin="ApplyMaskMoney"
+               @bind-value="CurrentValueAsString"
+               readonly="@Readonly" />
+
+        <div class="form-control-validation">
+            <ValidationMessage For="@ValidationFor" />
+        </div>
+    </div>
+
+
+@code {
+
+    [Parameter] public string Id { get; set; }
+    [Parameter] public string Label { get; set; }
+    [Parameter] public string Name { get; set; }
+    [Parameter] public string FunctionJSRuntime { get; set; }
+    [Parameter] public Expression<Func<T>> ValidationFor { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public bool ShowDefaultOpton { get; set; } = true;
+    [Parameter] public bool Readonly { get; set; } = false;
+    [Parameter] public EventCallback OnFocusOutFunc { get; set; }
+
+    private string uniqueId = Guid.NewGuid().ToString("N");
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!string.IsNullOrWhiteSpace(FunctionJSRuntime))
+        {
+            await ApplyMaskMoneyAsync();
+        }
+
+        base.OnInitialized();
+    }
+
+    //protected override void OnAfterRender(bool param)
+    //{
+    //    base.OnAfterRender(true);
+    //}
+
+    protected override bool TryParseValueFromString(string value, out T result, out string validationErrorMessage)
+    {
+        if (typeof(T) == typeof(decimal))
+        {
+            decimal.TryParse(value, out var parsedValue);
+
+            result = (T)(object)parsedValue;
+            validationErrorMessage = null;
+
+            return true;
+        }
+        else
+        {
+            result = (T)(object)null;
+            validationErrorMessage = $"{GetType()} não suporta o tipo '{typeof(T)}'.";
+
+            return false;
+        }
+    }
+
+    private void ApplyMaskMoney()
+    {
+        JSRuntime.InvokeAsync<string>(FunctionJSRuntime, Name).GetAwaiter();
+
+        StateHasChanged();
+    }
+
+    private async Task ApplyMaskMoneyAsync()
+    {
+        var result = await JSRuntime.InvokeAsync<string>(FunctionJSRuntime, Name);
+
+        StateHasChanged();
+    }
+
+    private void RemoveMask()
+    {
+        JSRuntime.InvokeAsync<string>("removeMask", Name).GetAwaiter();
+
+        StateHasChanged();
+    }
+
+    private async Task RemoveMaskAsync()
+    {
+        var result = await JSRuntime.InvokeAsync<string>("removeMask", Name);
+
+        StateHasChanged();
+    }
+}

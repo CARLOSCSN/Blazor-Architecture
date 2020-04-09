@@ -5,16 +5,22 @@
 @inherits InputBase<T>
 
 <!-- Control with label -->
-<div class="form-control-wrapper">
-    <label class="form-control-label" for="@uniqueId">@Label</label>
-    <input class="form-control @CssClass" id="@uniqueId" name="@Name" 
-           @onfocusout="@OnFocusOutFunc"
-           @bind-value="CurrentValueAsString"
-           readonly="@Readonly"/>
-    <div class="form-control-validation">
-        <ValidationMessage For="@ValidationFor" />
+    <div class="form-control-wrapper">
+        @if (!string.IsNullOrWhiteSpace(Label))
+        {
+            <label class="form-control-label" for="@uniqueId">@Label</label>
+        }
+
+        <input class="form-control @CssClass" id="@uniqueId" name="@Name"
+               @onblur="@OnFocusOutFunc"
+               @onfocusout="@OnFocusOutFunc"
+               @bind-value="CurrentValueAsString"
+               readonly="@Readonly" />
+
+        <div class="form-control-validation">
+            <ValidationMessage For="@ValidationFor" />
+        </div>
     </div>
-</div>
 
 
 @code {
@@ -29,6 +35,17 @@
     [Parameter] public EventCallback OnFocusOutFunc { get; set; }
 
     private string uniqueId = Guid.NewGuid().ToString("N");
+
+
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    base.OnInitialized();
+    //}
+
+    //protected override void OnAfterRender(bool param)
+    //{
+    //    base.OnAfterRender(true);
+    //}
 
     protected override bool TryParseValueFromString(string value, out T result, out string validationErrorMessage)
     {
@@ -89,8 +106,13 @@
                 return false;
             }
         }
+        else
+        {
+            result = (T)(object)null;
+            validationErrorMessage = $"{GetType()} não suporta o tipo '{typeof(T)}'.";
 
-        throw new InvalidOperationException($"{GetType()} does not support the type '{typeof(T)}'.");
+            return false;
+        }
     }
 
 }

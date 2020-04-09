@@ -1,5 +1,6 @@
 ﻿@page "/venda"
 @using Common.ViewModel
+@using System.Threading;
 
 @inject HttpClient Http
 @inject IJSRuntime JSRuntime
@@ -67,17 +68,17 @@ else
                 </div>
             </th>
             @*<th>Valor Compra</th>
-            <th>% Imposto</th>
-            <th>Frete 01</th>
-            <th>Frete 02</th>
-            <th>% C.O</th>
-            <th>Outras Despesas</th>
-            <th>Custo Total</th>
-            <th>% Comissão</th>
-            <th>Valor Comissão</th>
-            <th>% Lucro</th>
-            <th>Valor Lucro</th>
-            <th>Descrição</th>*@
+                <th>% Imposto</th>
+                <th>Frete 01</th>
+                <th>Frete 02</th>
+                <th>% C.O</th>
+                <th>Outras Despesas</th>
+                <th>Custo Total</th>
+                <th>% Comissão</th>
+                <th>Valor Comissão</th>
+                <th>% Lucro</th>
+                <th>Valor Lucro</th>
+                <th>Descrição</th>*@
         </MatTableHeader>
         <MatTableRow Context="venda">
             <td>
@@ -89,17 +90,17 @@ else
             <td>@venda.ValorVenda</td>
             <td>@venda.NomeCliente</td>
             @*<td>@venda.ValorCompra</td>
-            <td>@venda.PercentualImposto</td>
-            <td>@venda.ValorFrete1</td>
-            <td>@venda.ValorFrete2</td>
-            <td>@venda.PercentualCustoOperacional</td>
-            <td>@venda.ValorOutrasDespesas</td>
-            <td>@venda.ValorCustoTotal</td>
-            <td>@venda.PercentualComissao</td>
-            <td>@venda.ValorComissao</td>
-            <td>@venda.PercentualLucro</td>
-            <td>@venda.ValorLucro</td>
-            <td>@venda.Descricao</td>*@
+                <td>@venda.PercentualImposto</td>
+                <td>@venda.ValorFrete1</td>
+                <td>@venda.ValorFrete2</td>
+                <td>@venda.PercentualCustoOperacional</td>
+                <td>@venda.ValorOutrasDespesas</td>
+                <td>@venda.ValorCustoTotal</td>
+                <td>@venda.PercentualComissao</td>
+                <td>@venda.ValorComissao</td>
+                <td>@venda.PercentualLucro</td>
+                <td>@venda.ValorLucro</td>
+                <td>@venda.Descricao</td>*@
         </MatTableRow>
     </MatTable>
 }
@@ -125,17 +126,14 @@ else
                                   OnInvalidSubmit="@HandleInvalidSubmit">
 
                             <FluentValidationValidator />
-                            @*<ValidationSummary />*@
 
                             <div class="row mb-20">
                                 <div class="form-group">
                                     <div class="col-lg-2">
-                                        <label for="NumeroNotaFiscal">N.F</label>
-                                        <InputText Class="form-control" 
-                                                   Id="NumeroNotaFiscal" 
-                                                   name="NumeroNotaFiscal" 
-                                                   @bind-Value="model.NumeroNotaFiscal"></InputText>
-                                        <ValidationMessage For="(() => model.NumeroNotaFiscal)" />
+                                        <SwInputText Label="N.F"
+                                                     Name="NumeroNotaFiscal"
+                                                     @bind-Value="model.NumeroNotaFiscal"
+                                                     ValidationFor="@(() => model.NumeroNotaFiscal)" />
                                     </div>
                                     <div class="col-lg-3">
                                         <p>
@@ -151,19 +149,19 @@ else
                                         </p>
                                     </div>
                                     <div class="col-lg-5">
-                                        <label for="NomeCliente">Cliente</label>
-                                        <InputText Class="form-control" 
-                                                   Id="NomeCliente" 
-                                                   name="NomeCliente" 
-                                                   @bind-Value="model.NomeCliente"></InputText>
-                                        <ValidationMessage For="(() => model.NomeCliente)" />
+                                        <SwInputText Label="Cliente"
+                                                     Name="NomeCliente"
+                                                     @bind-Value="model.NomeCliente"
+                                                     ValidationFor="@(() => model.NomeCliente)" />
+
                                     </div>
                                     <div class="col-lg-2">
-                                        <SwInputText Label="Valor de Venda"
-                                                     Name="ValorVenda"
-                                                     OnFocusOutFunc="CalcCustoTotal"
-                                                     @bind-Value="model.ValorVenda"
-                                                     ValidationFor="@(() => model.ValorVenda)" />
+                                        <InputMoney Label="Valor Venda"
+                                                    Name="ValorVenda"
+                                                    OnFocusOutFunc="CalcularValores"
+                                                    FunctionJSRuntime="applyMaskMoney"
+                                                    @bind-Value="@model.ValorVenda"
+                                                    ValidationFor="@(() => model.ValorVenda)" />
                                     </div>
                                 </div>
                             </div>
@@ -171,53 +169,59 @@ else
                             <div class="row mb-20">
                                 <div class="form-group">
                                     <div class="col-lg-2">
-                                        <SwInputText Label="Valor de Compra"
-                                                     Name="ValorCompra"
-                                                     OnFocusOutFunc="CalcCustoTotal"
-                                                     @bind-Value="model.ValorCompra"
-                                                     ValidationFor="@(() => model.ValorCompra)" />
+                                        <InputMoney Label="Valor Compra"
+                                                    Name="ValorCompra"
+                                                    OnFocusOutFunc="CalcularValores"
+                                                    FunctionJSRuntime="applyMaskMoney"
+                                                    @bind-Value="@model.ValorCompra"
+                                                    ValidationFor="@(() => model.ValorCompra)" />
                                     </div>
                                     <div class="col-lg-1">
                                         <SwInputText Label="% Imposto"
                                                      Name="PercentualImposto"
-                                                     OnFocusOutFunc="CalcCustoTotal"
+                                                     OnFocusOutFunc="CalcularValores"
                                                      @bind-Value="model.PercentualImposto"
                                                      ValidationFor="@(() => model.PercentualImposto)" />
                                     </div>
                                     <div class="col-lg-2">
-                                        <SwInputText Label="Frete 01"
-                                                     Name="ValorFrete1"
-                                                     OnFocusOutFunc="CalcCustoTotal"
-                                                     @bind-Value="model.ValorFrete1"
-                                                     ValidationFor="@(() => model.ValorFrete1)" />
+                                        <InputMoney Label="Frete 01"
+                                                    Name="ValorFrete1"
+                                                    OnFocusOutFunc="CalcularValores"
+                                                    FunctionJSRuntime="applyMaskMoney"
+                                                    @bind-Value="@model.ValorFrete1"
+                                                    ValidationFor="@(() => model.ValorFrete1)" />
+
                                     </div>
                                     <div class="col-lg-2">
-                                        <SwInputText Label="Frete 02"
-                                                     Name="ValorFrete2"
-                                                     OnFocusOutFunc="CalcCustoTotal"
-                                                     @bind-Value="model.ValorFrete2"
-                                                     ValidationFor="@(() => model.ValorFrete2)" />
+                                        <InputMoney Label="Frete 02"
+                                                    Name="ValorFrete2"
+                                                    OnFocusOutFunc="CalcularValores"
+                                                    FunctionJSRuntime="applyMaskMoney"
+                                                    @bind-Value="@model.ValorFrete2"
+                                                    ValidationFor="@(() => model.ValorFrete2)" />
                                     </div>
                                     <div class="col-lg-1">
                                         <SwInputText Label="% C.O"
                                                      Name="PercentualCustoOperacional"
-                                                     OnFocusOutFunc="CalcCustoTotal"
+                                                     OnFocusOutFunc="CalcularValores"
                                                      @bind-Value="model.PercentualCustoOperacional"
                                                      ValidationFor="@(() => model.PercentualCustoOperacional)" />
                                     </div>
                                     <div class="col-lg-2">
-                                        <SwInputText Label="Outras Despesas"
-                                                     Name="ValorOutrasDespesas"
-                                                     OnFocusOutFunc="CalcCustoTotal"
-                                                     @bind-Value="model.ValorOutrasDespesas"
-                                                     ValidationFor="@(() => model.ValorOutrasDespesas)" />
+                                        <InputMoney Label="Valor Outras Despesas"
+                                                    Name="ValorOutrasDespesas"
+                                                    OnFocusOutFunc="CalcularValores"
+                                                    FunctionJSRuntime="applyMaskMoney"
+                                                    @bind-Value="@model.ValorOutrasDespesas"
+                                                    ValidationFor="@(() => model.ValorOutrasDespesas)" />
+
                                     </div>
                                     <div class="col-lg-2">
-                                        <SwInputText Label="Custo Total"
-                                                     Name="ValorCustoTotal"
-                                                     Readonly="true"
-                                                     @bind-Value="model.ValorCustoTotal"
-                                                     ValidationFor="@(() => model.ValorCustoTotal)" />
+                                        <SwInputText Label="% Comissão"
+                                                     Name="PercentualComissao"
+                                                     OnFocusOutFunc="CalcularValores"
+                                                     @bind-Value="model.PercentualComissao"
+                                                     ValidationFor="@(() => model.PercentualComissao)" />
                                     </div>
                                 </div>
                             </div>
@@ -225,28 +229,36 @@ else
                             <div class="row mb-20">
                                 <div class="form-group">
                                     <div class="col-lg-2">
-                                        <SwInputText Label="% Comissão"
-                                                     Name="PercentualComissao"
-                                                     @bind-Value="model.PercentualComissao"
-                                                     ValidationFor="@(() => model.PercentualComissao)" />
+                                        <InputMoney Label="Valor Comissão"
+                                                    Name="ValorComissao"
+                                                    Readonly="true"
+                                                    FunctionJSRuntime="applyMaskMoney"
+                                                    @bind-Value="@model.ValorComissao"
+                                                    ValidationFor="@(() => model.ValorComissao)" />
                                     </div>
                                     <div class="col-lg-2">
-                                        <SwInputText Label="Valor Comissão"
-                                                     Name="ValorComissao"
-                                                     @bind-Value="model.ValorComissao"
-                                                     ValidationFor="@(() => model.ValorComissao)" />
+                                        <InputMoney Label="Custo Total"
+                                                    Name="ValorCustoTotal"
+                                                    OnFocusOutFunc="CalcularValores"
+                                                    Readonly="true"
+                                                    FunctionJSRuntime="applyMaskMoney"
+                                                    @bind-Value="@model.ValorCustoTotal"
+                                                    ValidationFor="@(() => model.ValorCustoTotal)" />
                                     </div>
-                                    <div class="col-lg-2">
+                                    <div class="col-lg-1">
                                         <SwInputText Label="% Lucro"
                                                      Name="PercentualLucro"
+                                                     Readonly="true"
                                                      @bind-Value="model.PercentualLucro"
                                                      ValidationFor="@(() => model.PercentualLucro)" />
                                     </div>
                                     <div class="col-lg-2">
-                                        <SwInputText Label="Valor Lucro"
-                                                     Name="ValorLucro"
-                                                     @bind-Value="model.ValorLucro"
-                                                     ValidationFor="@(() => model.ValorLucro)" />
+                                        <InputMoney Label="Valor Lucro"
+                                                    Name="ValorLucro"
+                                                    Readonly="true"
+                                                    FunctionJSRuntime="applyMaskMoney"
+                                                    @bind-Value="@model.ValorLucro"
+                                                    ValidationFor="@(() => model.ValorLucro)" />
                                     </div>
                                 </div>
                             </div>
@@ -255,9 +267,10 @@ else
                                 <div class=form-group>
                                     <div class="col-lg-12">
                                         <label for="Descricao">Descrição</label>
-                                        <InputTextArea class="form-control" 
-                                                       rows="3" 
+                                        <InputTextArea class="form-control"
+                                                       rows="3"
                                                        @bind-Value="model.Descricao"></InputTextArea>
+                                        <ValidationMessage For="(() => model.Descricao)" />
                                     </div>
                                 </div>
                             </div>
@@ -286,6 +299,9 @@ else
     {
         try
         {
+            CalcularValores();
+            Thread.Sleep(100);
+
             await webApiServices.Post<VendaViewModel>(model, "api/Venda");
             navigationManager.NavigateTo("/venda");
 
@@ -332,16 +348,27 @@ else
         StateHasChanged();
     }
 
-    private void CalcCustoTotal()
+    private void CalcularValores()
     {
         var vlrImposto = ((model.PercentualImposto * model.ValorVenda) / 100);
         var vlrVendaMaisImp = model.ValorVenda + vlrImposto;
         var vlrCustoOperac = ((model.PercentualCustoOperacional * vlrVendaMaisImp) / 100);
 
         model.ValorCustoTotal = model.ValorCompra + model.ValorFrete1 + model.ValorFrete2
-            + vlrImposto + vlrCustoOperac + model.ValorOutrasDespesas;
+            + vlrImposto + vlrCustoOperac + model.ValorOutrasDespesas + model.ValorComissao;
 
-        //Console.WriteLine(model.ValorCustoTotal);
+        model.ValorComissao = ((model.PercentualComissao * model.ValorVenda) / 100);
+
+        model.ValorLucro = model.ValorVenda - model.ValorCustoTotal;
+
+        model.PercentualLucro = model.ValorLucro == 0 ? 0 : ((model.ValorLucro / model.ValorVenda) * 100);
+
+
+        // Arredondamento duas casas decimais.
+        model.ValorCustoTotal = Math.Round(model.ValorCustoTotal, 2);
+        model.ValorComissao = Math.Round(model.ValorComissao, 2);
+        model.ValorLucro = Math.Round(model.ValorLucro, 2);
+        model.PercentualLucro = Math.Round(model.PercentualLucro, 2);
 
         StateHasChanged();
     }

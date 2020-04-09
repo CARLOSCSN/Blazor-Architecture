@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Common.ViewModel
 {
@@ -28,7 +29,7 @@ namespace Common.ViewModel
 
         public decimal ValorCustoTotal { get; set; }
 
-        public double PercentualComissao { get; set; }
+        public decimal PercentualComissao { get; set; }
 
         public decimal ValorComissao { get; set; }
 
