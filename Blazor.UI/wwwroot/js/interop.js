@@ -2,6 +2,7 @@
 flatpickr.localize(flatpickr.l10ns.pt);
 
 $('[name="NumeroNotaFiscal"]').mask("9999");
+$('[name="DataNF"]').mask('00/00/0000', { reverse: true });
 
 function applyMaskMoney(nameInput) {
     //console.log('applyMaskMoney');

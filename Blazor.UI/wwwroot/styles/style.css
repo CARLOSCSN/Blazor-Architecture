@@ -3594,3 +3594,9 @@ div.dt-button-info {
 .custom-invalid {
     border: 1px solid red !important;
 }
+
+.mdc-text-field__input {
+    font-weight: 200 !important;
+    padding: 17px 10px 16px !important;
+    border-bottom: 0px solid !important;
+}
