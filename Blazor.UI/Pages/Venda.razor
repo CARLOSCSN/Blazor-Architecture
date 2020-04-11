@@ -20,54 +20,72 @@
 }
 else
 {
-    <MatTable Class="mat-elevation-z5 table table-striped table-hover"
-              Items="@vendas"
-              LoadInitialData="true"
-              Striped="true"
-              DebounceMilliseconds="150"
-              PageSize="5"
-              PageRecordCountLabel="Itens por página:"
-              PageLabel="Página"
-              FilterByColumnName="NomeCliente"
-              SearchTermFieldPlaceHolder="Cliente"
-              SearchTermFieldLabel="Pesquisar">
-        <MatTableHeader>
-            <th>
-                <div style="width:135px;">
-                    <MatButton class="btn btn-default"
-                               @onclick="@( () => OpenModal(1))"
-                               Icon="playlist_add"
-                               Label="Adicionar"
-                               Raised="true">
-                    </MatButton>
-                </div>
-            </th>
-            <th>
-                <div style="width:150px;">
-                    Venda ID
-                </div>
-            </th>
-            <th>
-                <div style="width:150px;">
-                    Nota Fiscal
-                </div>
-            </th>
-            <th>
-                <div style="width:150px;">
-                    Data N.F
-                </div>
-            </th>
-            <th>
-                <div style="width:150px;">
-                    Valor Venda
-                </div>
-            </th>
-            <th>
-                <div style="width:400px;">
-                    Cliente
-                </div>
-            </th>
-            @*<th>Valor Compra</th>
+    <style>
+        .table > tbody > tr > td{
+            padding: 0;
+        }
+        .table > tbody > tr > td > div {
+            padding-top: 10px;
+        }
+        .mdc-paginator-page-size{
+            display: flex;
+        }
+        .mdc-paginator-page-size .mdc-select {
+            margin-left: 15px;
+        }
+        .relative {
+            position: relative;
+        }
+    </style>
+    <div class="relative">
+        <MatTable Class="mat-elevation-z5 table table-striped table-hover"
+                  Items="@vendas"
+                  LoadInitialData="true"
+                  Striped="true"
+                  DebounceMilliseconds="150"
+                  PageSize="5"
+                  PageRecordCountLabel="Itens por página:"
+                  PageLabel="Página"
+                  FilterByColumnName="NomeCliente"
+                  SearchTermFieldPlaceHolder="Cliente"
+                  SearchTermFieldLabel="Pesquisar">
+            <MatTableHeader>
+                <th>
+                    <div style="width:135px;">
+                        <MatButton class="btn btn-default"
+                                   @onclick="@( () => OpenModal(1))"
+                                   Icon="playlist_add"
+                                   Label="Adicionar"
+                                   Raised="true">
+                        </MatButton>
+                    </div>
+                </th>
+                <th>
+                    <div style="width:150px;">
+                        Venda ID
+                    </div>
+                </th>
+                <th>
+                    <div style="width:150px;">
+                        Nota Fiscal
+                    </div>
+                </th>
+                <th>
+                    <div style="width:150px;">
+                        Data N.F
+                    </div>
+                </th>
+                <th>
+                    <div style="width:150px;">
+                        Valor Venda
+                    </div>
+                </th>
+                <th>
+                    <div style="width:400px;">
+                        Cliente
+                    </div>
+                </th>
+                @*<th>Valor Compra</th>
                 <th>% Imposto</th>
                 <th>Frete 01</th>
                 <th>Frete 02</th>
@@ -79,17 +97,17 @@ else
                 <th>% Lucro</th>
                 <th>Valor Lucro</th>
                 <th>Descrição</th>*@
-        </MatTableHeader>
-        <MatTableRow Context="venda">
-            <td>
-                <MatIconButton Icon="delete"></MatIconButton>
-            </td>
-            <td>@venda.VendaId</td>
-            <td>@venda.NumeroNotaFiscal</td>
-            <td>@venda.DataNF.ToString("dd//MM/yyyy")</td>
-            <td>@venda.ValorVenda</td>
-            <td>@venda.NomeCliente</td>
-            @*<td>@venda.ValorCompra</td>
+            </MatTableHeader>
+            <MatTableRow Context="venda">
+                <td>
+                    <MatIconButton Icon="delete"></MatIconButton>
+                </td>
+                <td><div>@venda.VendaId</div></td>
+                <td><div>@venda.NumeroNotaFiscal</div></td>
+                <td><div>@venda.DataNF.ToString("dd//MM/yyyy")</div></td>
+                <td><div>@venda.ValorVenda</div></td>
+                <td><div>@venda.NomeCliente</div></td>
+                @*<td>@venda.ValorCompra</td>
                 <td>@venda.PercentualImposto</td>
                 <td>@venda.ValorFrete1</td>
                 <td>@venda.ValorFrete2</td>
@@ -101,8 +119,9 @@ else
                 <td>@venda.PercentualLucro</td>
                 <td>@venda.ValorLucro</td>
                 <td>@venda.Descricao</td>*@
-        </MatTableRow>
-    </MatTable>
+            </MatTableRow>
+        </MatTable>
+    </div>
 }
 
 @if (modalOpen)
