@@ -27,11 +27,11 @@ namespace Common.Validation
                 .MaximumLength(70)
                 .WithMessage("Nome deve ter um minimo de 70 caracteres");
 
-            RuleFor(p => p.ValorVenda)
+            RuleFor(p => p.ValorVendaString)
                 .NotEmpty()
                 .WithMessage("Campo Obrigatório");
 
-            RuleFor(p => p.ValorCompra)
+            RuleFor(p => p.ValorCompraString)
                 .NotEmpty()
                 .WithMessage("Campo Obrigatório");
 
@@ -41,13 +41,9 @@ namespace Common.Validation
                 //.GreaterThan(-1)
                 //.WithMessage("Valor Inválido");
 
-            RuleFor(p => p.ValorFrete1)
-                .GreaterThan(-1)
-                .WithMessage("Valor Inválido");
+            RuleFor(p => p.ValorFrete1String);
 
-            RuleFor(p => p.ValorFrete2)
-                .GreaterThan(-1)
-                .WithMessage("Valor Inválido");
+            RuleFor(p => p.ValorFrete2String);
 
             RuleFor(p => p.PercentualCustoOperacional);
                 //.LessThan(101)
@@ -55,13 +51,9 @@ namespace Common.Validation
                 //.GreaterThan(-1)
                 //.WithMessage("Valor Inválido");
 
-            RuleFor(p => p.ValorOutrasDespesas)
-                .GreaterThan(-1)
-                .WithMessage("Valor Inválido");
+            RuleFor(p => p.ValorOutrasDespesasString);
 
-            RuleFor(p => p.ValorCustoTotal)
-                .GreaterThan(-1)
-                .WithMessage("Valor Inválido");
+            RuleFor(p => p.ValorCustoTotalString);
 
             RuleFor(p => p.PercentualComissao)
                 .LessThan(101)

@@ -65,6 +65,14 @@
 
             return true;
         }
+        else if(typeof(T) == typeof(string))
+        {
+            value = string.IsNullOrWhiteSpace(value) ? "0,00" : value;
+            value = value.Length < 3 ? value + ",00" : value;
+            result = (T)(object)value;
+            validationErrorMessage = null;
+            return true;
+        }
         else
         {
             result = (T)(object)null;
