@@ -3456,7 +3456,8 @@ div.dt-button-info {
 
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
     color: #a9a9a9 !important;
-    font-size: 15px !important;
+    padding-bottom: 5px !important;
+    font-size: 13px !important;
 }
 
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__icon {
@@ -3599,4 +3600,9 @@ div.dt-button-info {
     font-weight: 200 !important;
     padding: 17px 10px 16px !important;
     border-bottom: 0px solid !important;
+}
+
+.mdc-text-field--with-leading-icon .mdc-text-field__input {
+    padding-left: 48px !important;
+    padding-right: 16px !important;
 }
