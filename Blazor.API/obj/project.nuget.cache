@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KYXzs5vEf9uabNGg5PHfEowSJkGmzCPdvZ5y5KXEaEuJNUnyvx8uIqcidBylHFxO6FpjdK8j7nUR+RuMujVJaw==",
+  "dgSpecHash": "TmluBCdRFU0NVrIKIAv8b2cGTX4Kp+S/0MC55qvNsUgr+yau96FIqf2i7Epd3gqL7gB6qjpG7BDKGbTsmD+10g==",
   "success": true,
   "projectFilePath": "C:\\Temp\\Blazor-Architecture\\Blazor.API\\API.csproj",
   "expectedPackageFiles": [
@@ -57,10 +57,10 @@
     "C:\\Users\\carlo\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\carlo\\.nuget\\packages\\swashbuckle.aspnetcore\\5.3.1\\swashbuckle.aspnetcore.5.3.1.nupkg.sha512",
-    "C:\\Users\\carlo\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.3.1\\swashbuckle.aspnetcore.swagger.5.3.1.nupkg.sha512",
-    "C:\\Users\\carlo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.3.1\\swashbuckle.aspnetcore.swaggergen.5.3.1.nupkg.sha512",
-    "C:\\Users\\carlo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.3.1\\swashbuckle.aspnetcore.swaggerui.5.3.1.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\swashbuckle.aspnetcore\\5.3.2\\swashbuckle.aspnetcore.5.3.2.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.3.2\\swashbuckle.aspnetcore.swagger.5.3.2.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.3.2\\swashbuckle.aspnetcore.swaggergen.5.3.2.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.3.2\\swashbuckle.aspnetcore.swaggerui.5.3.2.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
