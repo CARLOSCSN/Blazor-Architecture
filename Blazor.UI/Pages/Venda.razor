@@ -157,8 +157,7 @@ else
                                     <div class="col-lg-3">
                                         <p>
                                             <label for="DataNF">Data N.F</label>
-                                            <MatDatePicker Required="true"
-                                                           Id="DataNF"
+                                            <MatDatePicker Id="DataNF"
                                                            name="DataNF"
                                                            AllowInput="true"
                                                            Format="dd/MM/yyyy"
@@ -380,7 +379,8 @@ else
 
         model.ValorLucro = model.ValorVenda - model.ValorCustoTotal;
 
-        model.PercentualLucro = model.ValorLucro == 0 ? 0 : ((model.ValorLucro / model.ValorVenda) * 100);
+        model.PercentualLucro = model.ValorLucro == 0 || model.ValorVenda == 0 ? 0 :
+            ((model.ValorLucro / model.ValorVenda) * 100);
 
 
         // Arredondamento duas casas decimais.

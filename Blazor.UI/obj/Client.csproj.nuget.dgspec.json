@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015048\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015095\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -134,15 +134,15 @@
             },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[3.2.0-preview3.20168.3, )"
+              "version": "[3.2.0-preview4.20210.8, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.Build": {
               "target": "Package",
-              "version": "[3.2.0-preview3.20168.3, )"
+              "version": "[3.2.0-preview4.20210.8, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "target": "Package",
-              "version": "[3.2.0-preview3.20168.3, )"
+              "version": "[3.2.0-preview4.20210.8, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -168,7 +168,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015048\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015095\\RuntimeIdentifierGraph.json"
         }
       }
     }

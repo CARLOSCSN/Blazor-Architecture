@@ -10,6 +10,7 @@ using Client.Services.Contracts;
 using Toolbelt.Blazor.Extensions.DependencyInjection;
 using MatBlazor;
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
+using System.Net.Http;
 
 namespace Client
 {
@@ -21,7 +22,8 @@ namespace Client
             WebAssemblyHttpMessageHandlerOptions.DefaultCredentials = FetchCredentialsOption.Include;
             builder.RootComponents.Add<App>("app");
 
-            builder.Services.AddBaseAddressHttpClient();
+            //builder.Services.AddBaseAddressHttpClient();
+            builder.Services.AddSingleton(new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             builder.Services.AddAuthorizationCore();
             builder.Services.AddScoped<IdentityAuthenticationStateProvider>();
