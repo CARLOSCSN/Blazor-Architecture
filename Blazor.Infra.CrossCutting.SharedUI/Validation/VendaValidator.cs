@@ -1,5 +1,6 @@
 ﻿using Common.ViewModel;
 using FluentValidation;
+using System;
 
 namespace Common.Validation
 {
@@ -16,6 +17,7 @@ namespace Common.Validation
             RuleFor(p => p.DataNF)
                 .NotEmpty()
                 .WithMessage("Campo Obrigatório");
+                //.OnFailure(x => x.DataNF = DateTime.Now);
 
             RuleFor(p => p.NomeCliente)
                 .NotEmpty()

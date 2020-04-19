@@ -85,18 +85,6 @@ else
                         Cliente
                     </div>
                 </th>
-                @*<th>Valor Compra</th>
-                <th>% Imposto</th>
-                <th>Frete 01</th>
-                <th>Frete 02</th>
-                <th>% C.O</th>
-                <th>Outras Despesas</th>
-                <th>Custo Total</th>
-                <th>% Comissão</th>
-                <th>Valor Comissão</th>
-                <th>% Lucro</th>
-                <th>Valor Lucro</th>
-                <th>Descrição</th>*@
             </MatTableHeader>
             <MatTableRow Context="venda">
                 <td>
@@ -104,21 +92,9 @@ else
                 </td>
                 <td><div>@venda.VendaId</div></td>
                 <td><div>@venda.NumeroNotaFiscal</div></td>
-                <td><div>@venda.DataNF.ToString("dd//MM/yyyy")</div></td>
+                <td><div>@venda.DataNF.ToString("dd/MM/yyyy")</div></td>
                 <td><div>@venda.ValorVenda</div></td>
                 <td><div>@venda.NomeCliente</div></td>
-                @*<td>@venda.ValorCompra</td>
-                <td>@venda.PercentualImposto</td>
-                <td>@venda.ValorFrete1</td>
-                <td>@venda.ValorFrete2</td>
-                <td>@venda.PercentualCustoOperacional</td>
-                <td>@venda.ValorOutrasDespesas</td>
-                <td>@venda.ValorCustoTotal</td>
-                <td>@venda.PercentualComissao</td>
-                <td>@venda.ValorComissao</td>
-                <td>@venda.PercentualLucro</td>
-                <td>@venda.ValorLucro</td>
-                <td>@venda.Descricao</td>*@
             </MatTableRow>
         </MatTable>
     </div>
@@ -159,8 +135,9 @@ else
                                             <label for="DataNF">Data N.F</label>
                                             <MatDatePicker Id="DataNF"
                                                            name="DataNF"
-                                                           AllowInput="true"
+                                                           AllowInput="false"
                                                            Format="dd/MM/yyyy"
+                                                           OnFocusOut="Teste"
                                                            @bind-Value="model.DataNF">
                                             </MatDatePicker>
                                             <ValidationMessage For="(() => model.DataNF)" />
@@ -358,6 +335,12 @@ else
         this.model = new VendaViewModel();
         this.modalTitle = "Cadastro de Venda";
         this.modalOpen = true;
+    }
+
+    protected void Teste()
+    {
+        Console.WriteLine(model.DataNF);
+        //StateHasChanged();
     }
 
     protected void CloseModal()

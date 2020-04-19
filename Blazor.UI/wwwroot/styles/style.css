@@ -3454,12 +3454,6 @@ div.dt-button-info {
     color: #f6a821 !important;
 }
 
-.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
-    color: #a9a9a9 !important;
-    padding-bottom: 5px !important;
-    font-size: 13px !important;
-}
-
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__icon {
     color: #a9a9a9 !important;
 }
@@ -3596,13 +3590,13 @@ div.dt-button-info {
     border: 1px solid red !important;
 }
 
-.mdc-text-field__input {
-    font-weight: 200 !important;
-    padding: 17px 10px 16px !important;
-    border-bottom: 0px solid !important;
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: #a9a9a9 !important;
+    font-size: 13px !important;
 }
 
-.mdc-text-field--with-leading-icon .mdc-text-field__input {
-    padding-left: 48px !important;
-    padding-right: 16px !important;
+.mat-date-picker .mdc-text-field__input {
+    font-weight: 200 !important;
+    padding: 17px 10px 16px !important;
+    /* border-bottom: 0px solid !important; */
 }
