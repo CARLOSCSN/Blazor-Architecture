@@ -20,23 +20,6 @@
 }
 else
 {
-    <style>
-        .table > tbody > tr > td{
-            padding: 0;
-        }
-        .table > tbody > tr > td > div {
-            padding-top: 10px;
-        }
-        .mdc-paginator-page-size{
-            display: flex;
-        }
-        .mdc-paginator-page-size .mdc-select {
-            margin-left: 15px;
-        }
-        .relative {
-            position: relative;
-        }
-    </style>
     <div class="relative">
         <MatTable Class="mat-elevation-z5 table table-striped table-hover"
                   Items="@vendas"
@@ -88,7 +71,7 @@ else
             </MatTableHeader>
             <MatTableRow Context="venda">
                 <td>
-                    <MatIconButton Icon="delete"></MatIconButton>
+                    <MatIconButton @onclick="@(() => ModalShowDelete(venda))" Icon="delete"></MatIconButton>
                 </td>
                 <td><div>@venda.VendaId</div></td>
                 <td><div>@venda.NumeroNotaFiscal</div></td>
@@ -100,6 +83,7 @@ else
     </div>
 }
 
+@* Modal Create *@
 @if (modalOpen)
 {
     <div class="modal" tabindex="-1" style="display:block" role="dialog">
@@ -137,7 +121,6 @@ else
                                                            name="DataNF"
                                                            AllowInput="false"
                                                            Format="dd/MM/yyyy"
-                                                           OnFocusOut="Teste"
                                                            @bind-Value="model.DataNF">
                                             </MatDatePicker>
                                             <ValidationMessage For="(() => model.DataNF)" />
@@ -155,7 +138,7 @@ else
                                                     Name="ValorVenda"
                                                     OnFocusOutFunc="CalcularValores"
                                                     FunctionJSRuntime="applyMaskMoney"
-                                                    @bind-Value="@model.ValorVendaString"
+                                                    @bind-Value="model.ValorVendaString"
                                                     ValidationFor="@(() => model.ValorVendaString)" />
                                     </div>
                                 </div>
@@ -168,7 +151,7 @@ else
                                                     Name="ValorCompra"
                                                     OnFocusOutFunc="CalcularValores"
                                                     FunctionJSRuntime="applyMaskMoney"
-                                                    @bind-Value="@model.ValorCompraString"
+                                                    @bind-Value="model.ValorCompraString"
                                                     ValidationFor="@(() => model.ValorCompraString)" />
                                     </div>
                                     <div class="col-lg-1">
@@ -183,7 +166,7 @@ else
                                                     Name="ValorFrete1"
                                                     OnFocusOutFunc="CalcularValores"
                                                     FunctionJSRuntime="applyMaskMoney"
-                                                    @bind-Value="@model.ValorFrete1String"
+                                                    @bind-Value="model.ValorFrete1String"
                                                     ValidationFor="@(() => model.ValorFrete1String)" />
 
                                     </div>
@@ -192,7 +175,7 @@ else
                                                     Name="ValorFrete2"
                                                     OnFocusOutFunc="CalcularValores"
                                                     FunctionJSRuntime="applyMaskMoney"
-                                                    @bind-Value="@model.ValorFrete2String"
+                                                    @bind-Value="model.ValorFrete2String"
                                                     ValidationFor="@(() => model.ValorFrete2String)" />
                                     </div>
                                     <div class="col-lg-1">
@@ -207,7 +190,7 @@ else
                                                     Name="ValorOutrasDespesas"
                                                     OnFocusOutFunc="CalcularValores"
                                                     FunctionJSRuntime="applyMaskMoney"
-                                                    @bind-Value="@model.ValorOutrasDespesasString"
+                                                    @bind-Value="model.ValorOutrasDespesasString"
                                                     ValidationFor="@(() => model.ValorOutrasDespesasString)" />
 
                                     </div>
@@ -263,8 +246,8 @@ else
                                     <div class="col-lg-12">
                                         <label for="Descricao">Descrição</label>
                                         <InputTextArea class="form-control"
-                                                       rows="3"
-                                                       @bind-Value="model.Descricao"></InputTextArea>
+                                                rows="3"
+                                                @bind-Value="model.Descricao"></InputTextArea>
                                         <ValidationMessage For="(() => model.Descricao)" />
                                     </div>
                                 </div>
@@ -283,12 +266,55 @@ else
     </div>
 }
 
+@* Modal Delete *@
+@if (showModalDelete)
+{
+    <div class="modal" tabindex="-1" style="display:block" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 class="modal-title">@modalTitle</h3>
+                    <button type="button" class="close" @onclick="@ModalDeleteCancel">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <p>A Venda @model.VendaId - cliente: @model.NomeCliente e NF: @model.NumeroNotaFiscal. será excluida, Confirmar? </p>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn" @onclick="@ModalDeleteCancel">Cancel</button>
+                    <button type="button" class="btn btn-danger" @onclick="@(() => ExcluirVenda(model.VendaId))">Delete</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
 @code {
     private EditContext editContext;
     private VendaViewModel model = new VendaViewModel();
     private VendaViewModel[] vendas;
     private bool modalOpen { get; set; }
     private string modalTitle { get; set; }
+    private bool showModalDelete = false;
+
+    private void ModalShowDelete(VendaViewModel venda)
+    {
+        this.modalTitle = "Excluir Venda";
+        showModalDelete = true;
+        model = venda;
+    }
+
+    protected void ModalDeleteCancel()
+    {
+        showModalDelete = false;
+        StateHasChanged();
+    }
 
     protected async Task HandleValidSubmit()
     {
@@ -335,19 +361,13 @@ else
         this.modalOpen = true;
     }
 
-    protected void Teste()
-    {
-        Console.WriteLine(model.DataNF);
-        //StateHasChanged();
-    }
-
     protected void CloseModal()
     {
         this.modalOpen = false;
         StateHasChanged();
     }
 
-    private void CalcularValores()
+    protected void CalcularValores()
     {
         var vlrImposto = ((model.PercentualImposto * model.ValorVenda) / 100);
         var vlrVendaMaisImp = model.ValorVenda + vlrImposto;
@@ -371,6 +391,27 @@ else
         model.PercentualLucro = Math.Round(model.PercentualLucro, 2);
 
         StateHasChanged();
+    }
+
+    protected async Task ExcluirVenda(int vendaId)
+    {
+        try
+        {
+            await webApiServices.Delete<int>(vendaId, "api/Venda");
+            navigationManager.NavigateTo("/venda");
+
+            vendas = await Http.GetJsonAsync<VendaViewModel[]>("https://localhost:44301/api/Venda");
+            editContext = new EditContext(new VendaViewModel());
+
+            ModalDeleteCancel();
+            matToaster.Add("Venda foi excluida.", MatToastType.Info, "Informação");
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            matToaster.Add(ex.Message, MatToastType.Danger, "Erro");
+            Console.WriteLine(ex.Message);
+        }
     }
 }
 

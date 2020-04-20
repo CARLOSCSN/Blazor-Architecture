@@ -3600,3 +3600,29 @@ div.dt-button-info {
     padding: 17px 10px 16px !important;
     /* border-bottom: 0px solid !important; */
 }
+
+
+/* Table */
+
+.table > tbody > tr > td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.table > tbody > tr > td > div {
+    padding-top: 10px;
+}
+
+.mdc-paginator-page-size {
+    display: flex;
+}
+
+.mdc-paginator-page-size .mdc-select {
+    margin-left: 15px;
+}
+
+.relative {
+    position: relative;
+}
+
+/* */

@@ -86,7 +86,7 @@ namespace API.Controllers
             {
                 if (input == null)
                     return BadRequest();
-                if (await _BlazorSupervisor.GetAlbumByIdAsync(id, ct) == null)
+                if (await _BlazorSupervisor.GetVendaByIdAsync(id, ct) == null)
                 {
                     return NotFound();
                 }

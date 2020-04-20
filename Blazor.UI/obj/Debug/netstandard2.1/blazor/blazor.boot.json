@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "Client.dll": "sha256-0lZIHZ+Ju6KAdSDX7t6+gJXpb8NlIR1rL\/sCLwi0FmY=",
+      "Client.dll": "sha256-qU5ztU\/7kPLqG7Tjb61ex24e32812lE81tvsjpi4q+s=",
       "System.Text.Json.dll": "sha256-uSbSxpqNWn\/oZG\/ZuYaStmZanXfULcYxF2ogBdWkBbE=",
       "System.Runtime.CompilerServices.Unsafe.dll": "sha256-vK9IBBJl1fs+hinlQUxpPvkGV7en5XJ2SryYwtkHoK0=",
       "mscorlib.dll": "sha256-\/wH+cZ4GWv76l2ip\/cTl2COsQjLmNljfkZi4H9zaHBc=",
@@ -68,7 +68,7 @@
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-Ppl6mxIH75\/svLec45z4pGzfZQdDWIp7NHDH9ZRwmDA="
     },
     "pdb": {
-      "Client.pdb": "sha256-hEcx1fDzHCrgeb3wKu40o5YtI1Ws1Hr7mVUyRnyB1lk=",
+      "Client.pdb": "sha256-ej4YyKTVjsidg8ZXzdA6PfUjlK+wZtiD+bVX+Je3Ndc=",
       "Common.pdb": "sha256-XgtBVzuLPACzGfAdz7ZpG4GcAJ3WedZKV8yB\/FYU13E="
     },
     "runtime": {
