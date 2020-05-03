@@ -24,10 +24,10 @@
           "lib/netstandard2.0/FluentValidation.dll": {}
         }
       },
-      "MatBlazor/2.3.0": {
+      "MatBlazor/2.5.0-preview-005": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Blazor.HttpClient": "3.1.0-preview4.19579.2",
+          "Microsoft.AspNetCore.Blazor.HttpClient": "3.2.0-preview3.20168.3",
           "Microsoft.AspNetCore.Components": "3.1.3",
           "Microsoft.AspNetCore.Components.Web": "3.1.3"
         },
@@ -98,11 +98,11 @@
           "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Components.Authorization/5.0.0-preview.2.20167.3": {
+      "Microsoft.AspNetCore.Components.Authorization/5.0.0-preview.3.20215.14": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "5.0.0-preview.2.20167.3",
-          "Microsoft.AspNetCore.Components": "5.0.0-preview.2.20167.3"
+          "Microsoft.AspNetCore.Authorization": "5.0.0-preview.3.20215.14",
+          "Microsoft.AspNetCore.Components": "5.0.0-preview.3.20215.14"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Components.Authorization.dll": {}
@@ -164,7 +164,7 @@
           "build/netstandard1.0/Microsoft.AspNetCore.Components.WebAssembly.Build.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Components.WebAssembly.DevServer/3.2.0-preview4.20210.8": {
+      "Microsoft.AspNetCore.Components.WebAssembly.DevServer/3.2.0-rc1.20223.4": {
         "type": "package",
         "build": {
           "build/Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets": {}
@@ -489,7 +489,7 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "Toolbelt.Blazor.HttpClientInterceptor/8.0.1": {
+      "Toolbelt.Blazor.HttpClientInterceptor/9.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Components.WebAssembly": "3.2.0-preview2.20160.5"
@@ -501,10 +501,10 @@
           "lib/netstandard2.1/Toolbelt.Blazor.HttpClientInterceptor.dll": {}
         }
       },
-      "Toolbelt.Blazor.LoadingBar/11.0.0.1": {
+      "Toolbelt.Blazor.LoadingBar/12.0.0": {
         "type": "package",
         "dependencies": {
-          "Toolbelt.Blazor.HttpClientInterceptor": "8.0.1"
+          "Toolbelt.Blazor.HttpClientInterceptor": "9.0.0"
         },
         "compile": {
           "lib/netstandard2.1/Toolbelt.Blazor.LoadingBar.dll": {}
@@ -563,10 +563,10 @@
         "lib/netstandard2.0/FluentValidation.xml"
       ]
     },
-    "MatBlazor/2.3.0": {
-      "sha512": "yEv4EQJ2r/AaJ7RbgBkrdIeYXY5IE0JdnuF9ozpVGNSgX93/5daYLE9J54ADviIU0u53YXeGXvyK8cxjkCuvhQ==",
+    "MatBlazor/2.5.0-preview-005": {
+      "sha512": "Z0S9QxrKgxr43NxiGG9mRvbSYaLi2RqGSkiKB5M11amSznzrkVwfMIIU4bKGTOaSLPwV4szLnerp41XXX3nnVg==",
       "type": "package",
-      "path": "matblazor/2.3.0",
+      "path": "matblazor/2.5.0-preview-005",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -578,7 +578,7 @@
         "contentFiles/any/netstandard2.1/Properties/launchSettings.json",
         "lib/netstandard2.1/MatBlazor.dll",
         "lib/netstandard2.1/MatBlazor.xml",
-        "matblazor.2.3.0.nupkg.sha512",
+        "matblazor.2.5.0-preview-005.nupkg.sha512",
         "matblazor.nuspec",
         "staticwebassets/dist/matBlazor.css",
         "staticwebassets/dist/matBlazor.js"
@@ -647,10 +647,10 @@
         "microsoft.aspnetcore.components.analyzers.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Authorization/5.0.0-preview.2.20167.3": {
-      "sha512": "dA65RCQ6+XON1jJFj8+uW3b/C3O2ZO7IDLv1sq4nB4sTGjxBbbC0pOt0TucZte1dwjGWrNsAjrEmVNObZn+fDg==",
+    "Microsoft.AspNetCore.Components.Authorization/5.0.0-preview.3.20215.14": {
+      "sha512": "TiKx4fasxKGIEIPJpeOIg/t/u3m0Ip2ZseO3+GdFgmzxwoyHz+TlxE0uJbrmuKRLUzE6mQdL4AOFT7MYWFVrBQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.authorization/5.0.0-preview.2.20167.3",
+      "path": "microsoft.aspnetcore.components.authorization/5.0.0-preview.3.20215.14",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -660,7 +660,7 @@
         "lib/netcoreapp5.0/Microsoft.AspNetCore.Components.Authorization.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Components.Authorization.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Components.Authorization.xml",
-        "microsoft.aspnetcore.components.authorization.5.0.0-preview.2.20167.3.nupkg.sha512",
+        "microsoft.aspnetcore.components.authorization.5.0.0-preview.3.20215.14.nupkg.sha512",
         "microsoft.aspnetcore.components.authorization.nuspec"
       ]
     },
@@ -752,10 +752,10 @@
         "tools/netfx/System.Runtime.CompilerServices.Unsafe.dll"
       ]
     },
-    "Microsoft.AspNetCore.Components.WebAssembly.DevServer/3.2.0-preview4.20210.8": {
-      "sha512": "HF//Vw+tK2FaTsDd5lWQPAXBN2g9GsaekD7bYEY1/VZ4rKr0GBKy9PZzWMpc38dIXqnO4U7V7C3Gbh5D0974rQ==",
+    "Microsoft.AspNetCore.Components.WebAssembly.DevServer/3.2.0-rc1.20223.4": {
+      "sha512": "5/ZvhCvOIPBWKccEJIRRjnibSitahbY0g5kznd0QKsJ9A9RVQQEYv8CaxGR/EPenwzDzBwSpQRyGcvAgrDcNQg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.webassembly.devserver/3.2.0-preview4.20210.8",
+      "path": "microsoft.aspnetcore.components.webassembly.devserver/3.2.0-rc1.20223.4",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -763,7 +763,7 @@
         "Icon.png",
         "THIRD-PARTY-NOTICES.txt",
         "build/Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets",
-        "microsoft.aspnetcore.components.webassembly.devserver.3.2.0-preview4.20210.8.nupkg.sha512",
+        "microsoft.aspnetcore.components.webassembly.devserver.3.2.0-rc1.20223.4.nupkg.sha512",
         "microsoft.aspnetcore.components.webassembly.devserver.nuspec",
         "tools/BlazorDebugProxy/Microsoft.AspNetCore.Components.WebAssembly.DebugProxy.deps.json",
         "tools/BlazorDebugProxy/Microsoft.AspNetCore.Components.WebAssembly.DebugProxy.dll",
@@ -1622,23 +1622,24 @@
         "version.txt"
       ]
     },
-    "Toolbelt.Blazor.HttpClientInterceptor/8.0.1": {
-      "sha512": "e8Rj7+8zDBLrz4Zclmnj7uSm1cXJT7Sj/jwU9VCBShsYjrI1hKmrXQ8R4APcT/otGZ/6Les/GJp+RC3tslKqcw==",
+    "Toolbelt.Blazor.HttpClientInterceptor/9.0.0": {
+      "sha512": "CUwJgfhJgSZeOfPn5gtXapQl9nmWsjtDyNsvomLe31g0axkN9wUjrCkIbp/wgYH82niD0SitEswyd0U5CbFkbA==",
       "type": "package",
-      "path": "toolbelt.blazor.httpclientinterceptor/8.0.1",
+      "path": "toolbelt.blazor.httpclientinterceptor/9.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/Toolbelt.Blazor.HttpClientInterceptor.dll",
         "lib/netstandard2.1/Toolbelt.Blazor.HttpClientInterceptor.xml",
-        "toolbelt.blazor.httpclientinterceptor.8.0.1.nupkg.sha512",
+        "nupkg-icon.png",
+        "toolbelt.blazor.httpclientinterceptor.9.0.0.nupkg.sha512",
         "toolbelt.blazor.httpclientinterceptor.nuspec"
       ]
     },
-    "Toolbelt.Blazor.LoadingBar/11.0.0.1": {
-      "sha512": "y3U0jnJdXokx2rZLQGPzIGmA7wADAzoTvX6CxHgrP+eLgCorfO/1vnI0PYp1QQeTjz9bV+jPwvgfddB6+0+7ig==",
+    "Toolbelt.Blazor.LoadingBar/12.0.0": {
+      "sha512": "K83+3N0T3DmcNpdubfa44MgrEk+itCy6BlFNFtZ+gjhUbD1A4TCJmN7Km+90vvxoMXV4eiedU5WtxghKUAHyJA==",
       "type": "package",
-      "path": "toolbelt.blazor.loadingbar/11.0.0.1",
+      "path": "toolbelt.blazor.loadingbar/12.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1648,9 +1649,10 @@
         "buildTransitive/Toolbelt.Blazor.LoadingBar.props",
         "lib/netstandard2.1/Toolbelt.Blazor.LoadingBar.dll",
         "lib/netstandard2.1/Toolbelt.Blazor.LoadingBar.xml",
+        "nupkg-icon.png",
         "staticwebassets/script.min.js",
         "staticwebassets/style.min.css",
-        "toolbelt.blazor.loadingbar.11.0.0.1.nupkg.sha512",
+        "toolbelt.blazor.loadingbar.12.0.0.nupkg.sha512",
         "toolbelt.blazor.loadingbar.nuspec"
       ]
     },
@@ -1664,14 +1666,14 @@
     ".NETStandard,Version=v2.1": [
       "Blazored.LocalStorage >= 2.1.5",
       "Common >= 1.0.0",
-      "MatBlazor >= 2.3.0",
+      "MatBlazor >= 2.5.0-preview-005",
       "Microsoft.AspNetCore.Blazor.HttpClient >= 3.2.0-preview3.20168.3",
-      "Microsoft.AspNetCore.Components.Authorization >= 5.0.0-preview.2.20167.3",
+      "Microsoft.AspNetCore.Components.Authorization >= 5.0.0-preview.3.20215.14",
       "Microsoft.AspNetCore.Components.WebAssembly >= 3.2.0-preview4.20210.8",
       "Microsoft.AspNetCore.Components.WebAssembly.Build >= 3.2.0-preview4.20210.8",
-      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 3.2.0-preview4.20210.8",
+      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 3.2.0-rc1.20223.4",
       "Newtonsoft.Json >= 12.0.3",
-      "Toolbelt.Blazor.LoadingBar >= 11.0.0.1"
+      "Toolbelt.Blazor.LoadingBar >= 12.0.0"
     ]
   },
   "packageFolders": {
@@ -1729,7 +1731,7 @@
           },
           "MatBlazor": {
             "target": "Package",
-            "version": "[2.3.0, )"
+            "version": "[2.5.0-preview-005, )"
           },
           "Microsoft.AspNetCore.Blazor.HttpClient": {
             "target": "Package",
@@ -1737,7 +1739,7 @@
           },
           "Microsoft.AspNetCore.Components.Authorization": {
             "target": "Package",
-            "version": "[5.0.0-preview.2.20167.3, )"
+            "version": "[5.0.0-preview.3.20215.14, )"
           },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
@@ -1749,7 +1751,7 @@
           },
           "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
             "target": "Package",
-            "version": "[3.2.0-preview4.20210.8, )"
+            "version": "[3.2.0-rc1.20223.4, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",
@@ -1757,7 +1759,7 @@
           },
           "Toolbelt.Blazor.LoadingBar": {
             "target": "Package",
-            "version": "[11.0.0.1, )"
+            "version": "[12.0.0, )"
           }
         },
         "imports": [

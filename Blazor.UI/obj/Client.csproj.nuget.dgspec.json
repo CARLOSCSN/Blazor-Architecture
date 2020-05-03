@@ -122,7 +122,7 @@
             },
             "MatBlazor": {
               "target": "Package",
-              "version": "[2.3.0, )"
+              "version": "[2.5.0-preview-005, )"
             },
             "Microsoft.AspNetCore.Blazor.HttpClient": {
               "target": "Package",
@@ -130,7 +130,7 @@
             },
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
-              "version": "[5.0.0-preview.2.20167.3, )"
+              "version": "[5.0.0-preview.3.20215.14, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
@@ -142,7 +142,7 @@
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "target": "Package",
-              "version": "[3.2.0-preview4.20210.8, )"
+              "version": "[3.2.0-rc1.20223.4, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -150,7 +150,7 @@
             },
             "Toolbelt.Blazor.LoadingBar": {
               "target": "Package",
-              "version": "[11.0.0.1, )"
+              "version": "[12.0.0, )"
             }
           },
           "imports": [

@@ -59,6 +59,8 @@ C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\System.IdentityMo
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
@@ -86,5 +88,3 @@ C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\staticwebassets\A
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.dll
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.pdb
 C:\Temp\Blazor-Architecture\Blazor.API\obj\Debug\netcoreapp3.1\API.genruntimeconfig.cache
-C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
-C:\Temp\Blazor-Architecture\Blazor.API\bin\Debug\netcoreapp3.1\System.Text.Json.dll
