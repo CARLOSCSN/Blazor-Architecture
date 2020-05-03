@@ -12,8 +12,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="9.0.0-preview3" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Forms" Version="3.1.1" />
+    <PackageReference Include="FluentValidation" Version="9.0.0-preview4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Forms" Version="5.0.0-preview.3.20215.14" />
   </ItemGroup>
 
 </Project>
