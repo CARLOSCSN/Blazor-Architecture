@@ -45,14 +45,35 @@ namespace Client.Services.Implementations
 
         public async Task Logout()
         {
-            var result = await _httpClient.PostAsync("https://localhost:44301/api/Authorize/Logout", null);
+            var requestMessage = new HttpRequestMessage()
+            {
+                Method = new HttpMethod("POST"),
+                RequestUri = new Uri("https://localhost:44301/api/Authorize/Logout"),
+                Content = null
+            };
+
+            requestMessage.SetBrowserRequestCredentials(BrowserRequestCredentials.Include);
+
+            var result = await _httpClient.SendAsync(requestMessage);
+
             result.EnsureSuccessStatusCode();
         }
 
         public async Task Register(RegisterParametersViewModel registerParameters)
         {
             var stringContent = new StringContent(JsonSerializer.Serialize(registerParameters), Encoding.UTF8, "application/json");
-            var result = await _httpClient.PostAsync("https://localhost:44301/api/Authorize/Register", stringContent);
+
+            var requestMessage = new HttpRequestMessage()
+            {
+                Method = new HttpMethod("POST"),
+                RequestUri = new Uri("https://localhost:44301/api/Authorize/Register"),
+                Content = stringContent
+            };
+
+            requestMessage.SetBrowserRequestCredentials(BrowserRequestCredentials.Include);
+
+            var result = await _httpClient.SendAsync(requestMessage);
+
             if (result.StatusCode == System.Net.HttpStatusCode.BadRequest) throw new Exception(await result.Content.ReadAsStringAsync());
             result.EnsureSuccessStatusCode();
         }

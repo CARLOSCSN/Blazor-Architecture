@@ -422,6 +422,6 @@ C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\staticwebassets\C
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\staticwebassets\Client.StaticWebAssets.xml
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Client.dll
 C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\Client.pdb
-C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\integrity\rg_19bMGd3G3n2V7MkLvQ6LGDyjjhfPRmNOuarILmZo=.hash
-C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\integrity\utXWnffchn836V-zQH9SrmjEGK2mTVNqdYb2rSr4CH8=.hash
-C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\integrity\Ph_woaMNRhrxxUNf1nPdUIS_AwJPOC9j-NY5Wjgm79A=.hash
+C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\integrity\ih0CZx6cfQZ_VXC2iNaKPmpQJQ4WKQAsephtUudD5Qw=.hash
+C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\integrity\89ID81QbizjJQu8fmhtYMUYf-mQdZr-YPcFw9M9SLio=.hash
+C:\Temp\Blazor-Architecture\Blazor.UI\obj\Debug\netstandard2.1\integrity\V-wlOcjQZG-qTCwx6ClKrrdp7KBZqQrkwFmAJCPiKnI=.hash
