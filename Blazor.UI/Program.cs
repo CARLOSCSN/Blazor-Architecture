@@ -19,11 +19,25 @@ namespace Client
         public static async Task Main(string[] args)
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
-            WebAssemblyHttpMessageHandlerOptions.DefaultCredentials = FetchCredentialsOption.Include;
+            //WebAssemblyHttpMessageHandlerOptions.DefaultCredentials = FetchCredentialsOption.Include;
+
             builder.RootComponents.Add<App>("app");
 
             //builder.Services.AddBaseAddressHttpClient();
-            builder.Services.AddSingleton(new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+            builder.Services.AddTransient(sp =>
+                new HttpClient
+                {
+                    BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
+                });
+
+            builder.Services.AddTransient(sp => 
+                new HttpClientHandler()
+                {
+                    UseCookies = true,
+                    UseDefaultCredentials = true
+                });
+
 
             builder.Services.AddAuthorizationCore();
             builder.Services.AddScoped<IdentityAuthenticationStateProvider>();

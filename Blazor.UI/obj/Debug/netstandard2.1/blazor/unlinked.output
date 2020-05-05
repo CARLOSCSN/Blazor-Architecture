@@ -18,7 +18,7 @@ obj\Debug\netstandard2.1\blazor\unlinked\System.Transactions.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.Runtime.Serialization.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.ServiceModel.Internals.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.Net.Http.dll
-obj\Debug\netstandard2.1\blazor\unlinked\WebAssembly.Net.Http.dll
+obj\Debug\netstandard2.1\blazor\unlinked\System.Net.Http.WebAssemblyHttpHandler.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.ComponentModel.Composition.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.IO.Compression.FileSystem.dll
 obj\Debug\netstandard2.1\blazor\unlinked\System.IO.Compression.dll
@@ -33,8 +33,8 @@ obj\Debug\netstandard2.1\blazor\unlinked\Toolbelt.Blazor.LoadingBar.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.AspNetCore.Components.WebAssembly.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.DependencyInjection.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Configuration.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Primitives.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Configuration.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Configuration.Abstractions.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Configuration.Json.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Configuration.FileExtensions.dll

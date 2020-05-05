@@ -1,6 +1,7 @@
 ﻿using Client.Services.Contracts;
 using Common.ViewModel;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.WebAssembly.Http;
 using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,19 @@ namespace Client.Services.Implementations
         public async Task Login(LoginParametersViewModel loginParameters)
         {
             var stringContent = new StringContent(JsonSerializer.Serialize(loginParameters), Encoding.UTF8, "application/json");
-            var result = await _httpClient.PostAsync("https://localhost:44301/api/Authorize/Login", stringContent);
+
+            var requestMessage = new HttpRequestMessage()
+            {
+                Method = new HttpMethod("POST"),
+                RequestUri = new Uri("https://localhost:44301/api/Authorize/Login"),
+                Content = stringContent
+            };
+
+            requestMessage.SetBrowserRequestCredentials(BrowserRequestCredentials.Include);
+
+            var result = await _httpClient.SendAsync(requestMessage);
+
+            //var result = await _httpClient.PostAsync("https://localhost:44301/api/Authorize/Login", stringContent);
             if (result.StatusCode == System.Net.HttpStatusCode.BadRequest) throw new Exception(await result.Content.ReadAsStringAsync());
             result.EnsureSuccessStatusCode();
         }
@@ -46,7 +59,28 @@ namespace Client.Services.Implementations
 
         public async Task<UserInfoViewModel> GetUserInfo()
         {
-            var result = await _httpClient.GetJsonAsync<UserInfoViewModel>("https://localhost:44301/api/Authorize/UserInfo");
+            var json = String.Empty;
+
+            var requestMessage = new HttpRequestMessage()
+            {
+                Method = new HttpMethod("GET"),
+                RequestUri = new Uri("https://localhost:44301/api/Authorize/UserInfo")
+            };
+
+            requestMessage.SetBrowserRequestCredentials(BrowserRequestCredentials.Include);
+
+            var response = await _httpClient.SendAsync(requestMessage);
+
+            using (HttpContent content = response.Content)
+            {
+                json = content.ReadAsStringAsync().Result;
+            }
+
+            var result = JsonSerializer.Deserialize<UserInfoViewModel>(
+                json, 
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }
+            );
+
             return result;
         }
     }
