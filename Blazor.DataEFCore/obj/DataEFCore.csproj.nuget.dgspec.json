@@ -50,29 +50,33 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0-preview.3.20215.14, )"
+              "version": "[5.0.0-preview.4.20257.10, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0-preview.3.20181.2, )"
+              "version": "[5.0.0-preview.4.20220.10, )"
             },
             "Microsoft.EntityFrameworkCore.Abstractions": {
               "target": "Package",
-              "version": "[5.0.0-preview.3.20181.2, )"
+              "version": "[5.0.0-preview.4.20220.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.0-preview.3.20181.2, )"
+              "version": "[5.0.0-preview.4.20220.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0-preview.3.20181.2, )"
+              "version": "[5.0.0-preview.4.20220.10, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0-preview.4.20251.6, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
-              "version": "[5.0.0-preview.3.20215.2, )"
+              "version": "[5.0.0-preview.4.20251.6, )"
             }
           },
           "imports": [
@@ -90,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015135\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -140,15 +144,15 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Abstractions": {
               "target": "Package",
-              "version": "[5.0.0-preview.3.20181.2, )"
+              "version": "[5.0.0-preview.4.20220.10, )"
             },
             "Microsoft.Extensions.Caching.Abstractions": {
               "target": "Package",
-              "version": "[5.0.0-preview.3.20215.2, )"
+              "version": "[5.0.0-preview.4.20251.6, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
-              "version": "[5.0.0-preview.3.20215.2, )"
+              "version": "[5.0.0-preview.4.20251.6, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -170,7 +174,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015135\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -220,7 +224,7 @@
             },
             "Microsoft.AspNetCore.Components.Forms": {
               "target": "Package",
-              "version": "[5.0.0-preview.3.20215.14, )"
+              "version": "[5.0.0-preview.4.20257.10, )"
             }
           },
           "imports": [
@@ -238,7 +242,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015135\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

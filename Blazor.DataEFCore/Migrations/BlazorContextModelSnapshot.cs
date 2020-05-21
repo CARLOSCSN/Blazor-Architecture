@@ -15,7 +15,7 @@ namespace DataEFCore.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.0-preview.2.20159.4")
+                .HasAnnotation("ProductVersion", "5.0.0-preview.4.20220.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -564,70 +564,70 @@ namespace DataEFCore.Migrations
                         new
                         {
                             WeatherForecastId = 1,
-                            Date = new DateTime(2020, 4, 9, 1, 28, 58, 451, DateTimeKind.Local).AddTicks(9171),
+                            Date = new DateTime(2020, 5, 21, 16, 25, 11, 24, DateTimeKind.Local).AddTicks(4408),
                             Summary = "Warm",
                             TemperatureC = -10
                         },
                         new
                         {
                             WeatherForecastId = 2,
-                            Date = new DateTime(2020, 4, 12, 1, 28, 58, 453, DateTimeKind.Local).AddTicks(2334),
+                            Date = new DateTime(2020, 5, 24, 16, 25, 11, 25, DateTimeKind.Local).AddTicks(9306),
                             Summary = "Very Hot",
                             TemperatureC = 45
                         },
                         new
                         {
                             WeatherForecastId = 3,
-                            Date = new DateTime(2020, 4, 15, 1, 28, 58, 453, DateTimeKind.Local).AddTicks(2466),
+                            Date = new DateTime(2020, 5, 27, 16, 25, 11, 25, DateTimeKind.Local).AddTicks(9465),
                             Summary = "Bracing",
                             TemperatureC = 12
                         },
                         new
                         {
                             WeatherForecastId = 4,
-                            Date = new DateTime(2020, 4, 9, 1, 28, 58, 453, DateTimeKind.Local).AddTicks(2473),
+                            Date = new DateTime(2020, 5, 21, 16, 25, 11, 25, DateTimeKind.Local).AddTicks(9472),
                             Summary = "Frying",
                             TemperatureC = 50
                         },
                         new
                         {
                             WeatherForecastId = 5,
-                            Date = new DateTime(2020, 4, 23, 1, 28, 58, 453, DateTimeKind.Local).AddTicks(2475),
+                            Date = new DateTime(2020, 6, 4, 16, 25, 11, 25, DateTimeKind.Local).AddTicks(9474),
                             Summary = "Cold",
                             TemperatureC = 2
                         },
                         new
                         {
                             WeatherForecastId = 6,
-                            Date = new DateTime(2020, 6, 8, 1, 28, 58, 453, DateTimeKind.Local).AddTicks(2476),
+                            Date = new DateTime(2020, 7, 20, 16, 25, 11, 25, DateTimeKind.Local).AddTicks(9477),
                             Summary = "Very Cold",
                             TemperatureC = -5
                         },
                         new
                         {
                             WeatherForecastId = 7,
-                            Date = new DateTime(2020, 4, 9, 1, 28, 58, 453, DateTimeKind.Local).AddTicks(2478),
+                            Date = new DateTime(2020, 5, 21, 16, 25, 11, 25, DateTimeKind.Local).AddTicks(9479),
                             Summary = "Hot",
                             TemperatureC = 40
                         },
                         new
                         {
                             WeatherForecastId = 8,
-                            Date = new DateTime(2020, 5, 12, 1, 28, 58, 453, DateTimeKind.Local).AddTicks(2480),
+                            Date = new DateTime(2020, 6, 23, 16, 25, 11, 25, DateTimeKind.Local).AddTicks(9481),
                             Summary = "Good",
                             TemperatureC = 22
                         },
                         new
                         {
                             WeatherForecastId = 9,
-                            Date = new DateTime(2020, 6, 27, 1, 28, 58, 453, DateTimeKind.Local).AddTicks(2482),
+                            Date = new DateTime(2020, 8, 8, 16, 25, 11, 25, DateTimeKind.Local).AddTicks(9482),
                             Summary = "Summer",
                             TemperatureC = 35
                         },
                         new
                         {
                             WeatherForecastId = 10,
-                            Date = new DateTime(2020, 4, 9, 1, 28, 58, 453, DateTimeKind.Local).AddTicks(2483),
+                            Date = new DateTime(2020, 5, 21, 16, 25, 11, 25, DateTimeKind.Local).AddTicks(9484),
                             Summary = "Warm",
                             TemperatureC = 55
                         });

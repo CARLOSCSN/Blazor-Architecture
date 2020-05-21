@@ -50,7 +50,7 @@
             },
             "Microsoft.AspNetCore.Components.Forms": {
               "target": "Package",
-              "version": "[5.0.0-preview.3.20215.14, )"
+              "version": "[5.0.0-preview.4.20257.10, )"
             }
           },
           "imports": [
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015135\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -118,7 +118,7 @@
           "dependencies": {
             "Blazored.LocalStorage": {
               "target": "Package",
-              "version": "[2.1.5, )"
+              "version": "[2.1.6, )"
             },
             "MatBlazor": {
               "target": "Package",
@@ -130,19 +130,19 @@
             },
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
-              "version": "[5.0.0-preview.3.20215.14, )"
+              "version": "[5.0.0-preview.4.20257.10, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[3.2.0-rc1.20223.4, )"
+              "version": "[3.2.0, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.Build": {
               "target": "Package",
-              "version": "[3.2.0-rc1.20223.4, )"
+              "version": "[3.2.0, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "target": "Package",
-              "version": "[3.2.0-rc1.20223.4, )"
+              "version": "[3.2.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -168,7 +168,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015135\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
