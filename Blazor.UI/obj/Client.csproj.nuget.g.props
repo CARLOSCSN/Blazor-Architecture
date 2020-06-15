@@ -13,9 +13,9 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Content Include="$(NuGetPackageRoot)matblazor\2.5.0-preview-005\contentFiles\any\netstandard2.1\Properties\launchSettings.json" Condition="Exists('$(NuGetPackageRoot)matblazor\2.5.0-preview-005\contentFiles\any\netstandard2.1\Properties\launchSettings.json')">
+    <Content Include="$(NuGetPackageRoot)matblazor\2.6.1-develop-013\contentFiles\any\netstandard2.1\Properties\launchSettings.json" Condition="Exists('$(NuGetPackageRoot)matblazor\2.6.1-develop-013\contentFiles\any\netstandard2.1\Properties\launchSettings.json')">
       <NuGetPackageId>MatBlazor</NuGetPackageId>
-      <NuGetPackageVersion>2.5.0-preview-005</NuGetPackageVersion>
+      <NuGetPackageVersion>2.6.1-develop-013</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
       <Private>False</Private>
       <Link>Properties\launchSettings.json</Link>
@@ -25,7 +25,7 @@
     <Import Project="$(NuGetPackageRoot)toolbelt.blazor.loadingbar\12.0.0\buildTransitive\Toolbelt.Blazor.LoadingBar.props" Condition="Exists('$(NuGetPackageRoot)toolbelt.blazor.loadingbar\12.0.0\buildTransitive\Toolbelt.Blazor.LoadingBar.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.runtime\3.2.0\build\netstandard1.0\Microsoft.AspNetCore.Components.WebAssembly.Runtime.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.runtime\3.2.0\build\netstandard1.0\Microsoft.AspNetCore.Components.WebAssembly.Runtime.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.build\3.2.0\build\netstandard1.0\Microsoft.AspNetCore.Components.WebAssembly.Build.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.build\3.2.0\build\netstandard1.0\Microsoft.AspNetCore.Components.WebAssembly.Build.props')" />
-    <Import Project="$(NuGetPackageRoot)matblazor\2.5.0-preview-005\buildTransitive\MatBlazor.props" Condition="Exists('$(NuGetPackageRoot)matblazor\2.5.0-preview-005\buildTransitive\MatBlazor.props')" />
+    <Import Project="$(NuGetPackageRoot)matblazor\2.6.1-develop-013\buildTransitive\MatBlazor.props" Condition="Exists('$(NuGetPackageRoot)matblazor\2.6.1-develop-013\buildTransitive\MatBlazor.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_AspNetCore_Components_WebAssembly_Runtime Condition=" '$(PkgMicrosoft_AspNetCore_Components_WebAssembly_Runtime)' == '' ">C:\Users\carlo\.nuget\packages\microsoft.aspnetcore.components.webassembly.runtime\3.2.0</PkgMicrosoft_AspNetCore_Components_WebAssembly_Runtime>

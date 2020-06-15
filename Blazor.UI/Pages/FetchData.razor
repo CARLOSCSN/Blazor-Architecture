@@ -1,5 +1,7 @@
 ﻿@page "/fetchdata"
 @using Common.ViewModel
+@using System.Net.Http.Json
+
 @inject HttpClient Http
 @inject IJSRuntime JSRuntime
 
@@ -81,7 +83,7 @@ else
                                     <div class="col-lg-2">
                                         <label for="NumeroNotaFiscal">N.F: </label>
                                         <InputDate Id="NumeroNotaFiscal" name="NumeroNotaFiscal" Class="form-control" @bind-Value="@Model.Date"></InputDate>
-                                            <ValidationMessage For="@(() => Model.Date)" />
+                                        <ValidationMessage For="@(() => Model.Date)" />
                                     </div>
                                     <div class="col-lg-3">
                                         <p>
@@ -170,12 +172,12 @@ else
                             <br />
                             <div class="row">
                                 @*<div class="form-group">
-                                    <div class="col-lg-4">
-                                        <label>
-                                            <input type="checkbox"> Ativo
-                                        </label>
-                                    </div>
-                                </div>*@
+                                        <div class="col-lg-4">
+                                            <label>
+                                                <input type="checkbox"> Ativo
+                                            </label>
+                                        </div>
+                                    </div>*@
                             </div>
 
                             <div class="pull-right">
@@ -216,7 +218,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetJsonAsync<WeatherForecastViewModel[]>("https://localhost:44301/api/weatherforecast");
+        forecasts = await Http.GetFromJsonAsync<WeatherForecastViewModel[]>("https://localhost:44301/api/weatherforecast");
         EditContext = new EditContext(Model);
         EditContext.OnFieldChanged += EditContext_OnFieldChanged;
 
